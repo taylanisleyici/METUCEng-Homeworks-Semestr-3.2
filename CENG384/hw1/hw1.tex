@@ -5,6 +5,8 @@
 \usepackage{graphicx}
 \usepackage{float}
 
+\usepackage{listings}
+
 \usepackage{tkz-euclide}
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -51,9 +53,9 @@ Homework 1}
 
     \item ~\\
           \begin{figure}[H]
-            \centering
-            \includegraphics[scale=0.25]{handwritten_signal.jpeg}
-            \caption{Signal $x(\frac{1}{2}t+1)$}
+              \centering
+              \includegraphics[scale=0.25]{handwritten_signal.jpeg}
+              \caption{Signal $x(\frac{1}{2}t+1)$}
           \end{figure}
 
     \item %write the solution of q3
@@ -101,10 +103,53 @@ Homework 1}
           \end{enumerate}
 
     \item %write the solution of q7
+          \begin{lstlisting}
+        from brg.datastructures import Mesh
+         
+        mesh = Mesh.from_obj('faces.obj')
+        mesh.draw()
+        \end{lstlisting}
           \begin{enumerate}
               % Write your solutions in the following items.
-              \item %write the solution of q7a
-                    \item~\\
+                \item %write the solution of q7a
+                \item~\\
+                    \lstset{language=Python}
+                    \lstset{frame=single}
+                    \lstset{caption={Solution code of part b}}
+                    \lstset{label={lst:code_direct}}
+                    \lstset{basicstyle=\footnotesize}
+                    \begin{lstlisting}
+import matplotlib.pyplot as plt
+
+
+def main():
+    filePath = input() #The program takes the path of csv file from the user
+    fileCSV = open(filePath)
+    csvList = [i for i in fileCSV.read().split(",")]
+    startingIndex = int(csvList[0])
+    a = int(csvList[1])
+    b = int(csvList[2])
+    csvList = [float(i) for i in csvList[3:]]
+    xVals = []
+    yVals = []
+
+    for iindex, i in enumerate(csvList):
+
+        """In the following lines the code basically controls whether the current
+        element  should be represented after the shift and scale operations. If it 
+        should, it finds the correct place for the element on the graph."""
+        
+        if (iindex + startingIndex - b)%a == 0: #If an + b = currentindex for some n
+            xVals.append((iindex + startingIndex - b)//a) #Find n, add n to the x axis.
+            yVals.append(i) #Add i to the y axis
+
+    plt.stem(xVals, yVals)
+    plt.show()
+
+
+if __name__ == "__main__":
+    main()
+                \end{lstlisting}
                     \begin{figure}[H]
                         \centering
                         \includegraphics[scale=0.75]{sine_part_b.png}
