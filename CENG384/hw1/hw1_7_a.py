@@ -37,11 +37,11 @@ def main():
 
     for i in even_results.items():
         xVals_even.append(i[0])
-        yVals_even.append(i[1])
+        yVals_even.append(i[1]/2)
     
     for i in odd_results.items():
         xVals_odd.append(i[0])
-        yVals_odd.append(i[1])
+        yVals_odd.append(i[1]/2)
     
 
     plt.stem(xVals_even, yVals_even)
