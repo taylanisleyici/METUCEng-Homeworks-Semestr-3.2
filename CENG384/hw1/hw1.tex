@@ -192,7 +192,7 @@ Homework 1}
                 \item %write the solution of q7a
                  \lstset{language=Python}
                     \lstset{frame=single}
-                    \lstset{caption={Solution code of part b}}
+                    \lstset{caption={Solution code of part a}}
                     \lstset{label={lst:code_direct}}
                     \lstset{basicstyle=\footnotesize}
                     \begin{lstlisting}
@@ -235,11 +235,11 @@ def main():
 
     for i in even_results.items():
         xVals_even.append(i[0])
-        yVals_even.append(i[1])
+        yVals_even.append(i[1]/2)
     
     for i in odd_results.items():
         xVals_odd.append(i[0])
-        yVals_odd.append(i[1])
+        yVals_odd.append(i[1]/2)
     
 
     plt.stem(xVals_even, yVals_even)
