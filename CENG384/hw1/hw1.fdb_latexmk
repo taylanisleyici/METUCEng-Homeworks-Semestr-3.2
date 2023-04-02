@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1680427234 "/home/taylan/METUCEng-Homeworks-Semestr-3.2/CENG384/hw1/hw1.tex" "hw1.pdf" "hw1" 1680427235 0
+["pdflatex"] 1680427423 "/home/taylan/METUCEng-Homeworks-Semestr-3.2/CENG384/hw1/hw1.tex" "hw1.pdf" "hw1" 1680427424 0
   "/home/taylan/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1662626655 2727060 07eb2c9e798ea7ff3aabcd9b37b6320e ""
-  "/home/taylan/METUCEng-Homeworks-Semestr-3.2/CENG384/hw1/hw1.tex" 1680427233 14240 096ba87234b53d83aceb5093bfe20cdc ""
+  "/home/taylan/METUCEng-Homeworks-Semestr-3.2/CENG384/hw1/hw1.tex" 1680427423 14257 961a6b8a70b31e7d34b87403e0e108a5 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1136768653 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -283,8 +283,8 @@
   "chirp_part_a_odd.png" 1680426459 39436 1c29837f72f18766c1891c3060c082cf ""
   "chirp_part_b.png" 1680011190 28172 30495fd95398bb4d29a35eea8a84b272 ""
   "data3a.dat" 1680427205 471 7e25dcfe11038d972b5267f4d057bd9b ""
-  "hw1.aux" 1680427235 1981 98250e896795f4697ee2021552888577 "pdflatex"
-  "hw1.tex" 1680427233 14240 096ba87234b53d83aceb5093bfe20cdc ""
+  "hw1.aux" 1680427424 1981 98250e896795f4697ee2021552888577 "pdflatex"
+  "hw1.tex" 1680427423 14257 961a6b8a70b31e7d34b87403e0e108a5 ""
   "hw1_q1.jpg" 1680426459 77294 6888a13818709482393129e3e0ea1c37 ""
   "hw1_q2.jpeg" 1680427145 130217 9fd93fec096bc6110063a7f5a3bb2339 ""
   "hw1_q5.jpg" 1680426459 92312 ed5ba6b680f52db9b84b4f57866b286a ""
