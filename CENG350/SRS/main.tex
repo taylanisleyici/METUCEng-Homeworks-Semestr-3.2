@@ -1,0 +1,52 @@
+\documentclass{scrreprt}
+\usepackage{float}
+\usepackage[numbers]{natbib}
+\usepackage{listings}
+\usepackage{underscore}
+\usepackage{graphicx}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\hypersetup{
+    pdftitle={Software Requirements Specification},
+    pdfauthor={$<$Cengizhan Deveci, Osman Taylan İşleyici$>$}, % author
+    pdfsubject={TeX and LaTeX}, % subject of the document
+    colorlinks=true, % false: boxed links; true: colored links
+    linkcolor=black, % color of internal links
+    citecolor=black, % color of links to bibliography
+    filecolor=black, % color of file links
+    urlcolor=purple, % color of external links
+    linktoc=page % only page is linked
+}
+
+\usepackage{hyperref}
+\begin{document}
+
+\begin{center}
+    {\bfseries
+        \Huge{AFETBILGI SOFTWARE REQUIREMENTS SPECIFICATION}\\
+        \vspace{1.6cm}
+        Ceng 350\\
+        \vspace{3.6cm}
+    }
+\end{center}
+
+\begin{flushleft}
+    {\bfseries
+        \large{Cengizhan Deveci - 2448322}\\
+        \vspace{0.25cm}
+        \large{Osman Taylan İşleyici}\\
+    }
+\end{flushleft}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\input{introduction.tex}
+\input{references.tex}
+\input{requirements.tex}
+\input{suggestion.tex}
+
+
+\end{document}
