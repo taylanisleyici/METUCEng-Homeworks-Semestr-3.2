@@ -99,13 +99,25 @@
 							"subViews": [
 								{
 									"_type": "LabelView",
+									"_id": "AAAAAAGHsE+i7/Aw56g=",
+									"_parent": {
+										"$ref": "AAAAAAF4loWe1uHCzUE="
+									},
+									"font": "Arial;13;0",
+									"left": 282,
+									"top": 277,
+									"width": 87.4326171875,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
 									"_id": "AAAAAAGHchGseGocAB0=",
 									"_parent": {
 										"$ref": "AAAAAAF4loWe1uHCzUE="
 									},
 									"font": "Arial;13;0",
-									"left": 386,
-									"top": 469,
+									"left": 282,
+									"top": 277,
 									"width": 87.4326171875,
 									"height": 13
 								},
@@ -116,8 +128,8 @@
 										"$ref": "AAAAAAF4loWe1uHCzUE="
 									},
 									"font": "Arial;13;0",
-									"left": 386,
-									"top": 469,
+									"left": 282,
+									"top": 277,
 									"width": 87.4326171875,
 									"height": 13
 								},
@@ -128,8 +140,8 @@
 										"$ref": "AAAAAAF4loWe1uHCzUE="
 									},
 									"font": "Arial;13;0",
-									"left": 386,
-									"top": 474,
+									"left": 282,
+									"top": 282,
 									"width": 87.4326171875,
 									"height": 26,
 									"text": "Google Map API Integration",
@@ -142,14 +154,13 @@
 										"$ref": "AAAAAAF4loWe1uHCzUE="
 									},
 									"font": "Arial;13;0",
-									"left": 104,
-									"top": 152,
+									"top": -40,
 									"height": 13
 								}
 							],
 							"font": "Arial;13;0",
-							"left": 376,
-							"top": 464,
+							"left": 272,
+							"top": 272,
 							"width": 107.4326171875,
 							"height": 46,
 							"nameLabel": {
@@ -166,6 +177,18 @@
 								"$ref": "AAAAAAF4loyzAOI5c8g="
 							},
 							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGHsE+i8PA3ltc=",
+									"_parent": {
+										"$ref": "AAAAAAF4loyzAOI7h0I="
+									},
+									"font": "Arial;13;0",
+									"left": 682,
+									"top": 133,
+									"width": 87.4326171875,
+									"height": 13
+								},
 								{
 									"_type": "LabelView",
 									"_id": "AAAAAAGHchGseGooN2M=",
@@ -232,8 +255,8 @@
 								"$ref": "AAAAAAF4lnwWm+Gc/ZI="
 							},
 							"font": "Arial;13;0",
-							"left": 464,
-							"top": 296,
+							"left": 496,
+							"top": 256,
 							"width": 121,
 							"height": 51,
 							"text": "Reach donation and solidarity campaigns to help"
@@ -246,7 +269,7 @@
 							},
 							"font": "Arial;13;0",
 							"left": 800,
-							"top": 512,
+							"top": 488,
 							"width": 129,
 							"height": 41,
 							"text": "Validate the data is valid and right"
@@ -271,7 +294,7 @@
 								"$ref": "AAAAAAF4lnwWm+Gc/ZI="
 							},
 							"font": "Arial;13;0",
-							"left": 848,
+							"left": 928,
 							"top": 408,
 							"width": 105,
 							"height": 51,
@@ -284,8 +307,8 @@
 								"$ref": "AAAAAAF4lnwWm+Gc/ZI="
 							},
 							"font": "Arial;13;0",
-							"left": 536,
-							"top": 488,
+							"left": 384,
+							"top": 400,
 							"width": 105,
 							"height": 51,
 							"text": "Navigate people to important locations"
@@ -302,13 +325,25 @@
 							"subViews": [
 								{
 									"_type": "LabelView",
+									"_id": "AAAAAAGHsE+i8fBDe2k=",
+									"_parent": {
+										"$ref": "AAAAAAGHchglH2rZyRw="
+									},
+									"font": "Arial;13;0",
+									"left": 1034,
+									"top": 517,
+									"width": 87.4326171875,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
 									"_id": "AAAAAAGHchglIWrf1sc=",
 									"_parent": {
 										"$ref": "AAAAAAGHchglH2rZyRw="
 									},
 									"font": "Arial;13;0",
-									"left": 954,
-									"top": 485,
+									"left": 1034,
+									"top": 517,
 									"width": 87.4326171875,
 									"height": 13
 								},
@@ -319,8 +354,8 @@
 										"$ref": "AAAAAAGHchglH2rZyRw="
 									},
 									"font": "Arial;13;0",
-									"left": 954,
-									"top": 490,
+									"left": 1034,
+									"top": 522,
 									"width": 87.4326171875,
 									"height": 26,
 									"text": "Information Validator",
@@ -333,14 +368,14 @@
 										"$ref": "AAAAAAGHchglH2rZyRw="
 									},
 									"font": "Arial;13;0",
-									"left": 520,
-									"top": 16,
+									"left": 600,
+									"top": 48,
 									"height": 13
 								}
 							],
 							"font": "Arial;13;0",
-							"left": 944,
-							"top": 480,
+							"left": 1024,
+							"top": 512,
 							"width": 107.4326171875,
 							"height": 46,
 							"nameLabel": {
@@ -359,13 +394,25 @@
 							"subViews": [
 								{
 									"_type": "LabelView",
+									"_id": "AAAAAAGHsE+i8fBJOo0=",
+									"_parent": {
+										"$ref": "AAAAAAGHchrPi2rpNSw="
+									},
+									"font": "Arial;13;0",
+									"left": 450,
+									"top": 149,
+									"width": 87.4326171875,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
 									"_id": "AAAAAAGHchrPjGrvBfQ=",
 									"_parent": {
 										"$ref": "AAAAAAGHchrPi2rpNSw="
 									},
 									"font": "Arial;13;0",
-									"left": 338,
-									"top": 229,
+									"left": 450,
+									"top": 149,
 									"width": 87.4326171875,
 									"height": 13
 								},
@@ -376,8 +423,8 @@
 										"$ref": "AAAAAAGHchrPi2rpNSw="
 									},
 									"font": "Arial;13;0",
-									"left": 338,
-									"top": 234,
+									"left": 450,
+									"top": 154,
 									"width": 87.4326171875,
 									"height": 13,
 									"text": "Volunteers",
@@ -390,14 +437,14 @@
 										"$ref": "AAAAAAGHchrPi2rpNSw="
 									},
 									"font": "Arial;13;0",
-									"left": -168,
-									"top": -72,
+									"left": -56,
+									"top": -152,
 									"height": 13
 								}
 							],
 							"font": "Arial;13;0",
-							"left": 328,
-							"top": 224,
+							"left": 440,
+							"top": 144,
 							"width": 107.4326171875,
 							"height": 33,
 							"nameLabel": {
@@ -414,6 +461,18 @@
 								"$ref": "AAAAAAGHchyKp2r9sVY="
 							},
 							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGHsE+i8fBP6XE=",
+									"_parent": {
+										"$ref": "AAAAAAGHchyKp2r/g7s="
+									},
+									"font": "Arial;13;0",
+									"left": 970,
+									"top": 269,
+									"width": 87.4326171875,
+									"height": 13
+								},
 								{
 									"_type": "LabelView",
 									"_id": "AAAAAAGHchyKqGsFx14=",
@@ -482,8 +541,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 679,
-									"top": 497,
+									"left": 297,
+									"top": 393,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -501,7 +560,7 @@
 								"$ref": "AAAAAAF4loQkaeGkLuQ="
 							},
 							"lineStyle": 2,
-							"points": "680:408;680:488;482:488",
+							"points": "680:400;312:400;312:317",
 							"nameLabel": {
 								"$ref": "AAAAAAGHcjGD5Gtkfl4="
 							}
@@ -527,7 +586,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 381,
+									"left": 493,
 									"top": 330,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -546,7 +605,7 @@
 								"$ref": "AAAAAAGHchrPi2rpNSw="
 							},
 							"lineStyle": 2,
-							"points": "381:256;381:351;680:351",
+							"points": "493:176;493:351;680:351",
 							"nameLabel": {
 								"$ref": "AAAAAAGHcjHrPWt8IpI="
 							}
@@ -572,7 +631,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 967,
+									"left": 1007,
 									"top": 359,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -591,7 +650,7 @@
 								"$ref": "AAAAAAGHchyKp2r/g7s="
 							},
 							"lineStyle": 2,
-							"points": "968:296;968:350;776:350",
+							"points": "1008:296;1008:350;776:350",
 							"nameLabel": {
 								"$ref": "AAAAAAGHcjQ5aWutJxE="
 							}
@@ -618,7 +677,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 761,
-									"top": 495,
+									"top": 527,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -636,7 +695,7 @@
 								"$ref": "AAAAAAGHchglH2rZyRw="
 							},
 							"lineStyle": 2,
-							"points": "944:502;776:502;776:408",
+							"points": "1024:534;776:534;776:408",
 							"nameLabel": {
 								"$ref": "AAAAAAGHcjVFSmu9J5A="
 							}
@@ -662,7 +721,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1014,
+									"left": 1092,
 									"top": 401,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -681,7 +740,7 @@
 								"$ref": "AAAAAAF4loQkaeGkLuQ="
 							},
 							"lineStyle": 2,
-							"points": "776:408;1000:408;1000:480",
+							"points": "776:408;1077:408;1077:512",
 							"nameLabel": {
 								"$ref": "AAAAAAGHcjZBzWvQXLE="
 							}
@@ -801,6 +860,246 @@
 							"width": 145,
 							"height": 65,
 							"text": "Get the location of safe gathering places, find active hospitals, food distribution center etc."
+						},
+						{
+							"_type": "DFDExternalEntityView",
+							"_id": "AAAAAAGHsFDdNfB5LZk=",
+							"_parent": {
+								"$ref": "AAAAAAF4lnwWm+Gc/ZI="
+							},
+							"model": {
+								"$ref": "AAAAAAGHsFDdMvB3QCk="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGHsFDdOfB/Ixs=",
+									"_parent": {
+										"$ref": "AAAAAAGHsFDdNfB5LZk="
+									},
+									"fillColor": "#ffff00",
+									"font": "Arial;13;0",
+									"left": 290,
+									"top": 533,
+									"width": 100,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGHsFDdNfB6wm0=",
+									"_parent": {
+										"$ref": "AAAAAAGHsFDdNfB5LZk="
+									},
+									"fillColor": "#ffff00",
+									"font": "Arial;13;0",
+									"left": 290,
+									"top": 538,
+									"width": 100,
+									"height": 26,
+									"text": "Item Donation Locations",
+									"wordWrap": true
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGHsFDdNfB7Fxw=",
+									"_parent": {
+										"$ref": "AAAAAAGHsFDdNfB5LZk="
+									},
+									"fillColor": "#ffff00",
+									"font": "Arial;13;0",
+									"left": -400,
+									"top": -48,
+									"height": 13
+								}
+							],
+							"fillColor": "#ffff00",
+							"font": "Arial;13;0",
+							"left": 280,
+							"top": 528,
+							"width": 120,
+							"height": 56,
+							"nameLabel": {
+								"$ref": "AAAAAAGHsFDdNfB6wm0="
+							}
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGHsFMPHPDEieg=",
+							"_parent": {
+								"$ref": "AAAAAAF4lnwWm+Gc/ZI="
+							},
+							"fontColor": "#757500",
+							"font": "Arial;13;0",
+							"left": 440,
+							"top": 552,
+							"width": 121,
+							"height": 65,
+							"text": "Send the required item information on locations"
+						},
+						{
+							"_type": "DFDExternalEntityView",
+							"_id": "AAAAAAGHsFO2BPDVYVY=",
+							"_parent": {
+								"$ref": "AAAAAAF4lnwWm+Gc/ZI="
+							},
+							"model": {
+								"$ref": "AAAAAAGHsFO2AvDT6do="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGHsFO2BvDbdqE=",
+									"_parent": {
+										"$ref": "AAAAAAGHsFO2BPDVYVY="
+									},
+									"fillColor": "#ffff00",
+									"font": "Arial;13;0",
+									"left": 674,
+									"top": 709,
+									"width": 101,
+									"height": 13
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGHsFO2BPDWMZI=",
+									"_parent": {
+										"$ref": "AAAAAAGHsFO2BPDVYVY="
+									},
+									"fillColor": "#ffff00",
+									"font": "Arial;13;0",
+									"left": 674,
+									"top": 714,
+									"width": 101,
+									"height": 13,
+									"text": "Government",
+									"wordWrap": true
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGHsFO2BPDXU2s=",
+									"_parent": {
+										"$ref": "AAAAAAGHsFO2BPDVYVY="
+									},
+									"fillColor": "#ffff00",
+									"font": "Arial;13;0",
+									"left": -144,
+									"top": 32,
+									"height": 13
+								}
+							],
+							"fillColor": "#ffff00",
+							"font": "Arial;13;0",
+							"left": 664,
+							"top": 704,
+							"width": 121,
+							"height": 57,
+							"nameLabel": {
+								"$ref": "AAAAAAGHsFO2BPDWMZI="
+							}
+						},
+						{
+							"_type": "UMLTextView",
+							"_id": "AAAAAAGHsFQPuvDrrjk=",
+							"_parent": {
+								"$ref": "AAAAAAF4lnwWm+Gc/ZI="
+							},
+							"fontColor": "#757500",
+							"font": "Arial;13;0",
+							"left": 736,
+							"top": 552,
+							"width": 81.53173828125,
+							"height": 142,
+							"text": "Government can send the location of help constantly and calculate arrival time"
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAGHsFTAqvD9h8s=",
+							"_parent": {
+								"$ref": "AAAAAAF4lnwWm+Gc/ZI="
+							},
+							"model": {
+								"$ref": "AAAAAAGHsFTAqfD7nJU="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGHsFTAqvD+7es=",
+									"_parent": {
+										"$ref": "AAAAAAGHsFTAqvD9h8s="
+									},
+									"model": {
+										"$ref": "AAAAAAGHsFTAqfD7nJU="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": 665,
+									"top": 521,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "AAAAAAGHsFTAqvD9h8s="
+									},
+									"edgePosition": 1
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF4loQkaeGkLuQ="
+							},
+							"tail": {
+								"$ref": "AAAAAAGHsFDdNfB5LZk="
+							},
+							"lineStyle": 2,
+							"points": "399:528;680:528;680:408",
+							"nameLabel": {
+								"$ref": "AAAAAAGHsFTAqvD+7es="
+							}
+						},
+						{
+							"_type": "DFDDataFlowView",
+							"_id": "AAAAAAGHsFTTRPEGnOc=",
+							"_parent": {
+								"$ref": "AAAAAAF4lnwWm+Gc/ZI="
+							},
+							"model": {
+								"$ref": "AAAAAAGHsFTTQvEE5Ts="
+							},
+							"subViews": [
+								{
+									"_type": "EdgeLabelView",
+									"_id": "AAAAAAGHsFTTRPEHq2c=",
+									"_parent": {
+										"$ref": "AAAAAAGHsFTTRPEGnOc="
+									},
+									"model": {
+										"$ref": "AAAAAAGHsFTTQvEE5Ts="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": 713,
+									"top": 549,
+									"height": 13,
+									"alpha": 1.5707963267948966,
+									"distance": 15,
+									"hostEdge": {
+										"$ref": "AAAAAAGHsFTTRPEGnOc="
+									},
+									"edgePosition": 1
+								}
+							],
+							"font": "Arial;13;0",
+							"head": {
+								"$ref": "AAAAAAF4loQkaeGkLuQ="
+							},
+							"tail": {
+								"$ref": "AAAAAAGHsFO2BPDVYVY="
+							},
+							"lineStyle": 2,
+							"points": "728:704;728:408",
+							"nameLabel": {
+								"$ref": "AAAAAAGHsFTTRPEHq2c="
+							}
 						}
 					]
 				},
@@ -946,6 +1245,52 @@
 							},
 							"source": {
 								"$ref": "AAAAAAGHchyKp2r9sVY="
+							},
+							"target": {
+								"$ref": "AAAAAAF4loQkaOGiv3U="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDExternalEntity",
+					"_id": "AAAAAAGHsFDdMvB3QCk=",
+					"_parent": {
+						"$ref": "AAAAAAF4lnwWmeGbOEE="
+					},
+					"name": "Item Donation Locations",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAGHsFTAqfD7nJU=",
+							"_parent": {
+								"$ref": "AAAAAAGHsFDdMvB3QCk="
+							},
+							"source": {
+								"$ref": "AAAAAAGHsFDdMvB3QCk="
+							},
+							"target": {
+								"$ref": "AAAAAAF4loQkaOGiv3U="
+							}
+						}
+					]
+				},
+				{
+					"_type": "DFDExternalEntity",
+					"_id": "AAAAAAGHsFO2AvDT6do=",
+					"_parent": {
+						"$ref": "AAAAAAF4lnwWmeGbOEE="
+					},
+					"name": "Government",
+					"ownedElements": [
+						{
+							"_type": "DFDDataFlow",
+							"_id": "AAAAAAGHsFTTQvEE5Ts=",
+							"_parent": {
+								"$ref": "AAAAAAGHsFO2AvDT6do="
+							},
+							"source": {
+								"$ref": "AAAAAAGHsFO2AvDT6do="
 							},
 							"target": {
 								"$ref": "AAAAAAF4loQkaOGiv3U="
