@@ -7,13 +7,46 @@
 \section{Functions}
 
 \section{Usability Requirements}
-
+\begin{itemize}
+    \item The mobile app should run on Android version 7.0+ since about 5 percent of android devices are still running on this version.
+    \item The mobile app should run on IOS 15+ since 96\% of IOS users are using IOS 15 and 16.
+    \item The mobile app should support PDF view for users to be able to see the PDF they Downloaded without any issues.
+    \item Mobile app shall support accessibility modes on Android and IOS for users with disablities.
+    \item Mobile app shall work in sync with AI assistants; Google Assistant, Siri and Bixby.
+    \item Size of the app must be less than 10 megabytes, so that users can download it less than a minute.
+\end{itemize}
 \section{Performance Requirements}
-
+\begin{itemize}
+    \item Mobile app should start in 2 seconds after click, on a mid-level Android and old IOS device.
+    \item Mobile app should cache datas to be able to show them during connection unstablities.
+\end{itemize}
 \section{Logical Database Requirements}
-
+\begin{itemize}
+    \item A local database should be created for mobile app to cache data.
+    \item This database should contain all data available for a selected city.
+\end{itemize}
 \section{Design Constraints}
-
+\begin{itemize}
+    \item Mobile app should be designed in a way that it should not store, collect or send any inappropriate information about user.
+    \item While app is being deleted, all data should be deleted to prevent data leak of users.
+\end{itemize}
 \section{System Attributes}
+\subsection{Reliablity}
+\begin{itemize}
+    \item Fails on mobile application should be less than 5 seconds in 10 minutes of use.
+    \item The app should crash at most once in 20 uses.
+\end{itemize}
+
+\subsection{Availability}
+\begin{itemize}
+    \item Users should be able to use old versions of app after updates for 30 days.
+    \item App should be available for all 3 major operating systems; IpadOS, IOS, Android.
+\end{itemize}
+
+\subsection{Security}
+\begin{itemize}
+    \item App should be running in sandbox mode, ie. It should not reach any data on users device.
+\end{itemize}
 
 \section{Supporting Information}
+All the APIs of afetbilgi.com, and the mobile app Afetbilgi, will be open source and free forever.

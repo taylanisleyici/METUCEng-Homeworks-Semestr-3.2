@@ -3509,7 +3509,8 @@
 					"_parent": {
 						"$ref": "AAAAAAF418PzB+y9aoU="
 					},
-					"name": "Role3"
+					"name": "Role3",
+					"type": ""
 				},
 				{
 					"_type": "UMLAttribute",
@@ -3517,7 +3518,8 @@
 					"_parent": {
 						"$ref": "AAAAAAF418PzB+y9aoU="
 					},
-					"name": "Role4"
+					"name": "Role4",
+					"type": ""
 				},
 				{
 					"_type": "UMLAttribute",
@@ -3525,7 +3527,8 @@
 					"_parent": {
 						"$ref": "AAAAAAF418PzB+y9aoU="
 					},
-					"name": "Role5"
+					"name": "Role5",
+					"type": ""
 				}
 			]
 		}

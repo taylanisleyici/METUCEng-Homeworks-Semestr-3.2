@@ -1,7 +1,10 @@
 \chapter{Specific Requirements}
 
-\section{External Interfaces}
-
+\section{External Interfaces}~\\
+\begin{figure}[H]
+    \includegraphics[scale = 0.5]{assets/ExternalInterfaces.png}
+    \caption[External Interfaces]{External Interfaces of Afetbilgi.com}
+\end{figure}
 \section{Functions}
 \begin{figure}[H]
     \includegraphics[scale=0.5]{assets/UseCaseDiagram.png}
@@ -41,7 +44,7 @@
     \begin{table}[H]
         \begin{tabular}{| m{3cm}| m{10cm} |}
             \hline
-            \textbf{Use case name}    & Seeing Contact info and Location of places                                                                                                                     \\
+            \textbf{Use case name}    & Seeing Contact info and Location of general needings                                                                                                           \\
             \hline
             \textbf{Actors}           & User                                                                                                                                                           \\
             \hline
@@ -69,6 +72,15 @@
         \end{tabular}
         \caption[Contact info and location]{Seeing contact info and location of places}
     \end{table}
+
+    ~\\~\\~\\
+
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[scale=0.5]{assets/ActivityDiagram.png}
+            \caption[Activity Diagram of Seeing Contact info and Location of general needings]{Activity Diagram of Seeing Contact info and Location of general needings}
+        \end{center}
+    \end{figure}
 
     ~\\~\\~\\
 
@@ -131,6 +143,14 @@
         \caption[Location of healthcare services]{Location of healthcare services}
     \end{table}
     ~\\~\\~\\
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[scale = 0.5]{assets/StateDiagram.png}
+            \caption[State Diagram of Getting Locations of Healthcare Services]{State Diagram of Getting Locations of Healthcare Services}
+        \end{center}
+    \end{figure}
+
+    ~\\~\\~\\
     \begin{table}[H]
         \begin{tabular}{| m{3cm}| m{10cm} |}
             \hline
@@ -185,7 +205,16 @@
         \end{tabular}
         \caption[Creating pdf]{Creating pdf}
     \end{table}
+
     ~\\~\\~\\
+    \begin{figure}[H]
+        \begin{center}
+            \includegraphics[scale = 0.5]{assets/SequenceDiagram.png}
+            \caption[Sequence Diagram of Creating PDF]{Sequence Diagram of Creating PDF}
+        \end{center}
+    \end{figure}
+    ~\\~\\~\\
+
     \begin{table}[H]
         \begin{tabular}{| m{3cm}| m{10cm} |}
             \hline
@@ -316,17 +345,13 @@
 \begin{itemize}
     \item During a restart, the site should be available in 3 minutes.
     \item Data backups should be done in 3 times in a day to prevent a database error.
+    \item Site should be available on any device with a browser.
 \end{itemize}
 
 \subsection{Security}
 \begin{itemize}
     \item Only admins and maintainers should be able to change database.,
     \item Only admins should be able to add a new kind of data to database.
-\end{itemize}
-
-\subsection{Availability}
-\begin{itemize}
-    \item Site should be available on any device with a browser.
 \end{itemize}
 
 

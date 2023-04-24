@@ -28,7 +28,7 @@
 			"_parent": {
 				"$ref": "AAAAAAFF+h6SjaM2Hec="
 			},
-			"name": "Receive Order - Activity Digram",
+			"name": "Get Locations Of General Needings",
 			"ownedElements": [
 				{
 					"_type": "UMLActivityDiagram",
@@ -36,7 +36,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF5JQadGHEQf5I="
 					},
-					"name": "Receive Order - Activity Digram",
+					"name": "Get Locations of General Needings",
 					"ownedViews": [
 						{
 							"_type": "UMLControlNodeView",
@@ -109,9 +109,9 @@
 											"font": "Arial;13;0",
 											"left": -208,
 											"top": -48,
-											"width": 220.30810546875,
+											"width": 244.2197265625,
 											"height": 13,
-											"text": "(from Receive Order - Activity Digram)"
+											"text": "(from Get Locations Of General Needings)"
 										},
 										{
 											"_type": "LabelView",
@@ -543,9 +543,9 @@
 											"font": "Arial;13;0",
 											"left": -64,
 											"top": 208,
-											"width": 220.30810546875,
+											"width": 244.2197265625,
 											"height": 13,
-											"text": "(from Receive Order - Activity Digram)"
+											"text": "(from Get Locations Of General Needings)"
 										},
 										{
 											"_type": "LabelView",
@@ -740,9 +740,9 @@
 											"font": "Arial;13;0",
 											"left": -384,
 											"top": -48,
-											"width": 220.30810546875,
+											"width": 244.2197265625,
 											"height": 13,
-											"text": "(from Receive Order - Activity Digram)"
+											"text": "(from Get Locations Of General Needings)"
 										},
 										{
 											"_type": "LabelView",
@@ -1143,9 +1143,9 @@
 											"font": "Arial;13;0",
 											"left": -64,
 											"top": 304,
-											"width": 220.30810546875,
+											"width": 244.2197265625,
 											"height": 13,
-											"text": "(from Receive Order - Activity Digram)"
+											"text": "(from Get Locations Of General Needings)"
 										},
 										{
 											"_type": "LabelView",
@@ -1339,9 +1339,9 @@
 											"font": "Arial;13;0",
 											"left": -176,
 											"top": -48,
-											"width": 220.30810546875,
+											"width": 244.2197265625,
 											"height": 13,
-											"text": "(from Receive Order - Activity Digram)"
+											"text": "(from Get Locations Of General Needings)"
 										},
 										{
 											"_type": "LabelView",
@@ -1741,9 +1741,9 @@
 											"font": "Arial;13;0",
 											"left": -144,
 											"top": -16,
-											"width": 220.30810546875,
+											"width": 244.2197265625,
 											"height": 13,
-											"text": "(from Receive Order - Activity Digram)"
+											"text": "(from Get Locations Of General Needings)"
 										},
 										{
 											"_type": "LabelView",
