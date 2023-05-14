@@ -5,6 +5,8 @@
 \usepackage{graphicx}
 \usepackage{float}
 
+\usepackage{listings}
+
 \usepackage{tkz-euclide}
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -24,8 +26,8 @@
   İşleyici, Osman Taylan\\
   \texttt{e2449496@ceng.metu.edu.tr}
   \and
-  LastName2, FirstName2\\
-  \texttt{exxxxxxx@ceng.metu.edu.tr}
+  Deveci, Cengizhan\\
+  \texttt{e2448322@ceng.metu.edu.tr}
 }
 
 \title{CENG 384 - Signals and Systems for Computer Engineers \\
@@ -41,6 +43,21 @@ Homework 3}
 \begin{enumerate}
 
 \item %write the solution of q1
+Let's say x(t) = $\sum_{k = -\infty}^{\infty}a_ke^{jkw_0t}$ \\
+
+Integrate both side \\
+
+$\int_{-\infty}^{t}x(s)ds = \int_{-\infty}^{t}\sum_{k = -\infty}^{\infty}a_ke^{jkw_0s}ds$ \\
+
+$=\sum_{k = -\infty}^{\infty}\int_{-\infty}^{t}a_ke^{jkw_0s}ds = \sum_{k = -\infty}^{\infty}a_k\int_{-\infty}^{t}e^{jkw_0s}ds$ \\
+
+$=\sum_{k = -\infty}^{\infty}a_k [\frac{e^{jkw_0s}}{jkw_0}|_{-\infty}^t]$ \\
+
+$=\sum_{k = -\infty}^{\infty}a_k [\frac{e^{jkw_0t}}{jkw_0} - 0]$ \\
+
+$=\sum_{k = -\infty}^{\infty}a_k \frac{e^{jkw_0t}}{jkw_0}$ \\
+
+So the coefficients become $(\frac{1}{jkw_0})a_k$. $w_0 = \frac{2*\pi}{T}$. Thus, the coefficients is $(\frac{1}{jk\frac{2*\pi}{T}})a_k$
 
 \item %write the solution of q2  
 	\begin{enumerate}
@@ -51,6 +68,26 @@ Homework 3}
     \end{enumerate}
 
 \item %write the solution of q3
+
+We know that $a_k = \frac{1}{T}\int_Tx(t)e^{-jkw_0t}dt$ \\
+
+Let's take 1 period from -0.5 to 3.5. The period is 4 in this signal. We can write the $a_k$ as \\
+
+$a_k = \frac{1}{T}\int_{-0.5}^{3.5}(2u(t) - 2u(t-1) - 2u(t-2) + 2u(t-3))e^{-jkw_0t}dt$ \\
+
+$a_k = \frac{1}{T}(\int_{0}^{1}2e^{-jkw_0t}dt + \int_{1}^{2}0e^{-jkw_0t}dt + \int_{2}^{3}-2e^{-jkw_0t}dt + \int_{3}^{3.5}0e^{-jkw_0t}dt)$ \\
+
+$\frac{1}{4} [(\frac{2e^{-jkw_0t}}{-jkw_0}|^1_0) + (\frac{-2e^{-jkw_0t}}{-jkw_0}|^3_2)]$ \\
+
+$= \frac{1}{4} [(\frac{2e^{-jkw_0}}{-jkw_0}) - \frac{2}{-jkw_0} + (\frac{2e^{-jkw_0 3}}{jkw_0}) - (\frac{2e^{-jkw_0 2}}{jkw_0})]$ \\
+
+$= \frac{1}{4} [\frac{-2e^{-jkw_0} + 2 + 2e^{-3jkw_0} - 2e^{-2jkw_0}}{jkw_0}]$ \\
+
+$a_k = \frac{e^{-3jkw_0} - e^{-2jkw_0} -e^{jkw_0} + 1}{2jkw_0}$ \\
+
+$x(t) = \sum_{k=-\infty}^{\infty}a_ke^{jkw_0t} = \sum_{k=-\infty}^{\infty}\frac{e^{-3jkw_0} - e^{-2jkw_0} -e^{-jkw_0} + 1}{2jkw_0}e^{-jkw_0t}$ \\
+
+$= \sum_{k=-\infty}^{\infty}\frac{e^{-2jkw_0} - e^{-jkw_0} -e^{jkw_0} + 1}{2jkw_0}$
 
 \item %write the solution of q4
     \begin{enumerate}   
@@ -80,16 +117,83 @@ Homework 3}
     
     \item $\dot{y}(t) + y(t) = x(t)$, we should first find the particular solution of this system. We should write $x(t)$ as $e^{\lambda t}u(t)$ and $y(t)$ as $Kx(t)$ than solve the equation for K. $(\lambda K  + K)e^{\lambda t}u(t) = e^{\lambda t} u(t)$, $\lambda K + K = 1$, $K = \frac{1}{1+\lambda}$. The pole of transfer function is the eigenvalue of system. Which is -1 for this question.
 	\item %write the solution of q4c
+	$\frac{dy(t)}{dt} + y(t) = x(t)$ \\
+
+    $y(t) = x(t) * h(t) = \int_{-\infty}^{\infty}x(\tau)h(t-\tau)d\tau$ \\
+
+    $=\int_{-\infty}^{\infty}h(\tau)x(t-\tau)d\tau = \int_{-\infty}^{\infty}h(\tau)(\sum_{k}a_k e^{jkw_0 (t-\tau)}) d\tau$ \\
+
+    $=\sum_{k}a_k e^{jkw_0 t}\int h(\tau)e^{-jkw_0 \tau} d\tau$ \\
+
+    $=\sum_{k}a_k H(jkw_0)e^{jkw_0 t}$ \\
+
+    $\sum_{k}a_k H(jkw_0)jkw_0 e^{jkw_0 t} + \sum_{k}a_k H(jkw_0) e^{jkw_0 t} = \sum_{k}a_k e^{jkw_0 t} $ \\
+
+    $\sum_{k} a_k H(jkw_0)jkw_0 e^{jkw_0 t} + a_k H(jkw_0) e^{jkw_0 t} - a_k e^{jkw_0 t} = 0$\\
+
+    $\sum_{k} a_k e^{jkw_0 t}(H(jkw_0) jkw_0 + H(jkw_0) - 1) = 0$ \\
+
+    $H(jkw_0) = \frac{1}{jkw_0 + 1}$ \\
+
+    $b_k = \frac{a_k}{jkw_0 + 1}$ \\
     \item %write the solution of q4d
+    $y(t) = \sum_kb_ke^{jkw_0 t}$ \\
+    
+    $y(t) = \sum_k \frac{a_k e^{jkw_0 t}}{hkw_ 0 + 1}$
+        
     \end{enumerate}
 
 \item %write the solution of q5
     \begin{enumerate}
     % Write your solutions in the following items.
     \item %write the solution of q5a
+    $x[n] = sin(\frac{\pi}{2}n)$ \\
+    
+    $x[n] = \frac{1}{2j}(e^{j\frac{\pi}{2}n} - e^{-j\frac{\pi}{2}n})$ Take $w_0 = \frac{\pi}{2}$ \\
+
+    So $=> a_1 = \frac{1}{2j} $ and $a_{-1} = \frac{-1}{2j}$ \\
+
+    $a_1 = \frac{1}{2j} = \frac{-j}{2}$ \\
+
+    $a_{-1} = \frac{-1}{2j} = \frac{j}{2}$ \\
+
     \item %write the solution of q5b
+    $y[n] = 1 + cos(\frac{\pi}{2}n)$ \\
+
+    $= 1 + \frac{1}{2}(e^{j\frac{\pi}{2}n} + e^{-j\frac{\pi}{2}n})$ Take $w_0 = \frac{\pi}{2}$ \\
+
+    $b_0 = 1$, $b_1 = b_{-1} = \frac{1}{2}$\\
+
 	\item %write the solution of q5c
+	$x[n] \longleftrightarrow^{F.S.} a_k$ \\
+
+    $y[n] \longleftrightarrow^{F.S.} b_k$ \\
+
+    $z[n] = x[n]y[n] \longleftrightarrow^{F.S.} c_k = \sum_{l=<N>}a_l b_{k-l}$ \\
+
+    $c_k = \sum_{l = 0}^{3}a_l b_k-l$ since N = 4 \\
+
+    $=a_0 b_k + a_1 b_{k-1} + a_2 b_{k-2} + a_3 b_{k-3} = a_1 b_{k-1} + a_3 b_{k-3}$ \\
+
+    $c_0 = a_1 b_{-1} + a_3 b_{-3} = \frac{-j}{2}\frac{1}{2} + \frac{j}{2}\frac{1}{2} = 0$
+
+    $c_1 = a_1 b_{0} + a_3 b_{-2} = \frac{-j}{2}1 + 0 = \frac{-j}{2}$
+
+    $c_2 = a_1 b_{1} + a_3 b_{-1} = \frac{-j}{2}\frac{1}{2} + \frac{j}{2}\frac{1}{2} = 0$
+
+    $c_3 = a_1 b_{2} + a_3 b_{0} = \frac{-j}{2}0 + \frac{j}{2}1 = \frac{j}{2}$
 	\item %write the solution of q5d
+	$x[n]y[n] = \sin(\frac{\pi}{2}n)(1 + cos(\frac{\pi}{2}n))$ \\
+
+    $= sin(\frac{\pi}{2}n) + sin(\frac{\pi}{2}n) cos(\frac{\pi}{2}n) = sin(\frac{\pi}{2}n) + \frac{sin\pi n}{2}$ and $ sin\pi n$ is zero. Therefore \\
+
+    $= sin(\frac{\pi}{2}n)$\\
+
+    like part a\\
+
+    $z[n] = \frac{1}{2j}(e^{j\frac{\pi}{2}n} - e^{-j\frac{\pi}{2}n})$\\
+
+    $c_1 = \frac{-j}{2}$ and $c_{-1} = c_{3} = \frac{j}{2}$. So as expected the result is the same with part c.
     \end{enumerate}    
     
 \item %write the solution of q6
@@ -148,12 +252,223 @@ Homework 3}
     \begin{enumerate}
     % Write your solutions in the following items.
     \item %write the solution of q7a
+    In CT LTI system \\
+
+    $e^{st} \rightarrow H(s)e^{st}$ \\
+
+    $= e^{st} \int_{-\infty}^{\infty}h(\tau)e^{-s\tau}d\tau$. \\
+    
+    $y(jw) = x(jw) * H(jw)$. \\
+    
+    If y(t) = x(t). We can say that y(jw) = x(jw). Then we can say that the coefficients should be identical.
+
+    That implies that system does not change in any value. It can be possible if the transfer function H = 1 so that $|w| \leq 80$.
+
     \item %write the solution of q7b
+    In contrary to part a. If the $y(t) \neq x(t)$ then there should be some values w where the transfer function not equal to 1. As a result we can say that for w that there should be some values of w that $|w| > 80$.
     \end{enumerate}    
 	
 \item %write the solution of q8	
+    \begin{enumerate}
+        \item 
+        ~\\
+        \begin{figure}[H]
+            \includegraphics[scale=0.75]{fourierCoefFunc.jpeg}
+            \caption{Fourier Coefficients Calculate function}
+        \end{figure}
+        \item 
+        ~\\
+        \begin{figure}[H]
+            \includegraphics[scale=0.75]{approximateFunc.jpeg}
+            \caption{Approximation function}
+        \end{figure}
+        \item 
+        ~\\
+        \begin{figure}[H]
+            \includegraphics[scale=0.75]{originalSignal.png}
+            \caption{Original signal}
+        \end{figure}
 
+        \begin{figure}[H]
+            \includegraphics[scale=0.75]{approximated_n=1.png}
+            \caption{Approximated signal n = 1}
+        \end{figure}
+        \begin{figure}[H]
+            \includegraphics[scale=0.75]{approximated_n=5.png}
+            \caption{Approximated signal n = 5}
+        \end{figure}
+        \begin{figure}[H]
+            \includegraphics[scale=0.75]{approximated_n=10.png}
+            \caption{Approximated signal n = 10}
+        \end{figure}
+        \begin{figure}[H]
+            \includegraphics[scale=0.75]{approximated_n=50.png}
+            \caption{Approximated signal n = 50}
+        \end{figure}
+        \begin{figure}[H]
+            \includegraphics[scale=0.75]{approximated_n=100.png}
+            \caption{Approximated signal n = 100}
+        \end{figure}
+        \item 
+        ~\\
+        \begin{figure}[H]
+            \includegraphics[scale=0.75]{sawToothFunc.jpeg}
+            \caption{Sawtooth function}
+        \end{figure}
+        \begin{figure}[H]
+            \includegraphics[scale=0.75]{approximatedSaw_n=1.png}
+            \caption{Approximated Saw signal n = 1}
+        \end{figure}
+        \begin{figure}[H]
+            \includegraphics[scale=0.75]{approximatedSaw_n=5.png}
+            \caption{Approximated Saw signal n = 5}
+        \end{figure}
+        \begin{figure}[H]
+            \includegraphics[scale=0.75]{approximatedSaw_n=10.png}
+            \caption{Approximated Saw signal n = 10}
+        \end{figure}
+        \begin{figure}[H]
+            \includegraphics[scale=0.75]{approximatedSaw_n=50.png}
+            \caption{Approximated Saw signal n = 50}
+        \end{figure}
+        \begin{figure}[H]
+            \includegraphics[scale=0.75]{approximatedSaw_n=100.png}
+            \caption{Approximated Saw signal n = 100}
+        \end{figure}
+        When we increase the n, the result will become more as expected signal.
+    \end{enumerate}
+
+    \lstset{language=Python}
+    \lstset{frame=single}
+    \lstset{caption={Solution code}}
+    \lstset{label={lst:code_direct}}
+    \lstset{basicstyle=\footnotesize}
+    \begin{lstlisting}
+    import matplotlib.pyplot as plt
+    import numpy as np
+    import scipy.signal as sp
+
+    def fourierCoefficients(signal, period, count):
+        coefficients = []
+        coefficients.append(np.mean(signal))
+
+        for k in range(1, count + 1):
+            value = 0
+            for n in range(len(signal)):
+                value += (signal[n] * np.cos(2 * np.pi * k * (n * period / len(signal)) / period))
+            coefficients.append(2 / len(signal) * value)
+
+        for k in range(1, count + 1):
+            value = 0
+            for n in range(len(signal)):
+                value += (signal[n] * np.sin(2 * np.pi * k * (n * period / len(signal)) / period))
+            coefficients.append(2 / len(signal) * value)
+        return coefficients
+
+    def approximate(coefficients, period, count):
+        result = np.empty(count)
+        result.fill(coefficients[0])
+
+
+        coef_num = (len(coefficients) - 1) // 2
+        for k in range(1, coef_num + 1):
+            for n in range(count):
+                result[n] += coefficients[k] * np.cos(2 * np.pi * k * (n * period / count) / period)
+                result[n] += coefficients[k + coef_num] * np.sin(2 * np.pi * k * (n * period / count) / period)
+        
+        return result
+
+    def sawtooth():
+        result = np.empty(1000)
+        t = np.linspace(-0.5, 0.5, 1000)
+        for i in range(len(t)):
+            if(t[i] < 0):
+                result[i] = 1 + 2 * t[i]
+            else:
+                result[i] = -1 - 2 * t[i]
+        return result
+
+    def main():
+        signal = []
+        for i in range(500):
+            signal.append(-1)
+        for i in range(500):
+            signal.append(1)
+
+        plt.plot(np.linspace(-0.5, 0.5, 1000), signal, label='Original')
+        plt.show()
+
+        coef = fourierCoefficients(signal, 1, 1)
+        approximation = approximate(coef, 1, 1000)
+        plt.plot(np.linspace(-0.5, 0.5, 1000), signal, label='Original')
+        plt.plot(np.linspace(-0.5, 0.5, 1000), approximation, label='Approximation')
+        plt.show()
+
+        coef = fourierCoefficients(signal, 1, 5)
+        approximation = approximate(coef, 1, 1000)
+        plt.plot(np.linspace(-0.5, 0.5, 1000), signal, label='Original')
+        plt.plot(np.linspace(-0.5, 0.5, 1000), approximation, label='Approximation')
+        plt.show()
+
+        coef = fourierCoefficients(signal, 1, 10)
+        approximation = approximate(coef, 1, 1000)
+        plt.plot(np.linspace(-0.5, 0.5, 1000), signal, label='Original')
+        plt.plot(np.linspace(-0.5, 0.5, 1000), approximation, label='Approximation')
+        plt.show()
+
+
+        coef = fourierCoefficients(signal, 1, 50)
+        approximation = approximate(coef, 1, 1000)
+        plt.plot(np.linspace(-0.5, 0.5, 1000), signal, label='Original')
+        plt.plot(np.linspace(-0.5, 0.5, 1000), approximation, label='Approximation')
+        plt.show()
+
+        coef = fourierCoefficients(signal, 1, 100)
+        approximation = approximate(coef, 1, 1000)
+        plt.plot(np.linspace(-0.5, 0.5, 1000), signal, label='Original')
+        plt.plot(np.linspace(-0.5, 0.5, 1000), approximation, label='Approximation')
+        plt.show()
+
+        signalSaw = sawtooth()
+
+        coef = fourierCoefficients(signalSaw, 1, 1)
+        approximation = approximate(coef, 1, 1000)
+        plt.plot(np.linspace(-0.5, 0.5, 1000), signalSaw, label='Original')
+        plt.plot(np.linspace(-0.5, 0.5, 1000), approximation, label='Approximation')
+        plt.show()
+
+        coef = fourierCoefficients(signalSaw, 1, 5)
+        approximation = approximate(coef, 1, 1000)
+        plt.plot(np.linspace(-0.5, 0.5, 1000), signalSaw, label='Original')
+        plt.plot(np.linspace(-0.5, 0.5, 1000), approximation, label='Approximation')
+        plt.show()
+
+        coef = fourierCoefficients(signalSaw, 1, 10)
+        approximation = approximate(coef, 1, 1000)
+        plt.plot(np.linspace(-0.5, 0.5, 1000), signalSaw, label='Original')
+        plt.plot(np.linspace(-0.5, 0.5, 1000), approximation, label='Approximation')
+        plt.show()
+
+
+        coef = fourierCoefficients(signalSaw, 1, 50)
+        approximation = approximate(coef, 1, 1000)
+        plt.plot(np.linspace(-0.5, 0.5, 1000), signalSaw, label='Original')
+        plt.plot(np.linspace(-0.5, 0.5, 1000), approximation, label='Approximation')
+        plt.show()
+
+        coef = fourierCoefficients(signalSaw, 1, 100)
+        approximation = approximate(coef, 1, 1000)
+        plt.plot(np.linspace(-0.5, 0.5, 1000), signalSaw, label='Original')
+        plt.plot(np.linspace(-0.5, 0.5, 1000), approximation, label='Approximation')
+        plt.show()
+
+    if __name__ == "__main__":
+        main()
+                        
+    \end{lstlisting}
 \end{enumerate}
+
+
 
 
 \end{document}
