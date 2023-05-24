@@ -1,0 +1,684 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$/tmp/xcXhaeCnJ.o
+idloc IDLOC 5 200000 200000 8 1
+init CODE 0 E E 4 1
+reset_vec CODE 0 0 0 4 1
+config CONFIG 4 300000 300000 E 1
+$dist/default/debug/THE3.X.debug.o
+cinit CODE 0 656 656 40 1
+idloc IDLOC 5 200000 200000 8 1
+intcode_body CODE 0 2E6 2E6 164 1
+text0 CODE 0 44A 44A D0 1
+text1 CODE 0 12 12 16A 1
+text2 CODE 0 51A 51A 74 1
+text3 CODE 0 7C4 7C4 24 1
+text4 CODE 0 696 696 38 1
+text5 CODE 0 6CE 6CE 32 1
+text6 CODE 0 700 700 32 1
+text7 CODE 0 764 764 30 1
+text9 CODE 0 17C 17C 16A 1
+text10 CODE 0 58E 58E 74 1
+text11 CODE 0 794 794 30 1
+text12 CODE 0 732 732 32 1
+idataCOMRAM CODE 0 602 602 54 1
+cstackCOMRAM COMRAM 1 55 55 13 1
+cstackBANK0 BANK0 1 C6 C6 A 1
+temp COMRAM 1 6B 6B 1 1
+bssBANK0 BANK0 1 80 80 46 1
+intcode CODE 0 8 8 6 1
+dataCOMRAM COMRAM 1 1 1 54 1
+bssCOMRAM COMRAM 1 68 68 3 1
+config CONFIG 4 300000 300000 E 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM D0-F7F 1
+SFR F80-FFF 1
+BANK0 D0-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 4-7 1
+CONST 7E8-FFFF 1
+STACK D0-F7F 1
+SMALLCONST 1000-FFFF 1
+CODE 4-7 1
+CODE 7E8-FFFF 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-F7F 1
+BIGRAM 6C-7F 1
+BIGRAM D0-F7F 1
+COMRAM 6C-7F 1
+EEDATA F00000-F003FF 1
+MEDIUMCONST 1000-FFFF 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/debug/THE3.X.debug.o
+8 intcode CODE >2504:/tmp/xcXKOacHO.s
+8 intcode CODE >30:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+732 text12 CODE >58:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+734 text12 CODE >59:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+736 text12 CODE >60:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+738 text12 CODE >61:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+73C text12 CODE >62:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+73E text12 CODE >63:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+74E text12 CODE >64:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+750 text12 CODE >65:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+760 text12 CODE >66:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+762 text12 CODE >67:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+794 text11 CODE >48:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+796 text11 CODE >49:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+798 text11 CODE >50:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+79A text11 CODE >51:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+79E text11 CODE >52:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+7A0 text11 CODE >53:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+7B0 text11 CODE >54:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+7B2 text11 CODE >55:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+7C2 text11 CODE >56:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+58E text10 CODE >72:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+590 text10 CODE >73:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+5A0 text10 CODE >74:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+5AA text10 CODE >75:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+5AE text10 CODE >76:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+5C0 text10 CODE >77:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+5CA text10 CODE >78:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+5CE text10 CODE >79:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+5E0 text10 CODE >80:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+5EA text10 CODE >81:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+5EE text10 CODE >83:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+5F8 text10 CODE >85:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+5FC text10 CODE >86:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+600 text10 CODE >87:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+17C text9 CODE >63:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+17C text9 CODE >65:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+184 text9 CODE >67:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+19C text9 CODE >69:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+1B2 text9 CODE >71:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+1E0 text9 CODE >72:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+1E6 text9 CODE >73:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+1EA text9 CODE >76:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+218 text9 CODE >77:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+222 text9 CODE >82:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+250 text9 CODE >83:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+254 text9 CODE >86:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+25A text9 CODE >87:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+25E text9 CODE >89:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+264 text9 CODE >90:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+268 text9 CODE >92:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+26E text9 CODE >93:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+272 text9 CODE >95:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+278 text9 CODE >96:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+27C text9 CODE >98:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+282 text9 CODE >99:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+286 text9 CODE >100:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+2CA text9 CODE >102:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+2E4 text9 CODE >103:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+2E6 intcode_body CODE >30:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+2F0 intcode_body CODE >32:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+2FE intcode_body CODE >35:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+302 intcode_body CODE >36:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+304 intcode_body CODE >38:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+312 intcode_body CODE >40:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+320 intcode_body CODE >42:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+35A intcode_body CODE >44:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+368 intcode_body CODE >46:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+3A4 intcode_body CODE >48:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+3B2 intcode_body CODE >50:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+3EE intcode_body CODE >52:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+3FC intcode_body CODE >54:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+432 intcode_body CODE >56:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+438 intcode_body CODE >57:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+43C intcode_body CODE >59:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+43E intcode_body CODE >61:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+764 text7 CODE >48:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+766 text7 CODE >49:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+768 text7 CODE >50:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+76A text7 CODE >51:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+76E text7 CODE >52:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+770 text7 CODE >53:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+780 text7 CODE >54:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+782 text7 CODE >55:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+792 text7 CODE >56:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+700 text6 CODE >108:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+700 text6 CODE >109:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+702 text6 CODE >110:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+704 text6 CODE >111:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+708 text6 CODE >113:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+70A text6 CODE >114:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+70C text6 CODE >115:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+712 text6 CODE >116:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+718 text6 CODE >117:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+71E text6 CODE >118:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+724 text6 CODE >119:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+72A text6 CODE >120:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+730 text6 CODE >121:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+6CE text5 CODE >58:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+6D0 text5 CODE >59:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+6D2 text5 CODE >60:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+6D4 text5 CODE >61:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+6D8 text5 CODE >62:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+6DA text5 CODE >63:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+6EA text5 CODE >64:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+6EC text5 CODE >65:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+6FC text5 CODE >66:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+6FE text5 CODE >67:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+696 text4 CODE >129:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+698 text4 CODE >135:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+6A4 text4 CODE >136:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+6A8 text4 CODE >137:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+6BA text4 CODE >138:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+6CC text4 CODE >142:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+7C4 text3 CODE >35:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7C4 text3 CODE >37:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7C6 text3 CODE >38:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7C8 text3 CODE >39:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7CA text3 CODE >40:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7CC text3 CODE >42:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7CE text3 CODE >43:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7D0 text3 CODE >45:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7D2 text3 CODE >46:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7D4 text3 CODE >47:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7D6 text3 CODE >56:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7D8 text3 CODE >57:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7DA text3 CODE >58:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7DC text3 CODE >60:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7DE text3 CODE >61:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7E0 text3 CODE >62:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7E2 text3 CODE >64:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7E4 text3 CODE >66:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+7E6 text3 CODE >68:/home/ceng33620232/MPLABXProjects/THE3.X/adc.h
+51A text2 CODE >72:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+51C text2 CODE >73:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+52C text2 CODE >74:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+536 text2 CODE >75:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+53A text2 CODE >76:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+54C text2 CODE >77:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+556 text2 CODE >78:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+55A text2 CODE >79:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+56C text2 CODE >80:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+576 text2 CODE >81:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+57A text2 CODE >83:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+584 text2 CODE >85:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+588 text2 CODE >86:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+58C text2 CODE >87:/home/ceng33620232/MPLABXProjects/THE3.X/lcd.h
+12 text1 CODE >63:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+12 text1 CODE >65:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+1A text1 CODE >67:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+32 text1 CODE >69:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+48 text1 CODE >71:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+76 text1 CODE >72:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+7C text1 CODE >73:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+80 text1 CODE >76:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+AE text1 CODE >77:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+B8 text1 CODE >82:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+E6 text1 CODE >83:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+EA text1 CODE >86:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+F0 text1 CODE >87:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+F4 text1 CODE >89:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+FA text1 CODE >90:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+FE text1 CODE >92:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+104 text1 CODE >93:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+108 text1 CODE >95:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+10E text1 CODE >96:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+112 text1 CODE >98:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+118 text1 CODE >99:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+11C text1 CODE >100:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+160 text1 CODE >102:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+17A text1 CODE >103:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+44A text0 CODE >106:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+44A text0 CODE >108:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+44E text0 CODE >110:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+452 text0 CODE >112:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+460 text0 CODE >113:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+46E text0 CODE >114:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+47C text0 CODE >115:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+48A text0 CODE >116:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+498 text0 CODE >117:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4A6 text0 CODE >118:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4B4 text0 CODE >119:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4C2 text0 CODE >121:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4CE text0 CODE >125:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4CE text0 CODE >127:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4D0 text0 CODE >128:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4D2 text0 CODE >129:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4D4 text0 CODE >130:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4D6 text0 CODE >131:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4D8 text0 CODE >134:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4DA text0 CODE >135:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4DC text0 CODE >136:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4DE text0 CODE >137:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4E0 text0 CODE >138:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4E2 text0 CODE >139:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4E4 text0 CODE >140:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4E6 text0 CODE >141:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4E8 text0 CODE >143:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4EA text0 CODE >144:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4EC text0 CODE >145:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4EE text0 CODE >146:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4F0 text0 CODE >156:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+4F4 text0 CODE >161:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+504 text0 CODE >163:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+50A text0 CODE >164:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+50E text0 CODE >166:/home/ceng33620232/MPLABXProjects/THE3.X/main.c
+656 cinit CODE >614:/tmp/xcXKOacHO.s
+656 cinit CODE >616:/tmp/xcXKOacHO.s
+656 cinit CODE >619:/tmp/xcXKOacHO.s
+656 cinit CODE >718:/tmp/xcXKOacHO.s
+658 cinit CODE >719:/tmp/xcXKOacHO.s
+65A cinit CODE >720:/tmp/xcXKOacHO.s
+65C cinit CODE >721:/tmp/xcXKOacHO.s
+65E cinit CODE >722:/tmp/xcXKOacHO.s
+660 cinit CODE >723:/tmp/xcXKOacHO.s
+662 cinit CODE >724:/tmp/xcXKOacHO.s
+666 cinit CODE >725:/tmp/xcXKOacHO.s
+66A cinit CODE >726:/tmp/xcXKOacHO.s
+66A cinit CODE >727:/tmp/xcXKOacHO.s
+66C cinit CODE >728:/tmp/xcXKOacHO.s
+670 cinit CODE >729:/tmp/xcXKOacHO.s
+672 cinit CODE >730:/tmp/xcXKOacHO.s
+674 cinit CODE >731:/tmp/xcXKOacHO.s
+676 cinit CODE >735:/tmp/xcXKOacHO.s
+67A cinit CODE >736:/tmp/xcXKOacHO.s
+67C cinit CODE >737:/tmp/xcXKOacHO.s
+67C cinit CODE >738:/tmp/xcXKOacHO.s
+67E cinit CODE >739:/tmp/xcXKOacHO.s
+680 cinit CODE >740:/tmp/xcXKOacHO.s
+682 cinit CODE >743:/tmp/xcXKOacHO.s
+684 cinit CODE >744:/tmp/xcXKOacHO.s
+686 cinit CODE >745:/tmp/xcXKOacHO.s
+688 cinit CODE >751:/tmp/xcXKOacHO.s
+688 cinit CODE >753:/tmp/xcXKOacHO.s
+68A cinit CODE >754:/tmp/xcXKOacHO.s
+68C cinit CODE >756:/tmp/xcXKOacHO.s
+68E cinit CODE >757:/tmp/xcXKOacHO.s
+690 cinit CODE >758:/tmp/xcXKOacHO.s
+692 cinit CODE >759:/tmp/xcXKOacHO.s
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+_selected_teamB_player_with_frisbee 25 0 COMRAM 1 dataCOMRAM dist/default/debug/THE3.X.debug.o
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug/THE3.X.debug.o
+__Hspace_0 1000 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__Hspace_1 D0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__Hspace_2 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__Hspace_4 60000E 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+LCDDat@dat 61 0 COMRAM 1 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+__size_ofi2_LCDCmd 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__size_ofi2_LCDDat 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__end_of_LCDAddSpecialCharacter 6CE 0 CODE 0 text4 dist/default/debug/THE3.X.debug.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/debug/THE3.X.debug.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcXhaeCnJ.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug/THE3.X.debug.o
+__end_of_LCDCmd 794 0 CODE 0 text7 dist/default/debug/THE3.X.debug.o
+__end_of_LCDDat 700 0 CODE 0 text5 dist/default/debug/THE3.X.debug.o
+_frisbee_steps 80 0 BANK0 1 bssBANK0 dist/default/debug/THE3.X.debug.o
+_CONVERT 6A 0 COMRAM 1 bssCOMRAM dist/default/debug/THE3.X.debug.o
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug/THE3.X.debug.o
+___sp 0 0 STACK 2 stack /tmp/xcXhaeCnJ.o
+_main 44A 0 CODE 0 text0 dist/default/debug/THE3.X.debug.o
+btemp 6B 0 COMRAM 1 temp dist/default/debug/THE3.X.debug.o
+setLCD@i 66 0 COMRAM 1 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+start E 0 CODE 0 init /tmp/xcXhaeCnJ.o
+__size_of_main 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug/THE3.X.debug.o
+i2LCDCmd@cmd 56 0 COMRAM 1 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+__size_of_LCDGoto 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__Hpowerup E 0 CODE 0 powerup dist/default/debug/THE3.X.debug.o
+ttemp5 6C 0 COMRAM 1 temp dist/default/debug/THE3.X.debug.o
+ttemp6 6F 0 COMRAM 1 temp dist/default/debug/THE3.X.debug.o
+ttemp7 73 0 COMRAM 1 temp dist/default/debug/THE3.X.debug.o
+i2LCDGoto@p_1 57 0 COMRAM 1 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+i2LCDGoto@p_2 58 0 COMRAM 1 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug/THE3.X.debug.o
+__accesstop 80 0 ABS 0 - /tmp/xcXhaeCnJ.o
+intlevel0 0 0 CODE 0 text /tmp/xcXhaeCnJ.o
+intlevel1 0 0 CODE 0 text /tmp/xcXhaeCnJ.o
+intlevel2 0 0 CODE 0 text /tmp/xcXhaeCnJ.o
+intlevel3 0 0 CODE 0 text /tmp/xcXhaeCnJ.o
+__LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/debug/THE3.X.debug.o
+_InitLCD 700 0 CODE 0 text6 dist/default/debug/THE3.X.debug.o
+i2_LCDCmd 794 0 CODE 0 text11 dist/default/debug/THE3.X.debug.o
+i2_LCDDat 732 0 CODE 0 text12 dist/default/debug/THE3.X.debug.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug/THE3.X.debug.o
+wtemp8 6C 0 COMRAM 1 temp dist/default/debug/THE3.X.debug.o
+_selected_teamB_player 35 0 COMRAM 1 dataCOMRAM dist/default/debug/THE3.X.debug.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/debug/THE3.X.debug.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/debug/THE3.X.debug.o
+__end_ofi2_LCDCmd 7C4 0 CODE 0 text11 dist/default/debug/THE3.X.debug.o
+__end_ofi2_LCDDat 764 0 CODE 0 text12 dist/default/debug/THE3.X.debug.o
+__pidataCOMRAM 602 0 CODE 0 idataCOMRAM dist/default/debug/THE3.X.debug.o
+_ADRESH FC4 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+_ADRESL FC3 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+i2setLCD@i 5B 0 COMRAM 1 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+___inthi_sp 0 0 STACK 2 stack /tmp/xcXhaeCnJ.o
+___intlo_sp 0 0 STACK 2 stack /tmp/xcXhaeCnJ.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug/THE3.X.debug.o
+__size_of_initADC 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/debug/THE3.X.debug.o
+_selected_teamA_player 3D 0 COMRAM 1 dataCOMRAM dist/default/debug/THE3.X.debug.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug/THE3.X.debug.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug/THE3.X.debug.o
+__Hintcodelo E 0 CODE 0 intcodelo dist/default/debug/THE3.X.debug.o
+__end_of_LCDGoto 58E 0 CODE 0 text2 dist/default/debug/THE3.X.debug.o
+i2LCDDat@dat 56 0 COMRAM 1 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug/THE3.X.debug.o
+_LCDCmd 764 0 CODE 0 text7 dist/default/debug/THE3.X.debug.o
+_LCDDat 6CE 0 CODE 0 text5 dist/default/debug/THE3.X.debug.o
+_INTCON2bits FF1 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__Lintcodelo E 0 CODE 0 intcodelo dist/default/debug/THE3.X.debug.o
+start_initialization 656 0 CODE 0 cinit dist/default/debug/THE3.X.debug.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug/THE3.X.debug.o
+_teamB_player 45 0 COMRAM 1 dataCOMRAM dist/default/debug/THE3.X.debug.o
+_TRISAbits F92 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+_TRISBbits F93 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+_TRISEbits F96 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+_selectedChar 68 0 COMRAM 1 bssCOMRAM dist/default/debug/THE3.X.debug.o
+__size_of_LCDAddSpecialCharacter 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+___rparam_used 1 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__pcstackBANK0 C6 0 BANK0 1 cstackBANK0 dist/default/debug/THE3.X.debug.o
+__size_ofi2_setLCD 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__size_of_LCDCmd 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__size_of_LCDDat 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__end_of_initADC 7E8 0 CODE 0 text3 dist/default/debug/THE3.X.debug.o
+__end_of_setLCD 17C 0 CODE 0 text1 dist/default/debug/THE3.X.debug.o
+__Hbank0 0 0 ABS 0 bank0 dist/default/debug/THE3.X.debug.o
+__Hbank1 0 0 ABS 0 bank1 dist/default/debug/THE3.X.debug.o
+__Hbank2 0 0 ABS 0 bank2 dist/default/debug/THE3.X.debug.o
+__Hbank3 0 0 ABS 0 bank3 dist/default/debug/THE3.X.debug.o
+__Hbank4 0 0 ABS 0 bank4 dist/default/debug/THE3.X.debug.o
+__Hbank5 0 0 ABS 0 bank5 dist/default/debug/THE3.X.debug.o
+__Hbank6 0 0 ABS 0 bank6 dist/default/debug/THE3.X.debug.o
+__Hbank7 0 0 ABS 0 bank7 dist/default/debug/THE3.X.debug.o
+__Hbank8 0 0 ABS 0 bank8 dist/default/debug/THE3.X.debug.o
+__Hbank9 0 0 ABS 0 bank9 dist/default/debug/THE3.X.debug.o
+__Hcinit 0 0 ABS 0 cinit dist/default/debug/THE3.X.debug.o
+__Hconst 0 0 CONST 0 const dist/default/debug/THE3.X.debug.o
+__Hidata 0 0 CODE 0 idata dist/default/debug/THE3.X.debug.o
+__Hidloc 200008 0 IDLOC 5 idloc dist/default/debug/THE3.X.debug.o
+_teamA_player 4D 0 COMRAM 1 dataCOMRAM dist/default/debug/THE3.X.debug.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/debug/THE3.X.debug.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/debug/THE3.X.debug.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/debug/THE3.X.debug.o
+__Hstack 0 0 STACK 2 stack dist/default/debug/THE3.X.debug.o
+__Htext0 0 0 ABS 0 text0 dist/default/debug/THE3.X.debug.o
+__Htext1 0 0 ABS 0 text1 dist/default/debug/THE3.X.debug.o
+__Htext2 0 0 ABS 0 text2 dist/default/debug/THE3.X.debug.o
+__Htext3 0 0 ABS 0 text3 dist/default/debug/THE3.X.debug.o
+__Htext4 0 0 ABS 0 text4 dist/default/debug/THE3.X.debug.o
+__Htext5 0 0 ABS 0 text5 dist/default/debug/THE3.X.debug.o
+__Htext6 0 0 ABS 0 text6 dist/default/debug/THE3.X.debug.o
+__Htext7 0 0 ABS 0 text7 dist/default/debug/THE3.X.debug.o
+__Htext9 0 0 ABS 0 text9 dist/default/debug/THE3.X.debug.o
+__Hbank10 0 0 ABS 0 bank10 dist/default/debug/THE3.X.debug.o
+__Hbank11 0 0 ABS 0 bank11 dist/default/debug/THE3.X.debug.o
+__Hbank12 0 0 ABS 0 bank12 dist/default/debug/THE3.X.debug.o
+__Hbank13 0 0 ABS 0 bank13 dist/default/debug/THE3.X.debug.o
+__Hbank14 0 0 ABS 0 bank14 dist/default/debug/THE3.X.debug.o
+__Hbank15 0 0 ABS 0 bank15 dist/default/debug/THE3.X.debug.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug/THE3.X.debug.o
+__Hbigram 0 0 ABS 0 bigram dist/default/debug/THE3.X.debug.o
+__smallconst 0 0 SMALLCONST 0 smallconst /tmp/xcXhaeCnJ.o
+__Hcomram 0 0 ABS 0 comram dist/default/debug/THE3.X.debug.o
+__Hconfig 30000E 0 CONFIG 4 config dist/default/debug/THE3.X.debug.o
+__Lbank0 0 0 ABS 0 bank0 dist/default/debug/THE3.X.debug.o
+__Lbank1 0 0 ABS 0 bank1 dist/default/debug/THE3.X.debug.o
+__Lbank2 0 0 ABS 0 bank2 dist/default/debug/THE3.X.debug.o
+__Lbank3 0 0 ABS 0 bank3 dist/default/debug/THE3.X.debug.o
+__Lbank4 0 0 ABS 0 bank4 dist/default/debug/THE3.X.debug.o
+__Lbank5 0 0 ABS 0 bank5 dist/default/debug/THE3.X.debug.o
+__Lbank6 0 0 ABS 0 bank6 dist/default/debug/THE3.X.debug.o
+__Lbank7 0 0 ABS 0 bank7 dist/default/debug/THE3.X.debug.o
+__Lbank8 0 0 ABS 0 bank8 dist/default/debug/THE3.X.debug.o
+__Lbank9 0 0 ABS 0 bank9 dist/default/debug/THE3.X.debug.o
+__Lcinit 0 0 ABS 0 cinit dist/default/debug/THE3.X.debug.o
+__Lconst 0 0 CONST 0 const dist/default/debug/THE3.X.debug.o
+__Lidata 0 0 CODE 0 idata dist/default/debug/THE3.X.debug.o
+__Lidloc 0 0 IDLOC 5 idloc dist/default/debug/THE3.X.debug.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/debug/THE3.X.debug.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/debug/THE3.X.debug.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/debug/THE3.X.debug.o
+__Lstack 0 0 STACK 2 stack dist/default/debug/THE3.X.debug.o
+__Ltext0 0 0 ABS 0 text0 dist/default/debug/THE3.X.debug.o
+__Ltext1 0 0 ABS 0 text1 dist/default/debug/THE3.X.debug.o
+__Ltext2 0 0 ABS 0 text2 dist/default/debug/THE3.X.debug.o
+__Ltext3 0 0 ABS 0 text3 dist/default/debug/THE3.X.debug.o
+__Ltext4 0 0 ABS 0 text4 dist/default/debug/THE3.X.debug.o
+__Ltext5 0 0 ABS 0 text5 dist/default/debug/THE3.X.debug.o
+__Ltext6 0 0 ABS 0 text6 dist/default/debug/THE3.X.debug.o
+__Ltext7 0 0 ABS 0 text7 dist/default/debug/THE3.X.debug.o
+__Ltext9 0 0 ABS 0 text9 dist/default/debug/THE3.X.debug.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/debug/THE3.X.debug.o
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/debug/THE3.X.debug.o
+_PORTBbits F81 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+_PORTEbits F84 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+_INTCONbits FF2 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__Habs1 0 0 ABS 0 abs1 dist/default/debug/THE3.X.debug.o
+__Hdata 0 0 ABS 0 data dist/default/debug/THE3.X.debug.o
+__Hinit 12 0 CODE 0 init dist/default/debug/THE3.X.debug.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/debug/THE3.X.debug.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/debug/THE3.X.debug.o
+__Htemp 6C 0 COMRAM 1 temp dist/default/debug/THE3.X.debug.o
+__Htext 0 0 ABS 0 text dist/default/debug/THE3.X.debug.o
+__Labs1 0 0 ABS 0 abs1 dist/default/debug/THE3.X.debug.o
+__Ldata 0 0 ABS 0 data dist/default/debug/THE3.X.debug.o
+__Linit E 0 CODE 0 init dist/default/debug/THE3.X.debug.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/debug/THE3.X.debug.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/debug/THE3.X.debug.o
+__Ltemp 6B 0 COMRAM 1 temp dist/default/debug/THE3.X.debug.o
+__Ltext 0 0 ABS 0 text dist/default/debug/THE3.X.debug.o
+LCDAddSpecialCharacter@i 65 0 COMRAM 1 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/debug/THE3.X.debug.o
+int$flags 6B 0 COMRAM 1 temp dist/default/debug/THE3.X.debug.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+__Hintret 0 0 ABS 0 intret dist/default/debug/THE3.X.debug.o
+__Hirdata 0 0 CODE 0 irdata dist/default/debug/THE3.X.debug.o
+_FNC 8 0 CODE 0 intcode dist/default/debug/THE3.X.debug.o
+__S0 7E8 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__S1 D0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__S2 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__S4 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__S5 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+_frisbee_target 15 0 COMRAM 1 dataCOMRAM dist/default/debug/THE3.X.debug.o
+LCDGoto@p_1 62 0 COMRAM 1 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+LCDGoto@p_2 63 0 COMRAM 1 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+i2_setLCD 17C 0 CODE 0 text9 dist/default/debug/THE3.X.debug.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug/THE3.X.debug.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/debug/THE3.X.debug.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/debug/THE3.X.debug.o
+__end_ofi2_setLCD 2E6 0 CODE 0 text9 dist/default/debug/THE3.X.debug.o
+__end_of_FNC 44A 0 CODE 0 intcode_body dist/default/debug/THE3.X.debug.o
+int_func 2E6 0 CODE 0 intcode_body dist/default/debug/THE3.X.debug.o
+__Lintentry 0 0 ABS 0 intentry dist/default/debug/THE3.X.debug.o
+__Hramtop 1000 0 RAM 0 ramtop dist/default/debug/THE3.X.debug.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/debug/THE3.X.debug.o
+__activetblptr 2 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/debug/THE3.X.debug.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 dist/default/debug/THE3.X.debug.o
+__Htext10 0 0 ABS 0 text10 dist/default/debug/THE3.X.debug.o
+__Htext11 0 0 ABS 0 text11 dist/default/debug/THE3.X.debug.o
+__Htext12 0 0 ABS 0 text12 dist/default/debug/THE3.X.debug.o
+__size_of_InitLCD 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__ptext10 58E 0 CODE 0 text10 dist/default/debug/THE3.X.debug.o
+__ptext11 794 0 CODE 0 text11 dist/default/debug/THE3.X.debug.o
+__ptext12 732 0 CODE 0 text12 dist/default/debug/THE3.X.debug.o
+__pintcode_body 2E6 0 CODE 0 intcode_body dist/default/debug/THE3.X.debug.o
+__Lbank10 0 0 ABS 0 bank10 dist/default/debug/THE3.X.debug.o
+__Lbank11 0 0 ABS 0 bank11 dist/default/debug/THE3.X.debug.o
+__Lbank12 0 0 ABS 0 bank12 dist/default/debug/THE3.X.debug.o
+__Lbank13 0 0 ABS 0 bank13 dist/default/debug/THE3.X.debug.o
+__Lbank14 0 0 ABS 0 bank14 dist/default/debug/THE3.X.debug.o
+__Lbank15 0 0 ABS 0 bank15 dist/default/debug/THE3.X.debug.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/debug/THE3.X.debug.o
+__Lbigram 0 0 ABS 0 bigram dist/default/debug/THE3.X.debug.o
+__Lcomram 0 0 ABS 0 comram dist/default/debug/THE3.X.debug.o
+__Lconfig 0 0 CONFIG 4 config dist/default/debug/THE3.X.debug.o
+_LCDGoto 51A 0 CODE 0 text2 dist/default/debug/THE3.X.debug.o
+LCDAddSpecialCharacter@data 62 0 COMRAM 1 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/debug/THE3.X.debug.o
+_setLCD 12 0 CODE 0 text1 dist/default/debug/THE3.X.debug.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/debug/THE3.X.debug.o
+stackhi F7F 0 ABS 0 - /tmp/xcXhaeCnJ.o
+stacklo D0 0 ABS 0 - /tmp/xcXhaeCnJ.o
+__Lintcode 8 0 CODE 0 intcode dist/default/debug/THE3.X.debug.o
+_selected_teamA_player_with_frisbee 2D 0 COMRAM 1 dataCOMRAM dist/default/debug/THE3.X.debug.o
+__Lintret 0 0 ABS 0 intret dist/default/debug/THE3.X.debug.o
+__Lirdata 0 0 CODE 0 irdata dist/default/debug/THE3.X.debug.o
+_ADCON0bits FC2 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+_ADCON1bits FC1 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+_ADCON2bits FC0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__Lspace_0 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__Lspace_1 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__Lspace_2 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__Lspace_4 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__pbssCOMRAM 68 0 COMRAM 1 bssCOMRAM dist/default/debug/THE3.X.debug.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/debug/THE3.X.debug.o
+_PIR1bits F9E 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__end_ofi2_LCDGoto 602 0 CODE 0 text10 dist/default/debug/THE3.X.debug.o
+_LCDAddSpecialCharacter 696 0 CODE 0 text4 dist/default/debug/THE3.X.debug.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+__size_ofi2_LCDGoto 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+end_of_initialization 688 0 CODE 0 cinit dist/default/debug/THE3.X.debug.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/debug/THE3.X.debug.o
+__Hintentry 0 0 ABS 0 intentry dist/default/debug/THE3.X.debug.o
+__Hreset_vec 4 0 CODE 0 reset_vec dist/default/debug/THE3.X.debug.o
+LCDAddSpecialCharacter@character_index 64 0 COMRAM 1 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 dist/default/debug/THE3.X.debug.o
+__size_of_setLCD 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+_initADC 7C4 0 CODE 0 text3 dist/default/debug/THE3.X.debug.o
+__Lramtop 1000 0 RAM 0 ramtop dist/default/debug/THE3.X.debug.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/debug/THE3.X.debug.o
+__pcinit 656 0 CODE 0 cinit dist/default/debug/THE3.X.debug.o
+i2_LCDGoto 58E 0 CODE 0 text10 dist/default/debug/THE3.X.debug.o
+__ptext0 44A 0 CODE 0 text0 dist/default/debug/THE3.X.debug.o
+__ptext1 12 0 CODE 0 text1 dist/default/debug/THE3.X.debug.o
+__ptext2 51A 0 CODE 0 text2 dist/default/debug/THE3.X.debug.o
+__ptext3 7C4 0 CODE 0 text3 dist/default/debug/THE3.X.debug.o
+__ptext4 696 0 CODE 0 text4 dist/default/debug/THE3.X.debug.o
+__ptext5 6CE 0 CODE 0 text5 dist/default/debug/THE3.X.debug.o
+__ptext6 700 0 CODE 0 text6 dist/default/debug/THE3.X.debug.o
+__ptext7 764 0 CODE 0 text7 dist/default/debug/THE3.X.debug.o
+__ptext9 17C 0 CODE 0 text9 dist/default/debug/THE3.X.debug.o
+__end_of_InitLCD 732 0 CODE 0 text6 dist/default/debug/THE3.X.debug.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/debug/THE3.X.debug.o
+__Ltext10 0 0 ABS 0 text10 dist/default/debug/THE3.X.debug.o
+__Ltext11 0 0 ABS 0 text11 dist/default/debug/THE3.X.debug.o
+__Ltext12 0 0 ABS 0 text12 dist/default/debug/THE3.X.debug.o
+__ramtop 1000 0 RAM 0 ramtop /tmp/xcXhaeCnJ.o
+__Lpowerup E 0 CODE 0 powerup dist/default/debug/THE3.X.debug.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug/THE3.X.debug.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/debug/THE3.X.debug.o
+LCDCmd@cmd 61 0 COMRAM 1 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+___param_bank 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/debug/THE3.X.debug.o
+__end_of__initialization 688 0 CODE 0 cinit dist/default/debug/THE3.X.debug.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/debug/THE3.X.debug.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/debug/THE3.X.debug.o
+main@values C6 0 BANK0 1 cstackBANK0 dist/default/debug/THE3.X.debug.o
+__pcstackCOMRAM 55 0 COMRAM 1 cstackCOMRAM dist/default/debug/THE3.X.debug.o
+_frisbee 1D 0 COMRAM 1 dataCOMRAM dist/default/debug/THE3.X.debug.o
+__end_of_main 51A 0 CODE 0 text0 dist/default/debug/THE3.X.debug.o
+__pintcode 8 0 CODE 0 intcode dist/default/debug/THE3.X.debug.o
+_PORTD F83 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+_TRISD F95 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__HRAM 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__Hbss 0 0 RAM 1 bss dist/default/debug/THE3.X.debug.o
+__Hram 0 0 ABS 0 ram dist/default/debug/THE3.X.debug.o
+__Hsfr 0 0 ABS 0 sfr dist/default/debug/THE3.X.debug.o
+__LRAM 1 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__Lbss 0 0 RAM 1 bss dist/default/debug/THE3.X.debug.o
+__Lram 0 0 ABS 0 ram dist/default/debug/THE3.X.debug.o
+__Lsfr 0 0 ABS 0 sfr dist/default/debug/THE3.X.debug.o
+_lcd_x 14 0 COMRAM 1 dataCOMRAM dist/default/debug/THE3.X.debug.o
+_lcd_y 13 0 COMRAM 1 dataCOMRAM dist/default/debug/THE3.X.debug.o
+__size_of_FNC 0 0 ABS 0 - dist/default/debug/THE3.X.debug.o
+__initialization 656 0 CODE 0 cinit dist/default/debug/THE3.X.debug.o
+__pbssBANK0 80 0 BANK0 1 bssBANK0 dist/default/debug/THE3.X.debug.o
+__pdataCOMRAM 1 0 COMRAM 1 dataCOMRAM dist/default/debug/THE3.X.debug.o
+_character B 0 COMRAM 1 dataCOMRAM dist/default/debug/THE3.X.debug.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/debug/THE3.X.debug.o
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug/THE3.X.debug.o
+_locations 1 0 COMRAM 1 dataCOMRAM dist/default/debug/THE3.X.debug.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/debug/THE3.X.debug.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug/THE3.X.debug.o
+__Hintcode E 0 CODE 0 intcode dist/default/debug/THE3.X.debug.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+reset_vec 0 0 0 4 1
+bssBANK0 1 80 80 50 1
+intcode 0 8 8 7E0 1
+dataCOMRAM 1 1 1 6B 1
+# %NOTES Section
+# This section contains data of all the note-psects.  The beginning of the section
+# is indicated by %NOTES. The first line indicates the name and decimal
+# byte-length of the first note-psect, e.g.
+#   $codecov_info_hdr 16
+# Each line that follows contains the byte-data of the psect in hexadecimal as a
+# space-separated list. These lines are limited to 16 bytes of data.
+%NOTES
