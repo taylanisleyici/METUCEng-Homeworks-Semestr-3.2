@@ -34,10 +34,15 @@ extern "C" {
     
     void initADC()
     {
-        ADCON1bits.PCFG3 = 1; // RA0 = Analog, RA1=1 Analog, RA2 = Analog
+        /*ADCON1bits.PCFG3 = 1; // RA0 = Analog, RA1=1 Analog, RA2 = Analog
         ADCON1bits.PCFG2 = 1;
         ADCON1bits.PCFG1 = 0;
-        ADCON1bits.PCFG0 = 0;
+        ADCON1bits.PCFG0 = 0;*/
+        
+        ADCON1bits.PCFG3 = 1; // RA0 = Analog, RA1=1 Analog, RA2 = Analog
+        ADCON1bits.PCFG2 = 0;
+        ADCON1bits.PCFG1 = 0;
+        ADCON1bits.PCFG0 = 1;
         
         ADCON1bits.VCFG0 = 0; // Vref+=5.0, Vref=0
         ADCON1bits.VCFG1 = 0;

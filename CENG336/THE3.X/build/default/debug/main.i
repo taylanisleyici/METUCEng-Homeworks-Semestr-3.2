@@ -4471,10 +4471,15 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 
     void initADC()
     {
+
+
+
+
+
         ADCON1bits.PCFG3 = 1;
-        ADCON1bits.PCFG2 = 1;
+        ADCON1bits.PCFG2 = 0;
         ADCON1bits.PCFG1 = 0;
-        ADCON1bits.PCFG0 = 0;
+        ADCON1bits.PCFG0 = 1;
 
         ADCON1bits.VCFG0 = 0;
         ADCON1bits.VCFG1 = 0;
@@ -4482,7 +4487,7 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
         TRISAbits.RA0 = 1;
         TRISAbits.RA1 = 1;
         TRISAbits.RA2 = 0;
-# 56 "./adc.h"
+# 61 "./adc.h"
         ADCON2bits.ADCS2 = 0;
         ADCON2bits.ADCS1 = 1;
         ADCON2bits.ADCS0 = 0;
@@ -4514,9 +4519,9 @@ void LCDCmd(unsigned char cmd) {
   PORTEbits.RE2 = 0;
   PORTD = cmd;
   PORTEbits.RE1 = 1;
-  _delay((unsigned long)((2000)*(40000000L/4000000.0)));
+  _delay((unsigned long)((100)*(40000000L/4000000.0)));
   PORTEbits.RE1 = 0;
-  _delay((unsigned long)((2000)*(40000000L/4000000.0)));
+  _delay((unsigned long)((100)*(40000000L/4000000.0)));
 }
 
 void LCDDat(unsigned char dat) {
@@ -4524,9 +4529,9 @@ void LCDDat(unsigned char dat) {
   PORTEbits.RE2 = 1;
   PORTD = dat;
   PORTEbits.RE1 = 1;
-  _delay((unsigned long)((2000)*(40000000L/4000000.0)));
+  _delay((unsigned long)((100)*(40000000L/4000000.0)));
   PORTEbits.RE1 = 0;
-  _delay((unsigned long)((2000)*(40000000L/4000000.0)));
+  _delay((unsigned long)((100)*(40000000L/4000000.0)));
   PORTEbits.RE2 = 0;
 }
 
@@ -4987,8 +4992,13 @@ char *ctermid(char *);
 char *tempnam(const char *, const char *);
 # 12 "main.c" 2
 
+
 volatile char CONVERT=0;
 void setLCD();
+void startTimer0();
+void set7Display();
+char isAllocated(unsigned short x, unsigned short y);
+
 
 unsigned char character[8] = {
   0b00000,
@@ -5003,6 +5013,10 @@ unsigned char character[8] = {
 
 char locations[5][2] = {{3,2},{3,3},{14,2},{14,3},{9,2}};
 unsigned short selectedChar = 0;
+unsigned short teamAScore = 0;
+unsigned short teamBScore = 0;
+char displayCount = 0;
+
 
 void __attribute__((picinterrupt(("high_priority")))) FNC()
 {
@@ -5014,44 +5028,60 @@ void __attribute__((picinterrupt(("high_priority")))) FNC()
     }
     if(INTCONbits.RBIF)
     {
-        if (PORTBbits.RB4 == 1)
+        startTimer0();
+        PORTA = 0;
+
+        if (PORTBbits.RB4 == 0)
         {
-            if(locations[selectedChar][1] != 1) locations[selectedChar][1]--;
+            if(locations[selectedChar][1] != 1 && isAllocated(locations[selectedChar][0], locations[selectedChar][1] - 1)) locations[selectedChar][1]--;
         }
-        else if (PORTBbits.RB5 == 1)
+        else if (PORTBbits.RB5 == 0)
         {
-            if(locations[selectedChar][0] != 16) locations[selectedChar][0]++;
+            if(locations[selectedChar][0] != 16 && isAllocated(locations[selectedChar][0] + 1, locations[selectedChar][1])) locations[selectedChar][0]++;
         }
-        else if (PORTBbits.RB6 == 1)
+        else if (PORTBbits.RB6 == 0)
         {
-            if(locations[selectedChar][1] != 4) locations[selectedChar][1]++;
+            if(locations[selectedChar][1] != 4 && isAllocated(locations[selectedChar][0], locations[selectedChar][1] + 1)) locations[selectedChar][1]++;
         }
-        else if (PORTBbits.RB7 == 1)
+        else if (PORTBbits.RB7 == 0)
         {
-            if(locations[selectedChar][0] != 1) locations[selectedChar][0]--;
+            if(locations[selectedChar][0] != 1 && isAllocated(locations[selectedChar][0] - 1, locations[selectedChar][1])) locations[selectedChar][0]--;
         }
             LCDCmd(0x01);
             setLCD();
 
             INTCONbits.RBIF = 0;
     }
+
+
+}
+
+char isAllocated(unsigned short x, unsigned short y)
+{
+    for(unsigned short i = 0; i < 4; i++)
+    {
+        if(locations[i][0] == x && locations[i][1] == y) return 0;
+    }
+    return 1;
 }
 
 void setLCD()
 {
-    for(unsigned short i = 0; i < 5; i++)
+    for(short i = 4; i >= 0 ; i--)
     {
         if(selectedChar == i)
         {
             if(i < 2)
             {
                 LCDGoto(locations[i][0],locations[i][1]);
-                LCDDat(1);
+                if(locations[i][0] == locations[4][0] && locations[i][1] == locations[4][1]) LCDDat(2);
+                else LCDDat(1);
             }
             else
             {
                 LCDGoto(locations[i][0],locations[i][1]);
-                LCDDat(4);
+                if(locations[i][0] == locations[4][0] && locations[i][1] == locations[4][1]) LCDDat(5);
+                else LCDDat(4);
             }
         }
         else
@@ -5079,6 +5109,81 @@ void setLCD()
     }
 }
 
+void set7Display()
+{
+    if(displayCount == 0)
+    {
+        PORTA = 8;
+        switch(teamAScore)
+        {
+            case 0:
+                PORTD = 0b00111111;
+                break;
+            case 1:
+                PORTD = 0b00000110;
+                break;
+            case 2:
+                PORTD = 0b01011011;
+                break;
+            case 3:
+                PORTD = 0b01001111;
+                break;
+            case 4:
+                PORTD = 0b01100110;
+                break;
+            case 5:
+                PORTD = 0b01101101;
+                break;
+        }
+        displayCount++;
+    }
+    else if(displayCount == 1)
+    {
+        PORTA = 16;
+        PORTD = 64;
+        displayCount++;
+    }
+    else
+    {
+        PORTA = 32;
+        switch(teamBScore)
+        {
+            case 0:
+                PORTD = 0b00111111;
+                break;
+            case 1:
+                PORTD = 0b00000110;
+                break;
+            case 2:
+                PORTD = 0b01011011;
+                break;
+            case 3:
+                PORTD = 0b01001111;
+                break;
+            case 4:
+                PORTD = 0b01100110;
+                break;
+            case 5:
+                PORTD = 0b01101101;
+                break;
+        }
+        displayCount = 0;
+    }
+
+
+}
+
+void startTimer0()
+{
+    INTCONbits.TMR0IF = 0;
+    INTCONbits.TMR0IE = 0;
+    T0CONbits.T08BIT = 1;
+    T0CONbits.T0CS = 0;
+    T0CONbits.PSA = 1;
+    T0CONbits.T0PS = 0b000;
+    TMR0 = 150;
+    T0CONbits.TMR0ON = 1;
+}
 
 void main(void) {
 
@@ -5116,17 +5221,33 @@ void main(void) {
     TRISBbits.RB5 = 1;
     TRISBbits.RB6 = 1;
     TRISBbits.RB7 = 1;
+    TRISA = 0;
 
     INTCONbits.RBIF = 0;
     INTCONbits.RBIE = 1;
     INTCON2bits.RBIP = 1;
     INTCON2bits.RBPU = 0;
-# 156 "main.c"
+
+    startTimer0();
+
+
+
+
+
+
+
     setLCD();
 
 
     while(1)
     {
+        if (INTCONbits.TMR0IF == 1)
+        {
+            set7Display();
+            INTCONbits.TMR0IF = 0;
+            startTimer0();
+        }
+
         if(CONVERT == 1)
         {
             LCDCmd(0x01);
