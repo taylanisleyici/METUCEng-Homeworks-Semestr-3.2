@@ -1,0 +1,297 @@
+{
+	"_type": "Project",
+	"_id": "AAAAAAFF+h6SjaM2Hec=",
+	"name": "Untitled",
+	"ownedElements": [
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAFF+qBWK6M3Z8Y=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Model",
+			"ownedElements": [
+				{
+					"_type": "UMLClassDiagram",
+					"_id": "AAAAAAFF+qBtyKM79qY=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "Main",
+					"defaultDiagram": true
+				}
+			]
+		},
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAGBGkMEELb2Fe4=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Afetbilgi.com",
+			"ownedElements": [
+				{
+					"_type": "UMLDeploymentDiagram",
+					"_id": "AAAAAAGBGkMEEbb3ba8=",
+					"_parent": {
+						"$ref": "AAAAAAGBGkMEELb2Fe4="
+					},
+					"name": "DeploymentDiagram1",
+					"ownedViews": [
+						{
+							"_type": "UMLFrameView",
+							"_id": "AAAAAAGBGkOVRrb7qjQ=",
+							"_parent": {
+								"$ref": "AAAAAAGBGkMEEbb3ba8="
+							},
+							"model": {
+								"$ref": "AAAAAAGBGkMEELb2Fe4="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGBGkOVRrb8u6w=",
+									"_parent": {
+										"$ref": "AAAAAAGBGkOVRrb7qjQ="
+									},
+									"font": "Arial;13;0",
+									"left": 207.9599609375,
+									"top": 141,
+									"width": 75.419921875,
+									"height": 13,
+									"text": "Afetbilgi.com"
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAGBGkOVR7b9pd4=",
+									"_parent": {
+										"$ref": "AAAAAAGBGkOVRrb7qjQ="
+									},
+									"font": "Arial;13;1",
+									"left": 181,
+									"top": 141,
+									"width": 21.9599609375,
+									"height": 13,
+									"text": "pkg"
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 176,
+							"top": 136,
+							"width": 585,
+							"height": 649,
+							"nameLabel": {
+								"$ref": "AAAAAAGBGkOVRrb8u6w="
+							},
+							"frameTypeLabel": {
+								"$ref": "AAAAAAGBGkOVR7b9pd4="
+							}
+						},
+						{
+							"_type": "UMLNodeView",
+							"_id": "AAAAAAGBGkXAB7cJOeQ=",
+							"_parent": {
+								"$ref": "AAAAAAGBGkMEEbb3ba8="
+							},
+							"model": {
+								"$ref": "AAAAAAGBGkXAB7cHF04="
+							},
+							"subViews": [
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "AAAAAAGBGkXAB7cKCdE=",
+									"_parent": {
+										"$ref": "AAAAAAGBGkXAB7cJOeQ="
+									},
+									"model": {
+										"$ref": "AAAAAAGBGkXAB7cHF04="
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGBGkXAB7cLKdw=",
+											"_parent": {
+												"$ref": "AAAAAAGBGkXAB7cKCdE="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": 293,
+											"top": 239,
+											"width": 341,
+											"height": 13
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGBGkXAB7cM8fU=",
+											"_parent": {
+												"$ref": "AAAAAAGBGkXAB7cKCdE="
+											},
+											"font": "Arial;13;1",
+											"left": 293,
+											"top": 241,
+											"width": 341,
+											"height": 13,
+											"text": "CloudFlare Server"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGBGkXAB7cNPAQ=",
+											"_parent": {
+												"$ref": "AAAAAAGBGkXAB7cKCdE="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": -112,
+											"top": -48,
+											"width": 195.56494140625,
+											"height": 13,
+											"text": "(from Afetbilgi.com)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGBGkXAB7cOcAs=",
+											"_parent": {
+												"$ref": "AAAAAAGBGkXAB7cKCdE="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": -112,
+											"top": -48,
+											"height": 13,
+											"horizontalAlignment": 1
+										}
+									],
+									"font": "Arial;13;0",
+									"left": 288,
+									"top": 234,
+									"width": 351,
+									"height": 25,
+									"stereotypeLabel": {
+										"$ref": "AAAAAAGBGkXAB7cLKdw="
+									},
+									"nameLabel": {
+										"$ref": "AAAAAAGBGkXAB7cM8fU="
+									},
+									"namespaceLabel": {
+										"$ref": "AAAAAAGBGkXAB7cNPAQ="
+									},
+									"propertyLabel": {
+										"$ref": "AAAAAAGBGkXAB7cOcAs="
+									}
+								},
+								{
+									"_type": "UMLAttributeCompartmentView",
+									"_id": "AAAAAAGBGkXAB7cPL9c=",
+									"_parent": {
+										"$ref": "AAAAAAGBGkXAB7cJOeQ="
+									},
+									"model": {
+										"$ref": "AAAAAAGBGkXAB7cHF04="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": -56,
+									"top": -24,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLOperationCompartmentView",
+									"_id": "AAAAAAGBGkXAB7cQb48=",
+									"_parent": {
+										"$ref": "AAAAAAGBGkXAB7cJOeQ="
+									},
+									"model": {
+										"$ref": "AAAAAAGBGkXAB7cHF04="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": -56,
+									"top": -24,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLReceptionCompartmentView",
+									"_id": "AAAAAAGBGkXAB7cRFBU=",
+									"_parent": {
+										"$ref": "AAAAAAGBGkXAB7cJOeQ="
+									},
+									"model": {
+										"$ref": "AAAAAAGBGkXAB7cHF04="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": -56,
+									"top": -24,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLTemplateParameterCompartmentView",
+									"_id": "AAAAAAGBGkXAB7cSXcE=",
+									"_parent": {
+										"$ref": "AAAAAAGBGkXAB7cJOeQ="
+									},
+									"model": {
+										"$ref": "AAAAAAGBGkXAB7cHF04="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": -56,
+									"top": -24,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 288,
+							"top": 224,
+							"width": 361,
+							"height": 465,
+							"nameCompartment": {
+								"$ref": "AAAAAAGBGkXAB7cKCdE="
+							},
+							"suppressAttributes": true,
+							"suppressOperations": true,
+							"attributeCompartment": {
+								"$ref": "AAAAAAGBGkXAB7cPL9c="
+							},
+							"operationCompartment": {
+								"$ref": "AAAAAAGBGkXAB7cQb48="
+							},
+							"receptionCompartment": {
+								"$ref": "AAAAAAGBGkXAB7cRFBU="
+							},
+							"templateParameterCompartment": {
+								"$ref": "AAAAAAGBGkXAB7cSXcE="
+							}
+						},
+						{
+							"_type": "UMLTextBoxView",
+							"_id": "AAAAAAGBGlEnLbi18KY=",
+							"_parent": {
+								"$ref": "AAAAAAGBGkMEEbb3ba8="
+							},
+							"font": "Arial;13;0",
+							"left": 352,
+							"top": 336,
+							"width": 185,
+							"height": 81,
+							"text": "App.tsx (Main app file written in typescript and react)\nRunner.py (Pdf converter api, converts information to pdf when needed.)"
+						}
+					]
+				},
+				{
+					"_type": "UMLNode",
+					"_id": "AAAAAAGBGkXAB7cHF04=",
+					"_parent": {
+						"$ref": "AAAAAAGBGkMEELb2Fe4="
+					},
+					"name": "CloudFlare Server"
+				}
+			]
+		}
+	]
+}
