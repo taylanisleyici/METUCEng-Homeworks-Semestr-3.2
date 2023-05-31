@@ -4,21 +4,179 @@
 
 \subsection{Stakeholders' uses of this view}
 
+There are three main stakeholders of the system: the volunteers, victims, developers. \\
+
+The volunteers use this view to understand how they will help the victims by sharing information with website.
+The victims use this view to understand how they can get help to get food, healthcare, etc.
+The developers use this view to understand how they can build a bridge between victims and volunteers and how they can achieve to forward the validated information as fast as possible.
+
 \subsection{Context Diagram}
+
+\begin{figure}[H]
+    \includegraphics[scale = 0.5]{assets/System Context DiagramSuggestion.png}
+    \caption[Suggested System Context Diagram]{Suggested System Context Diagram}
+\end{figure}
 
 \subsection{External Interfaces}
 
+\begin{figure}[H]
+    \includegraphics[scale = 0.4]{assets/ExternalInterfaceSuggestion.png}
+    \caption[Suggested External Interface]{Suggested External Interface}
+\end{figure}
+
+\begin{center}
+    \begin{table}[H]
+        \begin{tabular}{| m{6cm}| m{8cm} |}
+            \hline
+            \textbf{Operation} & \textbf{Description} \\
+            \hline
+            generatePdf & The website generate the pdf which contains the selected city crucial information in compact form as a downloadable file by users.\\
+            \hline
+            showLocationsOnMaps & Website shows the important locations on the map.\\
+            \hline
+            changeLanguage & Users can choose a language between Turkish, English, Kurdi and Arabic.\\
+            \hline
+            selectCity & Website filter the datas according to selected city.\\
+            \hline
+            showInformations & Shows the information as subparts on the website mainpage.\\
+            \hline
+            editCode & Developers can edit the code in the source files.\\
+            \hline
+            updateDatabase & Developers can update the database with the validated information.\\
+            \hline
+            getData & Users can reach the validated data by using this website.\\
+            \hline
+            sendEmail & In case of truth of information or error in server, users can send an email.\\
+            \hline
+            pushRequest & Developers can push the code changes to Github Repository.\\
+            \hline
+            pullRequest & Developers can pull the code from the Github Repository.\\
+            \hline
+            clone & Developers can download the code from the Github Repository.\\
+            \hline
+            commit & Developers can record changes in their code.\\
+            \hline
+            log & Developers can look at it previous commits.\\
+            \hline
+            getClickableIcons & Google Maps API gets the icons such as hospital and pharmacies to show on map.\\
+            \hline
+            \textcolor{yellow}{alarm} & \textcolor{yellow}{Alarm all affected users from disaster.} \\
+            \hline
+            \textcolor{yellow}{sendNotification} & \textcolor{yellow}{Send notification when the disaster occurs.} \\
+            \hline
+            \textcolor{yellow}{showLocationsOfHelp} & \textcolor{yellow}{Show locations of coming help on map.} \\
+            \hline
+            \textcolor{yellow}{targetLocation} & \textcolor{yellow}{Show the aid destination.} \\
+            \hline
+            \textcolor{yellow}{setHelp} & \textcolor{yellow}{Create an aid to go.} \\
+            \hline
+        \end{tabular}
+        \caption[Suggested External Interface Operation Descriptions]{Suggested External Interface Operation Descriptions}
+    \end{table}
+\end{center}
+
 \subsection{Interaction scenarios}
+
+\begin{figure}[H]
+    \includegraphics[scale = 0.5]{assets/Activity Diagram Suggestion.png}
+    \caption[Suggested Activity Diagram]{Suggested Activity Diagram}
+\end{figure}
 
 \section{Functional View}
 
 \subsection{Stakeholders' use of this view}
 
+There are three main stakeholders of the system: the volunteers, victims and developers. \\
+
+The volunteers use this view to find locations which can help to go there or donating money.
+The victims especially use this view to make use of Google Maps API since it is very helpful to find all crucial locations in a compact form near them.
+The developers use this view to add new functionalities to this system so that they can reach more people and help to faster delivery of aid.
+
 \subsection{Component Diagram}
+
+\begin{figure}[H]
+    \includegraphics[scale = 0.4]{assets/ComponentDiagramSuggestion.png}
+    \caption[Suggested Component Diagram]{Suggested Component Diagram}
+\end{figure}
 
 \subsection{Internal Interfaces}
 
+\begin{figure}[H]
+    \includegraphics[scale = 0.4]{assets/InternalInterfacesSuggestion.png}
+    \caption[Suggested Internal Interfaces]{Suggested Internal Interfaces}
+\end{figure}
+
+\begin{center}
+    \begin{table}[H]
+        \begin{tabular}{| m{6cm}| m{8cm} |}
+            \hline
+            \textbf{Operation} & \textbf{Description} \\
+            \hline
+            sendData & Sends a data to a web server.\\
+            \hline
+            updateData & Update the current database with new data.\\
+            \hline
+            getRequest & Retrieves a request maded by a server.\\
+            \hline
+            requestData & Requests data from a server.\\
+            \hline
+            getData & Retrieves data from a server.\\
+            \hline
+            htmlParser & Parses and extracts information from HTML documents.\\
+            \hline
+            cssParser & Parses and extracts information from CSS documents.\\
+            \hline
+            JavascriptEngine & Executes Javascript code.\\
+            \hline
+            EventHandling & Handles events triggered by user interactions or system events.\\
+            \hline
+            ControlConnection & Manages and maintains connections for controlling or communicating with external systems.\\
+            \hline
+            sendNotification & Sends a notification via email to the user.\\
+            \hline
+            storeLogData & Stores log data for future analysis.\\
+            \hline
+            storeMetricsData & Stores metrics or performance data for analysis.\\
+            \hline
+            visualizeMetrics & Shows metrics or performance data in a visual format.\\
+            \hline
+            sendAlarms & Sends alarms to notify about specific conditions.\\
+            \hline
+            storeData & Saves data for future use.\\
+            \hline
+            runServer & Runs a server.\\
+            \hline
+            storeLogs & Saves log entries or records for tracking or analysis.\\
+            \hline
+            encryption & Implements encryption algorithms or techniques to secure data.\\
+            \hline
+            createLog & Creates log entries or records for system.\\
+            \hline
+            controlLogs & Manages log entries, including filtering or searching.\\
+            \hline
+            processInformation & Helps to analyzes information.\\
+            \hline
+            \textcolor{yellow}{getData} & \textcolor{yellow}{Gets the data for validation.} \\
+            \hline
+            \textcolor{yellow}{validateData} & \textcolor{yellow}{Validate the data from government or charities system.} \\
+            \hline
+            \textcolor{yellow}{requestData} & \textcolor{yellow}{Retrieved data for the mobile application.} \\
+            \hline
+            \textcolor{yellow}{runApp} & \textcolor{yellow}{Run the program in mobile phone.} \\
+            \hline
+            \textcolor{yellow}{updateApp} & \textcolor{yellow}{Update the program to latest version.} \\
+            \hline
+        \end{tabular}
+        \caption[Internal Interface Operation Descriptions]{Internal Interface Operation Descriptions}
+    \end{table}
+\end{center}
+
 \subsection{Interaction Patterns}
+
+\begin{figure}[H]
+    \includegraphics[scale = 0.4]{assets/SequenceDiagramSuggestion.png}    
+    \caption[Suggested Sequence Diagram]{Suggested Sequence Diagram}
+\end{figure}
 
 \section{Information View}
 

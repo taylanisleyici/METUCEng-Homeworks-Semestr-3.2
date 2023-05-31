@@ -120,15 +120,84 @@ In this section, the internal interfaces of afetbilgi will be provided. \\
     \caption[Internal Interface of Afetbilgi]{Internal Interface of Afetbilgi}
 \end{figure}
 
-\subsection{Interaction Patterns}
+\begin{center}
+    \begin{table}[H]
+        \begin{tabular}{| m{6cm}| m{8cm} |}
+            \hline
+            \textbf{Operation} & \textbf{Description} \\
+            \hline
+            sendData & Sends a data to a web server.\\
+            \hline
+            updateData & Update the current database with new data.\\
+            \hline
+            getRequest & Retrieves a request maded by a server.\\
+            \hline
+            requestData & Requests data from a server.\\
+            \hline
+            getData & Retrieves data from a server.\\
+            \hline
+            htmlParser & Parses and extracts information from HTML documents.\\
+            \hline
+            cssParser & Parses and extracts information from CSS documents.\\
+            \hline
+            JavascriptEngine & Executes Javascript code.\\
+            \hline
+            EventHandling & Handles events triggered by user interactions or system events.\\
+            \hline
+            ControlConnection & Manages and maintains connections for controlling or communicating with external systems.\\
+            \hline
+            sendNotification & Sends a notification via email to the user.\\
+            \hline
+            storeLogData & Stores log data for future analysis.\\
+            \hline
+            storeMetricsData & Stores metrics or performance data for analysis.\\
+            \hline
+            visualizeMetrics & Shows metrics or performance data in a visual format.\\
+            \hline
+            sendAlarms & Sends alarms to notify about specific conditions.\\
+            \hline
+            storeData & Saves data for future use.\\
+            \hline
+            runServer & Runs a server.\\
+            \hline
+            storeLogs & Saves log entries or records for tracking or analysis.\\
+            \hline
+            encryption & Implements encryption algorithms or techniques to secure data.\\
+            \hline
+            createLog & Creates log entries or records for system.\\
+            \hline
+            controlLogs & Manages log entries, including filtering or searching.\\
+            \hline
+            processInformation & Helps to analyzes information.\\
+            \hline
+        \end{tabular}
+        \caption[Internal Interface Operation Descriptions]{Internal Interface Operation Descriptions}
+    \end{table}
+\end{center}
 
 As shown in Figure 4.6, the internal interfaces of Afetbilgi are Amazon Web Service, CloudWatch, LogBucket, Database and Browser. The operations of interfaces can be described in below. \\
 
 \begin{itemize}
     \item There are two different API which is implemented into to webservice. According to users' needs the necessary API used to create the PDF file which contains information or shows the important locations on Google Maps.
     \item There are two internal interface which has an association with the Amazon Web Service which are CloudWatch and LogBucket. With these internal interfaces, it stores the log of website and give an opportunity of analyzing the metrics of website.
-    \item Database which is an internal interface allow website 
 \end{itemize}
+
+\subsection{Interaction Patterns}
+
+\begin{figure}[H]
+    \includegraphics[scale = 0.7]{assets/SequenceDiagramUpdateDB.png}
+    \caption[Sequence Diagram of Update Database]{Sequence Diagram of Update Database}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[scale = 0.6]{assets/SequenceDiagramOpenBrowser.png}
+    \caption[Sequence Diagram of Get Data]{Sequence Diagram of Get Data}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[scale = 0.5]{assets/SequenceDiagramMaps.png}
+    \caption[Sequence Diagram of Opening Map]{Sequence Diagram of Opening Map}
+\end{figure}
 
 \section{Information View}
 
