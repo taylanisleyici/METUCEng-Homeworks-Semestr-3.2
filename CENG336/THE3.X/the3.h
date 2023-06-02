@@ -15,7 +15,7 @@ extern "C" {
 
 // YOU CAN CHANGE THE FUNCTION RETURN TYPES, ARGUMENTS, FUNCTION NAMES, VARIABLE NAMES, ANYTHING YOU WANT
 
-typedef unsigned char byte;     // define byte here for readability and sanity.    
+//typedef unsigned char byte;     // define byte here for readability and sanity.    
     
 byte teamA_player[] = {
                   0b10001,
@@ -201,13 +201,17 @@ unsigned short compute_frisbee_target_and_route(unsigned short current_fisbee_x_
     return number_of_steps;
 }
 
-unsigned short random_generator(unsigned short modulo) {
-    
-    // THE IMPLEMENTATION TOTALLY BELONGS TO YOU. You can follow the steps given in the3.pdf
-    // You can define different rotation amounts in bits for different types of needs for random integer
-    
+unsigned short random_generator(unsigned short modulo)
+{
+    unsigned short returnValue = TMR3L % modulo;
+    char addToHigh = TMR3L % 8 * 16;
+    char addToLow = TMR3H % 8 * 16;
+    char currentHigh = TMR3H;
+    char currentLow = TMR3L;
+    TMR3H = (currentHigh >> 3) + addToHigh; 
+    TMR3L = (currentLow >> 3) + addToLow;
+    return returnValue;
 }
-
 #ifdef	__cplusplus
 }
 #endif

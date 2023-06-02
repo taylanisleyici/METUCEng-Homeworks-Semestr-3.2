@@ -13,10 +13,16 @@
 
 volatile char CONVERT=0;
 void setLCD();
-void startTimer0();
+void startTimer2(void);
+void startTimer0(void);
 void set7Display();
-char isAllocated(unsigned short x, unsigned short y);
-
+char isAvailable(unsigned short x, unsigned short y);
+void changeSpeedLevel(void);
+void iterateGame(void);
+char isActive = 0;
+char seeTarget = 1;
+char isThrownByA = 1;
+unsigned char speedLevel = 1;
 
 unsigned char character[8] = {
   0b00000,
@@ -30,61 +36,269 @@ unsigned char character[8] = {
 };
 
 char locations[5][2] = {{3,2},{3,3},{14,2},{14,3},{9,2}};
+char targetPosition[2] = {0,0};
 unsigned short selectedChar = 0;
 unsigned short teamAScore = 0;
 unsigned short teamBScore = 0;
 char displayCount = 0;
+char rb4last, rb5last, rb6last, rb7last;
+unsigned short currentStep = 0;
+unsigned short totalStep = 0;
 
-
-void __interrupt(high_priority) FNC()
+void timer1Interrupt()
 {
-    if(INTCONbits.INT0IF)
-    {
-        //LCDStr("INT");
-        CONVERT = 1;
-        INTCONbits.INT0IF = 0;
-    }
-    if(INTCONbits.RBIF) // RB interrupt
-    {
-        startTimer0();
-        PORTA = 0;
+    changeSpeedLevel();
+    IPR1bits.TMR1IP = 0;
+    //PIE1bits.TMR1IE = 0;
+    PIR1bits.TMR1IF = 0;
+    INTCONbits.RBIE = 1;
+    INTCON3bits.INT1E = 1;
+    INTCONbits.RBIF = 0;
+}
 
-        if (PORTBbits.RB4 == 0)
-        {
-            if(locations[selectedChar][1] != 1 && isAllocated(locations[selectedChar][0], locations[selectedChar][1] - 1)) locations[selectedChar][1]--;
-        } 
-        else if (PORTBbits.RB5 == 0)
-        {
-            if(locations[selectedChar][0] != 16 && isAllocated(locations[selectedChar][0] + 1, locations[selectedChar][1])) locations[selectedChar][0]++;
-        }
-        else if (PORTBbits.RB6 == 0)
-        {
-            if(locations[selectedChar][1] != 4 && isAllocated(locations[selectedChar][0], locations[selectedChar][1] + 1)) locations[selectedChar][1]++;
-        }
-        else if (PORTBbits.RB7 == 0)
-        {
-            if(locations[selectedChar][0] != 1 && isAllocated(locations[selectedChar][0] - 1, locations[selectedChar][1])) locations[selectedChar][0]--;
-        }
-            LCDCmd(LCD_CLEAR);
-            setLCD();
-            
-            INTCONbits.RBIF = 0;
+void startTimer1() // it will be used for debouncing 100 ms
+{
+    IPR1bits.TMR1IP = 1;
+    PIE1bits.TMR1IE = 1;
+    TMR1L = 0;
+    TMR1H = 0b10000000;
+    T1CONbits.TMR1ON = 1;
+    T1CONbits.T1CKPS0 = 1; 
+    T1CONbits.T1CKPS1 = 1;
+    INTCONbits.RBIE = 0;
+    INTCONbits.RBIF = 0;
+    INTCON3bits.INT1E = 0; 
+}
+
+void movePlayer(unsigned char i, unsigned short move)
+{
+    unsigned short nextX = locations[i][0], nextY = locations[i][1];
+    switch(move)
+    {
+        case 0:
+            nextX--;
+            nextY--;
+            break;
+        case 1:
+            nextY--;
+            break;
+        case 2:
+            nextX++;
+            nextY--;
+            break;
+        case 3:
+            nextX--;
+            break;
+        case 4:
+            break;
+        case 5:
+            nextX++;
+            break;
+        case 6:
+            nextX--;
+            nextY++;
+            break;
+        case 7:
+            nextY++;
+            break;
+        case 8:
+            nextX++;
+            nextY++;
+            break;
     }
-    
+    if (isAvailable(nextX, nextY))
+    {
+        locations[i][0] = nextX;
+        locations[i][1] = nextY;
+    }
     
 }
 
-char isAllocated(unsigned short x, unsigned short y)
+char isAvailable(unsigned short x, unsigned short y)
 {
-    for(unsigned short i = 0; i < 4; i++)
+    if (x < 1 || x > 16 || y < 1 || y> 4)
+    {
+        return 0;
+    }
+    for(unsigned char i = 0; i < 4; i++)
     {
         if(locations[i][0] == x && locations[i][1] == y) return 0;
     }
     return 1;
 }
 
+short counter = 0;
+void movement()
+{
+    if(counter == 1) return;
+    if (PORTBbits.RB4 == 0)
+    {
+        
+        if(locations[selectedChar][1] != 1 && isAvailable(locations[selectedChar][0], locations[selectedChar][1] - 1)) locations[selectedChar][1]--;
+        counter = 1;
+        INTCONbits.RBIF = 0;
+        return;
+    } 
+    if (PORTBbits.RB5 == 0)
+    {  
+        if(locations[selectedChar][0] != 16 && isAvailable(locations[selectedChar][0] + 1, locations[selectedChar][1])) locations[selectedChar][0]++;
+        counter = 1;
+        INTCONbits.RBIF = 0;
+        return;
+    }
+    if (PORTBbits.RB6 == 0)
+    {
+        if(locations[selectedChar][1] != 4 && isAvailable(locations[selectedChar][0], locations[selectedChar][1] + 1)) locations[selectedChar][1]++;
+        counter = 1;
+        INTCONbits.RBIF = 0;
+        
+        return;
+    }
+    if (PORTBbits.RB7 == 0)
+    {
+        if(locations[selectedChar][0] != 1 && isAvailable(locations[selectedChar][0] - 1, locations[selectedChar][1])) locations[selectedChar][0]--;
+        counter = 1;
+        INTCONbits.RBIF = 0;
+        return;
+    }
+    
+        
+}
+
+void throwFrisbee()
+{
+    if (locations[selectedChar][0] != locations[4][0] || locations[selectedChar][0] != locations[4][0] || isActive)
+    {
+        return;
+    }
+    if (selectedChar < 2)
+    {
+        isThrownByA = 1;
+    }
+    else
+    {
+        isThrownByA = 0;
+    }
+    //LCDGoto(frisbee_steps[totalStep - 1][0], frisbee_steps[totalStep - 1][1]);
+    currentStep = 0;
+    totalStep = compute_frisbee_target_and_route(locations[4][0], locations[4][1]);
+    isActive = 1;
+    //unsigned short currentStep = 0;
+    //unsigned short totalStep = 0;
+}
+
+void rb1Interrupt()
+{
+    if (counter == 1) return;
+    if (locations[selectedChar][0] == locations[4][0] && locations[selectedChar][1] == locations[4][1]) return;
+    if(PORTBbits.RB1 == 0)
+    {
+        selectedChar = (selectedChar+1)%4;
+        INTCON3bits.INT1E = 0;
+    }
+    INTCON3bits.INT1F = 0;
+    counter = 1;
+}
+
+void changeSpeedLevel(void)
+{
+    //unsigned short readADCChannel(unsigned char channel)
+    unsigned short value = readADCChannel(0);
+    if (value < 256)
+    {
+        speedLevel = 1;
+    }
+    else if (value < 512)
+    {
+        speedLevel = 2;
+    }
+    else if (value < 768)
+    {
+        speedLevel = 3;
+    }
+    else
+    {
+        speedLevel = 4;
+    }
+
+    initADC();
+}
+
+void __interrupt(high_priority) FNC()
+{
+    if (PIR1bits.ADIF)
+    {
+        changeSpeedLevel();
+    }
+    if (PIR1bits.TMR1IF)
+    {
+        if (counter == 1)
+        {
+            counter = 0;
+        }else
+        {
+            timer1Interrupt();
+        }
+        PORTA = 0;
+        LCDCmd(LCD_CLEAR);
+        setLCD();
+        timer1Interrupt();
+        startTimer2();
+        PIR1bits.TMR2IF = 0;
+    }
+    if (PIR1bits.TMR2IF == 1)
+    {
+        set7Display();
+        PIR1bits.TMR2IF = 0;
+        startTimer2();
+        return;
+    }
+    if(INTCONbits.INT0IF)
+    {
+        throwFrisbee();
+        //CONVERT = 1;
+        INTCONbits.INT0IF = 0;
+        startTimer0();
+    }
+    if (INTCON3bits.INT1F)
+    {
+        rb1Interrupt();
+    }
+    if(INTCONbits.RBIF) // RB interrupt
+    {
+        movement();
+    }
+    if (PIR1bits.TMR2IF)
+    {
+        set7Display();
+        PIR1bits.TMR2IF = 0;
+        startTimer2();
+    }
+    
+}
+
+/*char isAllocated(unsigned short x, unsigned short y)
+{
+    for(unsigned char i = 0; i < 4; i++)
+    {
+        if(locations[i][0] == x && locations[i][1] == y) return 0;
+    }
+    return 1;
+}*/
+
 void setLCD()
 {
+    if (isActive && seeTarget)
+    {
+        seeTarget = 0;
+        //LCDGoto(1,1);
+        LCDGoto(frisbee_steps[totalStep - 1][0], frisbee_steps[totalStep - 1][1]);
+        LCDDat(7);
+    }
+    else
+    {
+        seeTarget = 1;
+    }
     for(short i = 4; i >= 0 ; i--)
     {
         if(selectedChar == i)
@@ -191,20 +405,110 @@ void set7Display() // set the 7 segment display
     
 }
 
-void startTimer0() // it will used for 7 segment display
+void startTimer2(void)
+{
+    PIE1bits.TMR2IE = 1;
+    T2CON = 0b00000100;
+    TMR2 = 50;
+}
+
+void startTimer0() // 
 {
     INTCONbits.TMR0IF = 0;
     INTCONbits.TMR0IE = 0;
-    T0CONbits.T08BIT = 1; // 8 bit
+    T0CONbits.T08BIT = 0; // 16 bit
     T0CONbits.T0CS = 0; // instruction clock
-    T0CONbits.PSA = 1; // 0 enables prescaler
-    T0CONbits.T0PS = 0b000; // prescaler
-    TMR0 = 100; //
+    T0CONbits.PSA = 0; // 0 enables prescaler
+    if(speedLevel == 1) // 400ms
+    {
+        T0CONbits.T0PS = 0b011; 
+        TMR0L = 0b11011100;
+        TMR0H = 0b00001011;
+    }
+    else if (speedLevel == 2) // 800ms
+    {
+        T0CONbits.T0PS = 0b100;
+        TMR0L = 0b11011100;
+        TMR0H = 0b00001011;
+    } 
+    else if (speedLevel == 3) // 1200ms
+    {
+        T0CONbits.T0PS = 0b101; 
+        TMR0L = 0b11100101;
+        TMR0H = 0b01001000;
+    }
+    else // 1600 ms
+    {
+        T0CONbits.T0PS = 0b101;
+        TMR0L = 0b11011100;
+        TMR0H = 0b00001011;
+    } 
+    
     T0CONbits.TMR0ON = 1; // enable
 }
 
-void main(void) { 
+void setTimer3(void)
+{
+    T3CON = 0b10000001;
     
+    //T3CON.TMR3ON = 1;
+    //T3CON.RD16 = 1;
+}
+
+void iterateGame(void)
+{
+    if (isActive)
+    {
+        if (currentStep < totalStep)
+        {
+            locations[4][0] = frisbee_steps[currentStep][0];
+            locations[4][1] = frisbee_steps[currentStep][1];
+            for (unsigned char i = 0; i < 4; i++)
+            {
+                if (i == selectedChar)
+                {
+                    continue;
+                }
+                unsigned short movement = random_generator(8);
+                movePlayer(i, movement);
+            }
+            currentStep++;
+        }
+        if (currentStep == totalStep)
+        {
+            isActive = 0;
+            if (locations[selectedChar][0] == locations[4][0] && locations[selectedChar][1] == locations[4][1])
+            {
+                if (selectedChar < 2)
+                {
+                    teamAScore++;
+                }
+                else
+                {
+                    teamBScore++;
+                }
+            }
+            else
+            {
+                if (isThrownByA)
+                {
+                    teamBScore++;
+                }
+                else
+                {
+                    teamAScore++;
+                }
+            }
+            set7Display();
+            PIR1bits.TMR2IF = 0;
+            startTimer2();
+        }
+    }
+}
+
+void main(void) { 
+
+    setTimer3();
     initADC();
     
     InitLCD();
@@ -217,9 +521,7 @@ void main(void) {
     LCDAddSpecialCharacter(5, selected_teamB_player_with_frisbee);
     LCDAddSpecialCharacter(6, frisbee);
     LCDAddSpecialCharacter(7, frisbee_target);
-    
-    char values[10] = {0};
-    
+        
     
     
     unsigned short convertion = 0;
@@ -230,11 +532,16 @@ void main(void) {
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
     
+    INTCON3bits.INT1E = 1;
+    INTCON3bits.INT1IP = 1;
+    
     // to control the up and down
     PORTBbits.RB4 = 0; 
     PORTBbits.RB5 = 0;
     PORTBbits.RB6 = 0;
     PORTBbits.RB7 = 0;
+    PORTBbits.RB1 = 0;
+    TRISBbits.RB1 = 1;
     TRISBbits.RB4 = 1; 
     TRISBbits.RB5 = 1;
     TRISBbits.RB6 = 1;
@@ -246,34 +553,26 @@ void main(void) {
     INTCON2bits.RBIP = 1;
     INTCON2bits.RBPU = 0;
     
-    startTimer0();
+    
     
     
     /*TRISBbits.RB1 = 1;
     TRISBbits.TRISB1 = 1;
     INTCON2bits.RBIP = 0; 
     INTCONbits.RBIE = 1;*/
-    
+    startTimer0();
+    LCDCmd(LCD_CLEAR);
     setLCD();
-    
-    
+    startTimer2();
+    startTimer1();
     while(1)
     {
-        if (INTCONbits.TMR0IF == 1)
+        if (INTCONbits.TMR0IF)
         {
-            set7Display();
+            iterateGame();
             INTCONbits.TMR0IF = 0;
             startTimer0();
         }
-        
-        if(CONVERT == 1)
-        {
-            LCDCmd(LCD_CLEAR);
-            setLCD();
-            
-            CONVERT = 0;
-        }
-        
     }
 
     return;
