@@ -87,15 +87,24 @@ Homework 4}
                       node at (0, 0) [input] (inp) {\Large \textopenbullet}
                       node [output, right of = inp] (out1) {}
                       node [output, below of = out1] (out2) {}
-                      node [block, right of = out2] (derv1) {\derv}
+                      node [block, right of = out2] (derv1) {\inte}
                       node [output, right of = derv1] (out3) {}
                       node [sum, above of = out3] (sum1) {\suma}
-                      node [sum, right of = out1] (sum2) {\suma}
-                      node [output, right of = sum1](out4) {}
-                      node [output, right of = out4](y){}
-                      node [output, above of = out4](out5){}
-                      node [block, left of = out5](derv2){\derv}
-                      node [output, left of = derv2] (out6) {}
+                      node [sum, right of = sum1] (sum2) {\suma}
+                      node [output, right of = sum2] (out4) {}
+                      node [output, right of = out4] (out5) {}
+                      node [output, right of = out5] (y) {}
+                      node [output, above of = out5] (out6) {}
+                      node [block, left of = out6] (inte2) {\inte}
+                      node [output, left of = inte2] (out7) {}
+                    %   node [output, right of = derv1] (out3) {}
+                    %   node [sum, above of = out3] (sum1) {\suma}
+                    %   node [sum, right of = out1] (sum2) {\suma}
+                    %   node [output, right of = sum1](out4) {}
+                    %   node [output, right of = out4](y){}
+                    %   node [output, above of = out4](out5){}
+                    %   node [block, left of = out5](derv2){\derv}
+                    %   node [output, left of = derv2] (out6) {}
                       % node [sum, right of=inp] (sum) {\suma}
                       % node [block, right of=sum] (int) {\inte}
                       % node [output, right of=int] (out) {}
@@ -107,15 +116,26 @@ Homework 4}
                       \draw[-](out1) -- (out2);
                       \draw[->](out2)--(derv1);
                       \draw[-](derv1) -- (out3);
-                      \draw[->](out3) -- (sum1);
-                      \draw[->](out1)--node{$-1$}(sum2);
-                      \draw[->](sum2)--(sum1);
-                      \draw[-] (sum1)--(out4);
-                      \draw[->] (out4)--node{$y(t)$}(y);
-                      \draw[-] (out4)--(out5);
-                      \draw[->] (out5)--(derv2);
-                      \draw[-] (derv2) -- node{$-1$}(out6);
-                      \draw[->] (out6)--(sum2);
+                      \draw[->](out3) -- node{$-1$}(sum1);
+                      \draw[->](out1) -- (sum1);
+                      \draw[->](out1) -- (sum2);
+                      \draw[-](sum2) -- (out4);
+                      \draw[-](out4) -- (y);
+                      \draw[-](out5) -- (out6);
+                      \draw[->](out6) -- (inte2);
+                      \draw[-](inte2) -- (out7);
+                      \draw[->](out7) -- node{$-1$}(sum2);
+                      \draw[->] (out5)--node{$y(t)$}(y);
+                    %   \draw[-](derv1) -- (out3);
+                    %   \draw[->](out3) -- (sum1);
+                    %   \draw[->](out1)--node{$-1$}(sum2);
+                    %   \draw[->](sum2)--(sum1);
+                    %   \draw[-] (sum1)--(out4);
+                    %   \draw[->] (out4)--node{$y(t)$}(y);
+                    %   \draw[-] (out4)--(out5);
+                    %   \draw[->] (out5)--(derv2);
+                    %   \draw[-] (derv2) -- node{$-1$}(out6);
+                    %   \draw[->] (out6)--(sum2);
                       % \draw[->](inp) -- node{$x(t)$} (sum);
                       % \draw[->](sum) -- (int);
                       % \draw[-](int) -- (out);
