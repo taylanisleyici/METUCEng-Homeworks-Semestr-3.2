@@ -34,10 +34,17 @@ def plotter(data, title, xlabel, ylabel):
     plt.ylabel(ylabel)
     plt.xlabel(xlabel)
 
+def plotter2(data, title, xlabel, ylabel, rate):
+    plt.figure()
+    plt.plot(np.arange(0, len(data)/rate, 1/rate),np.abs(data))
+    plt.title(title)
+    plt.ylabel(ylabel)
+    plt.xlabel(xlabel)
+
 
 def decode(rate, data):
     # plot original data in time domain
-    plotter(data, "Encoded data in time domain", "n", "|x[n]|")
+    plotter2(data, "Encoded data in time domain", "n", "|x[n]|", rate)
 
     # fourier transforming data
     fourierTransformed = fft(data)
@@ -57,7 +64,7 @@ def decode(rate, data):
 
     # normalizing
     decoded = np.real(newData)/np.max(np.abs(newData))
-    plotter(decoded, "Decoded data in time domain", "n", "|x'[n]|")
+    plotter2(decoded, "Decoded data in time domain", "n", "|x'[n]|", rate)
 
     # normalizing and writing to file.
     sio.wavfile.write('decodedOutput.wav', rate, decoded)
