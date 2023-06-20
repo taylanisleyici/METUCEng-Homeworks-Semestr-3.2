@@ -7,3 +7,5 @@
 *.out
 *.gx
 *.toc
+/CENG336/THE4/THE4.X/build/
+/CENG336/THE4/THE4.X/dist/

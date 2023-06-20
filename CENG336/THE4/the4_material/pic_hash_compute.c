@@ -49,6 +49,5 @@ void compute_hash(unsigned char *inp, unsigned char *out) {
     out[16] = '\0';
     //repeat algo for new str
     cp = out;
-    
   }
 }
