@@ -4,24 +4,21 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>common.h</itemPath>
-      <itemPath>LCD.h</itemPath>
-      <itemPath>define.h</itemPath>
+      <itemPath>../../../../../MPLABXProjects/the.X/common.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
-      <itemPath>../../Desktop/picos/Linker/18f4620.lkr</itemPath>
+      <itemPath>../../../../../Desktop/picos/Linker/18f4620.lkr</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.c</itemPath>
-      <itemPath>int.c</itemPath>
-      <itemPath>taskdesc.c</itemPath>
-      <itemPath>tsk_task0.c</itemPath>
-      <itemPath>tsk_task1.c</itemPath>
-      <itemPath>LCD.c</itemPath>
+      <itemPath>../../../../../MPLABXProjects/the.X/int.c</itemPath>
+      <itemPath>../../../../../MPLABXProjects/the.X/main.c</itemPath>
+      <itemPath>../../../../../MPLABXProjects/the.X/taskdesc.c</itemPath>
+      <itemPath>../../../../../MPLABXProjects/the.X/tsk_task0.c</itemPath>
+      <itemPath>../../../../../MPLABXProjects/the.X/tsk_task1.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -30,7 +27,8 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>../../Desktop/picos/Linker</Elem>
+    <Elem>../../../../../MPLABXProjects/the.X</Elem>
+    <Elem>../../../../../Desktop/picos/Linker</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -40,7 +38,7 @@
         <targetDevice>PIC18F4620</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>picsimlab</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>C18</languageToolchain>
         <languageToolchainVersion>3.40</languageToolchainVersion>
         <platform>2</platform>
@@ -53,7 +51,7 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibFileItem>../../Desktop/picos/Kernel/picos18.lib</linkerLibFileItem>
+            <linkerLibFileItem>../../../../../Desktop/picos/Kernel/picos18.lib</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>
@@ -94,7 +92,8 @@
         <property key="enable-ot" value="true"/>
         <property key="enable-ou" value="true"/>
         <property key="enable-ow" value="true"/>
-        <property key="extra-include-directories" value="../../Desktop/picos/Include"/>
+        <property key="extra-include-directories"
+                  value="../../../../../Desktop/picos/Include"/>
         <property key="optimization-master" value="Enable all"/>
         <property key="preprocessor-macros" value=""/>
         <property key="procedural-abstraction-passes" value="4"/>
@@ -112,7 +111,8 @@
       </C18-AS>
       <C18-LD>
         <property key="cod-file" value="false"/>
-        <property key="extra-lib-directories" value="../../Desktop/picos/Kernel"/>
+        <property key="extra-lib-directories"
+                  value="../../../../../Desktop/picos/Kernel"/>
         <property key="hex-output-format" value="INHX32"/>
         <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
       </C18-LD>

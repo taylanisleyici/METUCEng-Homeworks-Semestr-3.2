@@ -22,6 +22,7 @@ TASK(TASK0)
         WaitEvent(ALARM_EVENT);
         ClearEvent(ALARM_EVENT);
         TXREG = '@';
+
 	}
 	TerminateTask();
 }

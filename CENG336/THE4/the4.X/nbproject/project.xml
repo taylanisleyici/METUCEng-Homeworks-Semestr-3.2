@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>the</name>
-            <creation-uuid>6c68c7f7-a1c6-4f60-92e4-c1cdf69c5edb</creation-uuid>
+            <name>the4</name>
+            <creation-uuid>27a5dde8-746b-4f5c-8a30-3f25cb41af88</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
@@ -13,7 +13,8 @@
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>../../Desktop/picos/Linker</sourceRootElem>
+                <sourceRootElem>../../../../../MPLABXProjects/the.X</sourceRootElem>
+                <sourceRootElem>../../../../../Desktop/picos/Linker</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
