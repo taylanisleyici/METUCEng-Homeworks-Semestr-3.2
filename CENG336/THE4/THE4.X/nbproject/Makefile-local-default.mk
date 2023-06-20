@@ -20,18 +20,18 @@ PATH:=/opt/microchip/mplabx/v5.45/mplab_platform/platform/../mplab_ide/modules/.
 # Path to java used to run MPLAB X when this makefile was created
 MP_JAVA_PATH="/opt/microchip/mplabx/v5.45/sys/java/zulu8.40.0.25-ca-fx-jre8.0.222-linux_x64/bin/"
 OS_CURRENT="$(shell uname -s)"
-MP_CC="/home/ceng33620232/Desktop/mcc18/mplabc18/v3.40/bin/mcc18"
+MP_CC="/home/ceng33620232/Desktop/mcc18/v3.40/bin/mcc18"
 # MP_CPPC is not defined
 # MP_BC is not defined
-MP_AS="/home/ceng33620232/Desktop/mcc18/mplabc18/v3.40/bin/../mpasm/MPASMWIN"
-MP_LD="/home/ceng33620232/Desktop/mcc18/mplabc18/v3.40/bin/mplink"
-MP_AR="/home/ceng33620232/Desktop/mcc18/mplabc18/v3.40/bin/mplib"
+MP_AS="/home/ceng33620232/Desktop/mcc18/v3.40/bin/../mpasm/MPASMWIN"
+MP_LD="/home/ceng33620232/Desktop/mcc18/v3.40/bin/mplink"
+MP_AR="/home/ceng33620232/Desktop/mcc18/v3.40/bin/mplib"
 DEP_GEN=${MP_JAVA_PATH}java -jar "/opt/microchip/mplabx/v5.45/mplab_platform/platform/../mplab_ide/modules/../../bin/extractobjectdependencies.jar"
-MP_CC_DIR="/home/ceng33620232/Desktop/mcc18/mplabc18/v3.40/bin"
+MP_CC_DIR="/home/ceng33620232/Desktop/mcc18/v3.40/bin"
 # MP_CPPC_DIR is not defined
 # MP_BC_DIR is not defined
-MP_AS_DIR="/home/ceng33620232/Desktop/mcc18/mplabc18/v3.40/bin/../mpasm"
-MP_LD_DIR="/home/ceng33620232/Desktop/mcc18/mplabc18/v3.40/bin"
-MP_AR_DIR="/home/ceng33620232/Desktop/mcc18/mplabc18/v3.40/bin"
+MP_AS_DIR="/home/ceng33620232/Desktop/mcc18/v3.40/bin/../mpasm"
+MP_LD_DIR="/home/ceng33620232/Desktop/mcc18/v3.40/bin"
+MP_AR_DIR="/home/ceng33620232/Desktop/mcc18/v3.40/bin"
 # MP_BC_DIR is not defined
 DFP_DIR=/opt/microchip/mplabx/v5.45/packs/Microchip/PIC18Fxxxx_DFP/1.2.26

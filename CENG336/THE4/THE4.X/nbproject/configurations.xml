@@ -8,11 +8,12 @@
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
-      <itemPath>../../../../picos/PICos18_v2/Linker/18f4620.lkr</itemPath>
+      <itemPath>../../../../picos/Linker/18f4620.lkr</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>../the4_material/pic_hash_compute.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -22,6 +23,8 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>../../../../picos/PICos18_v2/Linker</Elem>
+    <Elem>../the4_material</Elem>
+    <Elem>../../../../picos/Linker</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -44,7 +47,7 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibFileItem>../../../../picos/PICos18_v2/Kernel/picos18.lib</linkerLibFileItem>
+            <linkerLibFileItem>../../../../picos/Kernel/picos18.lib</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>
@@ -85,8 +88,7 @@
         <property key="enable-ot" value="true"/>
         <property key="enable-ou" value="true"/>
         <property key="enable-ow" value="true"/>
-        <property key="extra-include-directories"
-                  value="../../../../picos/PICos18_v2/Include"/>
+        <property key="extra-include-directories" value="../../../../picos/Include"/>
         <property key="optimization-master" value="Enable all"/>
         <property key="preprocessor-macros" value=""/>
         <property key="procedural-abstraction-passes" value="4"/>
@@ -104,8 +106,7 @@
       </C18-AS>
       <C18-LD>
         <property key="cod-file" value="false"/>
-        <property key="extra-lib-directories"
-                  value="../../../../picos/PICos18_v2/Kernel"/>
+        <property key="extra-lib-directories" value="../../../../picos/Kernel"/>
         <property key="hex-output-format" value="INHX32"/>
         <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
       </C18-LD>

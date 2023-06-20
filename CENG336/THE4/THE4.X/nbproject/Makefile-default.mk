@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=
+SOURCEFILES_QUOTED_IF_SPACED=../the4_material/pic_hash_compute.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=
-POSSIBLE_DEPFILES=
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/_ext/851234316/pic_hash_compute.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/_ext/851234316/pic_hash_compute.o.d
 
 # Object Files
-OBJECTFILES=
+OBJECTFILES=${OBJECTDIR}/_ext/851234316/pic_hash_compute.o
 
 # Source Files
-SOURCEFILES=
+SOURCEFILES=../the4_material/pic_hash_compute.c
 
 
 
@@ -102,19 +102,35 @@ endif
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/_ext/851234316/pic_hash_compute.o: ../the4_material/pic_hash_compute.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/851234316" 
+	@${RM} ${OBJECTDIR}/_ext/851234316/pic_hash_compute.o.d 
+	@${RM} ${OBJECTDIR}/_ext/851234316/pic_hash_compute.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG -D__MPLAB_DEBUGGER_SIMULATOR=1 -p$(MP_PROCESSOR_OPTION) -I"../../../../picos/Include" -ms -oa-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/_ext/851234316/pic_hash_compute.o   ../the4_material/pic_hash_compute.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/851234316/pic_hash_compute.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/851234316/pic_hash_compute.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 else
+${OBJECTDIR}/_ext/851234316/pic_hash_compute.o: ../the4_material/pic_hash_compute.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}/_ext/851234316" 
+	@${RM} ${OBJECTDIR}/_ext/851234316/pic_hash_compute.o.d 
+	@${RM} ${OBJECTDIR}/_ext/851234316/pic_hash_compute.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../picos/Include" -ms -oa-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/_ext/851234316/pic_hash_compute.o   ../the4_material/pic_hash_compute.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/_ext/851234316/pic_hash_compute.o 
+	@${FIXDEPS} "${OBJECTDIR}/_ext/851234316/pic_hash_compute.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 endif
 
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: link
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-dist/${CND_CONF}/${IMAGE_TYPE}/THE4.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk  ../../../../picos/PICos18_v2/Kernel/picos18.lib  ../../../../picos/PICos18_v2/Linker/18f4620.lkr
+dist/${CND_CONF}/${IMAGE_TYPE}/THE4.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk  ../../../../picos/Kernel/picos18.lib  ../../../../picos/Linker/18f4620.lkr
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_LD} $(MP_EXTRA_LD_PRE) "../../../../picos/PICos18_v2/Linker/18f4620.lkr"    -x -u_DEBUG -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map" -l"../../../../picos/PICos18_v2/Kernel"     $(MP_LINKER_DEBUG_OPTION) -l ${MP_CC_DIR}/../lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/THE4.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}  ../../../../picos/PICos18_v2/Kernel/picos18.lib 
+	${MP_LD} $(MP_EXTRA_LD_PRE) "../../../../picos/Linker/18f4620.lkr"    -x -u_DEBUG -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map" -l"../../../../picos/Kernel"     $(MP_LINKER_DEBUG_OPTION) -l ${MP_CC_DIR}/../lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/THE4.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}  ../../../../picos/Kernel/picos18.lib 
 else
-dist/${CND_CONF}/${IMAGE_TYPE}/THE4.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk  ../../../../picos/PICos18_v2/Kernel/picos18.lib ../../../../picos/PICos18_v2/Linker/18f4620.lkr
+dist/${CND_CONF}/${IMAGE_TYPE}/THE4.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk  ../../../../picos/Kernel/picos18.lib ../../../../picos/Linker/18f4620.lkr
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_LD} $(MP_EXTRA_LD_PRE) "../../../../picos/PICos18_v2/Linker/18f4620.lkr"     -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map" -l"../../../../picos/PICos18_v2/Kernel"    -l ${MP_CC_DIR}/../lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/THE4.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}  ../../../../picos/PICos18_v2/Kernel/picos18.lib 
+	${MP_LD} $(MP_EXTRA_LD_PRE) "../../../../picos/Linker/18f4620.lkr"     -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map" -l"../../../../picos/Kernel"    -l ${MP_CC_DIR}/../lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/THE4.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}  ../../../../picos/Kernel/picos18.lib 
 endif
 
 

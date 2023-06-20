@@ -6,7 +6,7 @@
             <name>THE4</name>
             <creation-uuid>9d56906a-bd9b-4c52-811c-aaa97f470efa</creation-uuid>
             <make-project-type>0</make-project-type>
-            <c-extensions/>
+            <c-extensions>c</c-extensions>
             <cpp-extensions/>
             <header-extensions/>
             <asminc-extensions/>
@@ -14,6 +14,8 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>../../../../picos/PICos18_v2/Linker</sourceRootElem>
+                <sourceRootElem>../the4_material</sourceRootElem>
+                <sourceRootElem>../../../../picos/Linker</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
