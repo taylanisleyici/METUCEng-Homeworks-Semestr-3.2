@@ -1,6 +1,7 @@
 #pragma config OSC = HSPLL, FCMEN = OFF, IESO = OFF, PWRT = OFF, BOREN = OFF, WDT = OFF, MCLRE = ON, LPT1OSC = OFF, LVP = OFF, XINST = OFF, DEBUG = OFF
 
 #include "common.h"
+#include "define.h"
 
 /**********************************************************************
  * Definition dedicated to the local functions.
