@@ -3,19 +3,17 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>THE4</name>
-            <creation-uuid>9d56906a-bd9b-4c52-811c-aaa97f470efa</creation-uuid>
+            <name>the</name>
+            <creation-uuid>6c68c7f7-a1c6-4f60-92e4-c1cdf69c5edb</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
-            <header-extensions/>
+            <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>../../../../picos/PICos18_v2/Linker</sourceRootElem>
-                <sourceRootElem>../the4_material</sourceRootElem>
-                <sourceRootElem>../../../../picos/Linker</sourceRootElem>
+                <sourceRootElem>../../Desktop/picos/Linker</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

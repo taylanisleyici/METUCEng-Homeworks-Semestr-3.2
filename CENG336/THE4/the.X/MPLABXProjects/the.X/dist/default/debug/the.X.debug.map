@@ -1,0 +1,992 @@
+MPLINK 4.40, Linker
+Linker Map File - Created Wed Jun 21 01:30:16 2023
+
+                                 Section Info
+                  Section       Type    Address   Location Size(Bytes)
+                ---------  ---------  ---------  ---------  ---------
+               _entry_scn       code   0x000000    program   0x000006
+           .romdata_int.o    romdata   0x000006    program   0x000000
+         .romdata_alarm.o    romdata   0x000006    program   0x000000
+     .romdata_tsk_task1.o    romdata   0x000006    program   0x000000
+       .romdata_pro_man.o    romdata   0x000006    program   0x000000
+      .romdata_even_man.o    romdata   0x000006    program   0x000000
+     .idata_tsk_task1.o_i    romdata   0x000006    program   0x000001
+          .romdata_main.o    romdata   0x000006    program   0x000000
+     .romdata_tsk_task0.o    romdata   0x000006    program   0x000000
+       .romdata_int_man.o    romdata   0x000006    program   0x000000
+     .romdata_PICos18iz.o    romdata   0x000006    program   0x000000
+      .romdata_taskdesc.o    romdata   0x000006    program   0x000000
+          .idata_main.o_i    romdata   0x000007    program   0x000000
+       .idata_int_man.o_i    romdata   0x000007    program   0x000000
+       .idata_pro_man.o_i    romdata   0x000007    program   0x000000
+           .idata_int.o_i    romdata   0x000007    program   0x000001
+     .idata_tsk_task0.o_i    romdata   0x000007    program   0x000000
+           IT_vector_high       code   0x000008    program   0x000006
+            IT_vector_low       code   0x000018    program   0x000006
+                 DESC_ROM    romdata   0x000200    program   0x00001d
+               KERNEL_ROM       code   0x000300    program   0x001b7c
+       _INTERRUPT_VECTORL       code   0x003000    program   0x000104
+             .code_main.o       code   0x003104    program   0x000062
+        .code_tsk_task0.o       code   0x003166    program   0x000036
+             _startup_scn       code   0x00319c    program   0x00002c
+        .code_tsk_task1.o       code   0x0031c8    program   0x00001a
+      .idata_taskdesc.o_i    romdata   0x0031e2    program   0x00002c
+       _INTERRUPT_VECTORH       code   0x003300    program   0x000012
+                   .cinit    romdata   0x003312    program   0x000026
+               _cinit_scn       code   0x003338    program   0x00009e
+                    .code       code   0x0033d6    program   0x000020
+     .idata_PICos18iz.o_i    romdata   0x0033f6    program   0x000000
+          .code_int_man.o       code   0x0033f6    program   0x000000
+        .code_PICos18iz.o       code   0x0033f6    program   0x000000
+         .code_even_man.o       code   0x0033f6    program   0x000000
+      .idata_even_man.o_i    romdata   0x0033f6    program   0x000000
+          .code_pro_man.o       code   0x0033f6    program   0x000000
+            .code_alarm.o       code   0x0033f6    program   0x000000
+         .idata_alarm.o_i    romdata   0x0033f6    program   0x000000
+              .code_int.o       code   0x0033f6    program   0x000000
+         .code_taskdesc.o       code   0x0033f6    program   0x000000
+  _RESET_INTERRUPT_VECTOR       code   0x003400    program   0x000006
+    .config_300001_main.o    romdata   0x300001    program   0x000001
+    .config_300002_main.o    romdata   0x300002    program   0x000001
+    .config_300003_main.o    romdata   0x300003    program   0x000001
+    .config_300005_main.o    romdata   0x300005    program   0x000001
+    .config_300006_main.o    romdata   0x300006    program   0x000001
+                 .tmpdata      udata   0x000000       data   0x000008
+                MATH_DATA      udata   0x000008       data   0x000002
+               KERNEL_RAM      udata   0x000060       data   0x000012
+               EVENT_MASK      udata   0x000080       data   0x000010
+                WAIT_MASK      udata   0x000090       data   0x000010
+                STACK_RAM      udata   0x0000a0       data   0x000010
+                STATE_RAM      udata   0x0000b0       data   0x000010
+                  STACK_B      udata   0x000100       data   0x000100
+                  STACK_A      udata   0x000200       data   0x000100
+        .idata_taskdesc.o      idata   0x000e00       data   0x00002c
+         .udata_pro_man.o      udata   0x000e2c       data   0x000005
+           .udata_alarm.o      udata   0x000e31       data   0x000002
+            .udata_main.o      udata   0x000e33       data   0x000001
+         .udata_int_man.o      udata   0x000e34       data   0x000001
+             .udata_int.o      udata   0x000e35       data   0x000001
+       .idata_tsk_task1.o      idata   0x000e36       data   0x000001
+             .idata_int.o      idata   0x000e37       data   0x000001
+        .idata_even_man.o      idata   0x000e38       data   0x000000
+        .udata_even_man.o      udata   0x000e38       data   0x000000
+         .idata_int_man.o      idata   0x000e38       data   0x000000
+         .idata_pro_man.o      idata   0x000e38       data   0x000000
+           .idata_alarm.o      idata   0x000e38       data   0x000000
+       .udata_tsk_task1.o      udata   0x000e38       data   0x000000
+       .idata_tsk_task0.o      idata   0x000e38       data   0x000000
+       .udata_tsk_task0.o      udata   0x000e38       data   0x000000
+        .udata_taskdesc.o      udata   0x000e38       data   0x000000
+            .idata_main.o      idata   0x000e38       data   0x000000
+       .idata_PICos18iz.o      idata   0x000e38       data   0x000000
+       .udata_PICos18iz.o      udata   0x000e38       data   0x000000
+                   .stack      udata   0x000e80       data   0x000074
+            SFR_UNBANKED0      udata   0x000f80       data   0x000080
+
+
+
+                              Program Memory Usage 
+                               Start         End      
+                           ---------   ---------      
+                            0x000000    0x00000d      
+                            0x000018    0x00001d      
+                            0x000200    0x00021c      
+                            0x000300    0x001e7b      
+                            0x003000    0x00320d      
+                            0x003300    0x0033f5      
+                            0x003400    0x003405      
+                            0x300001    0x300003      
+                            0x300005    0x300006      
+            7868 out of 66584 program addresses used, program memory utilization is 11%
+
+
+
+                              Symbols - Sorted by Name
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+             ActivateTask   0x001048    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+               AddOneTick   0x000b36    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+              CancelAlarm   0x000710    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+                ChainTask   0x001222    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+               ClearEvent   0x0017ec    program     extern c:\PICos18_v2_10\Kernel\even_man.c
+     DisableAllInterrupts   0x001a84    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+      EnableAllInterrupts   0x001a7e    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+                 EnterISR   0x001a9e    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+                ErrorHook   0x003154    program     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+ GetActiveApplicationMode   0x00138e    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                 GetAlarm   0x00065a    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+             GetAlarmBase   0x000770    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+          GetCounterValue   0x000aa4    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+                 GetEvent   0x0018b2    program     extern c:\PICos18_v2_10\Kernel\even_man.c
+              GetPriority   0x000eba    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+              GetResource   0x0014d0    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                GetTaskID   0x000f64    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+             GetTaskState   0x000fb6    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+               IncCounter   0x0007d4    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+                     Init   0x003118    program     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+         InterruptVectorH   0x003300    program     extern /home/ceng33620232/MPLABXProjects/the.X/int.c
+         InterruptVectorL   0x003000    program     extern /home/ceng33620232/MPLABXProjects/the.X/int.c
+       Interrupt_high_vec   0x000008    program     extern /home/ceng33620232/MPLABXProjects/the.X/int.c
+        Interrupt_low_vec   0x000018    program     extern /home/ceng33620232/MPLABXProjects/the.X/int.c
+                 LeaveISR   0x001aa8    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+                 Organize   0x001450    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+             PostTaskHook   0x003158    program     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+              PreTaskHook   0x003156    program     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+          ReleaseResource   0x0015e8    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+      ResumeAllInterrupts   0x001a8a    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+       ResumeOSInterrupts   0x001a96    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+                 Schedule   0x0012f0    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+              SetAbsAlarm   0x0004ce    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+                 SetEvent   0x0016be    program     extern c:\PICos18_v2_10\Kernel\even_man.c
+              SetPriority   0x000dfe    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+              SetRelAlarm   0x000300    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+             ShutdownHook   0x003152    program     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+               ShutdownOS   0x001434    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                  StartOS   0x001396    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+              StartupHook   0x003150    program     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+     SuspendAllInterrupts   0x001a90    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+      SuspendOSInterrupts   0x001a9a    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+                    TASK0   0x003166    program     extern /home/ceng33620232/MPLABXProjects/the.X/tsk_task0.c
+                    TASK1   0x0031c8    program     extern /home/ceng33620232/MPLABXProjects/the.X/tsk_task1.c
+            TerminateTask   0x001138    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                WaitEvent   0x00197a    program     extern c:\PICos18_v2_10\Kernel\even_man.c
+                _17_found   0x001c8c    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+          _17_matchTaskID   0x001c78    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+        _17_nextTaskEntry   0x001c82    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+                _25_found   0x001d9c    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+          _25_matchTaskID   0x001d88    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+        _25_nextTaskEntry   0x001d92    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+       _30_nextTableEntry   0x001df0    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+       _32_nextTableEntry   0x001e14    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+                _34_found   0x001e5e    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+          _34_matchTaskID   0x001e4a    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+        _34_nextTaskEntry   0x001e54    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+ _RoundRobin4SamePriority   0x001c0c    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+         ___else_lbl00031   0x0011de    program     static                          
+          ___for_lbl00028   0x001202    program     static                          
+          ___for_lbl00029   0x001206    program     static                          
+          ___for_lbl00033   0x001158    program     static                          
+          ___for_lbl00035   0x0012ca    program     static                          
+          ___for_lbl00036   0x0012ce    program     static                          
+          ___for_lbl00039   0x001242    program     static                          
+           ___if_lbl00030   0x0011f8    program     static                          
+           ___if_lbl00032   0x0011f8    program     static                          
+           ___if_lbl00037   0x00127e    program     static                          
+           ___if_lbl00038   0x0012c0    program     static                          
+           ___if_lbl00041   0x001300    program     static                          
+           ___if_lbl00046   0x001384    program     static                          
+       ___return_lbl00000   0x000004    program     static                          
+       ___return_lbl00000   0x00001c    program     static                          
+       ___return_lbl00001   0x0031c6    program     static                          
+       ___return_lbl00001   0x00000c    program     static                          
+       ___return_lbl00002   0x0033d4    program     static                          
+       ___return_lbl00010   0x003404    program     static                          
+       ___return_lbl00027   0x00120a    program     static                          
+       ___return_lbl00034   0x0012d8    program     static                          
+       ___return_lbl00040   0x00138c    program     static                          
+       ___return_lbl00048   0x00142c    program     static                          
+       ___return_lbl00054   0x0014ce    program     static                          
+        ___while_lbl00042   0x001346    program     static                          
+        ___while_lbl00043   0x001354    program     static                          
+        ___while_lbl00044   0x001358    program     static                          
+        ___while_lbl00045   0x00136e    program     static                          
+        ___while_lbl00049   0x0013da    program     static                          
+        ___while_lbl00050   0x0013e8    program     static                          
+        ___while_lbl00051   0x0013ec    program     static                          
+        ___while_lbl00052   0x001402    program     static                          
+        ___while_lbl00055   0x00148c    program     static                          
+        ___while_lbl00056   0x00149a    program     static                          
+        ___while_lbl00057   0x00149e    program     static                          
+        ___while_lbl00058   0x0014b4    program     static                          
+               __config_0   0x300001    program     static /home/ceng33620232/MPLABXProjects/the.X/main.c
+               __config_1   0x300002    program     static /home/ceng33620232/MPLABXProjects/the.X/main.c
+               __config_2   0x300003    program     static /home/ceng33620232/MPLABXProjects/the.X/main.c
+               __config_3   0x300005    program     static /home/ceng33620232/MPLABXProjects/the.X/main.c
+               __config_4   0x300006    program     static /home/ceng33620232/MPLABXProjects/the.X/main.c
+                   __pa_0   0x00315a    program     static /home/ceng33620232/MPLABXProjects/the.X/main.c
+            __zero_memory   0x0033d6    program     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              _checkPanic   0x001d50    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+                _do_cinit   0x003338    program     extern C:\PICos18_v2_10\Kernel\PICos18iz.c
+                   _entry   0x000000    program     extern C:\PICos18_v2_10\Kernel\PICos18iz.c
+                  _isHook   0x001bdc    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+              _kInitBank0   0x001aca    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+      _kInitHardwareStack   0x001ad8    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+                  _kernel   0x001abc    program     extern c:\PICos18_v2_10\Kernel\kernel.asm
+_kernelPanicStackOverflow   0x001e0e    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+_kernelPanicTrashedByNeighbor   0x001dea    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+                  _parser   0x001b02    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+              _parserInit   0x001b1e    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+            _parserUpdate   0x001b78    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+        _parserUpdateDiff   0x001b9e    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+        _parserUpdateLoop   0x001b86    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+        _parserUpdateSwap   0x001ba4    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+         _parser_organize   0x001b72    program     extern c:\PICos18_v2_10\Kernel\kernel.asm
+                   _reset   0x003400    program     extern /home/ceng33620232/MPLABXProjects/the.X/int.c
+             _restore_ctx   0x001c60    program     extern c:\PICos18_v2_10\Kernel\kernel.asm
+             _restore_now   0x001cb0    program     extern c:\PICos18_v2_10\Kernel\kernel.asm
+       _restore_start_adr   0x001e36    program     extern c:\PICos18_v2_10\Kernel\kernel.asm
+                   _sched   0x001bdc    program     extern c:\PICos18_v2_10\Kernel\kernel.asm
+_schedFindRunningTaskEntry   0x001bec    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+       _schedPickNext2Run   0x001c46    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+     _schedTaskReadyOrNot   0x001c4c    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+ _schedTestEndOfCtrlTable   0x001d3a    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+                 _startup   0x00319c    program     extern C:\PICos18_v2_10\Kernel\PICos18iz.c
+      _testIfSamePriority   0x001c02    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+               _whileIdle   0x001d48    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+               clear_loop   0x0031b6    program     static                          
+                compare_l   0x0033ec    program     static C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                copy_loop   0x0033aa    program     static                          
+            copy_one_byte   0x0033b0    program     static                          
+              descromarea   0x000200    program     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+                     done   0x0033d4    program     static                          
+             done_copying   0x0033be    program     static                          
+                      end   0x000214    program     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+             immediat_ret   0x001d18    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+                     loop   0x0031c0    program     static                          
+                   loop_h   0x0033e4    program     static C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   loop_l   0x0033ee    program     static C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     main   0x003104    program     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+ restoreNextHardwareStack   0x001cbc    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+   restoreNextTmpdataByte   0x001cd6    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+           rom_desc_task0   0x000202    program     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+           rom_desc_task1   0x00020b    program     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+                     test   0x003352    program     static                          
+               zero_block   0x0033e4    program     static C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   ADCON0   0x000fc2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               ADCON0bits   0x000fc2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   ADCON1   0x000fc1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               ADCON1bits   0x000fc1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   ADCON2   0x000fc0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               ADCON2bits   0x000fc0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    ADRES   0x000fc3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   ADRESH   0x000fc4       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   ADRESL   0x000fc3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              ALARMNUMBER   0x000e20       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+               Alarm_list   0x000e14       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+                  BAUDCON   0x000fb8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              BAUDCONbits   0x000fb8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  BAUDCTL   0x000fb8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              BAUDCTLbits   0x000fb8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                      BSR   0x000fe0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  CCP1CON   0x000fbd       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              CCP1CONbits   0x000fbd       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  CCP2CON   0x000fba       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              CCP2CONbits   0x000fba       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    CCPR1   0x000fbe       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   CCPR1H   0x000fbf       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   CCPR1L   0x000fbe       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    CCPR2   0x000fbb       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   CCPR2H   0x000fbc       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   CCPR2L   0x000fbb       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    CMCON   0x000fb4       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                CMCONbits   0x000fb4       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+            COUNTERNUMBER   0x000e21       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+                   CVRCON   0x000fb5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               CVRCONbits   0x000fb5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+           Counter_kernel   0x000e0a       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+             Counter_list   0x000e00       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+                     DDRA   0x000f92       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 DDRAbits   0x000f92       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     DDRB   0x000f93       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 DDRBbits   0x000f93       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     DDRC   0x000f94       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 DDRCbits   0x000f94       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     DDRD   0x000f95       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 DDRDbits   0x000f95       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     DDRE   0x000f96       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 DDREbits   0x000f96       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  ECCP1AS   0x000fb6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              ECCP1ASbits   0x000fb6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    EEADR   0x000fa9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   EEADRH   0x000faa       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   EECON1   0x000fa6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               EECON1bits   0x000fa6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   EECON2   0x000fa7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   EEDATA   0x000fa8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     FSR0   0x000fe9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    FSR0H   0x000fea       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    FSR0L   0x000fe9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     FSR1   0x000fe1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    FSR1H   0x000fe2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               FSR1H_MAIN   0x000e2c       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                    FSR1L   0x000fe1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               FSR1L_MAIN   0x000e2d       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                     FSR2   0x000fd9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    FSR2H   0x000fda       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    FSR2L   0x000fd9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  HLVDCON   0x000fd2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              HLVDCONbits   0x000fd2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    INDF0   0x000fef       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    INDF1   0x000fe7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    INDF2   0x000fdf       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   INTCON   0x000ff2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  INTCON2   0x000ff1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              INTCON2bits   0x000ff1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  INTCON3   0x000ff0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              INTCON3bits   0x000ff0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               INTCONbits   0x000ff2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     IPR1   0x000f9f       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 IPR1bits   0x000f9f       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     IPR2   0x000fa2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 IPR2bits   0x000fa2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     LATA   0x000f89       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 LATAbits   0x000f89       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     LATB   0x000f8a       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 LATBbits   0x000f8a       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     LATC   0x000f8b       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 LATCbits   0x000f8b       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     LATD   0x000f8c       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 LATDbits   0x000f8c       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     LATE   0x000f8d       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 LATEbits   0x000f8d       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   LVDCON   0x000fd2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               LVDCONbits   0x000fd2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   OSCCON   0x000fd3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               OSCCONbits   0x000fd3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  OSCTUNE   0x000f9b       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              OSCTUNEbits   0x000f9b       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                       PC   0x000ff9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                      PCL   0x000ff9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   PCLATH   0x000ffa       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   PCLATU   0x000ffb       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     PIE1   0x000f9d       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 PIE1bits   0x000f9d       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     PIE2   0x000fa0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 PIE2bits   0x000fa0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     PIR1   0x000f9e       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 PIR1bits   0x000f9e       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     PIR2   0x000fa1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 PIR2bits   0x000fa1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   PLUSW0   0x000feb       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   PLUSW1   0x000fe3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   PLUSW2   0x000fdb       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    PORTA   0x000f80       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                PORTAbits   0x000f80       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    PORTB   0x000f81       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                PORTBbits   0x000f81       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    PORTC   0x000f82       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                PORTCbits   0x000f82       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    PORTD   0x000f83       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                PORTDbits   0x000f83       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    PORTE   0x000f84       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                PORTEbits   0x000f84       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 POSTDEC0   0x000fed       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 POSTDEC1   0x000fe5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 POSTDEC2   0x000fdd       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 POSTINC0   0x000fee       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 POSTINC1   0x000fe6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 POSTINC2   0x000fde       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                      PR2   0x000fcb       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  PREINC0   0x000fec       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  PREINC1   0x000fe4       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  PREINC2   0x000fdc       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     PROD   0x000ff3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    PRODH   0x000ff4       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    PRODL   0x000ff3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  PWM1CON   0x000fb7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              PWM1CONbits   0x000fb7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     RCON   0x000fd0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 RCONbits   0x000fd0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    RCREG   0x000fae       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    RCSTA   0x000fab       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                RCSTAbits   0x000fab       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+           RESOURCENUMBER   0x000e29       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+            Resource_list   0x000e26       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+                     SIGN   0x000008       data     extern C:\MCC18\v3_39\src\traditional\math\cmath18.asm
+                    SPBRG   0x000faf       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   SPBRGH   0x000fb0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   SSPADD   0x000fc8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   SSPBUF   0x000fc9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  SSPCON1   0x000fc6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              SSPCON1bits   0x000fc6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  SSPCON2   0x000fc5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              SSPCON2bits   0x000fc5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  SSPSTAT   0x000fc7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              SSPSTATbits   0x000fc7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   STATUS   0x000fd8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               STATUSbits   0x000fd8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   STKPTR   0x000ffc       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               STKPTRbits   0x000ffc       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+             SelectedMode   0x000e33       data     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+                    T0CON   0x000fd5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                T0CONbits   0x000fd5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    T1CON   0x000fcd       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                T1CONbits   0x000fcd       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    T2CON   0x000fca       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                T2CONbits   0x000fca       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    T3CON   0x000fb1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                T3CONbits   0x000fb1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   TABLAT   0x000ff5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   TBLPTR   0x000ff6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  TBLPTRH   0x000ff7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  TBLPTRL   0x000ff6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  TBLPTRU   0x000ff8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TMR0H   0x000fd7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TMR0L   0x000fd6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TMR1H   0x000fcf       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TMR1L   0x000fce       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     TMR2   0x000fcc       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TMR3H   0x000fb3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TMR3L   0x000fb2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                      TOS   0x000ffd       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     TOSH   0x000ffe       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     TOSL   0x000ffd       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     TOSU   0x000fff       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TRISA   0x000f92       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                TRISAbits   0x000f92       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TRISB   0x000f93       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                TRISBbits   0x000f93       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TRISC   0x000f94       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                TRISCbits   0x000f94       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TRISD   0x000f95       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                TRISDbits   0x000f95       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TRISE   0x000f96       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                TRISEbits   0x000f96       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TXREG   0x000fad       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TXSTA   0x000fac       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                TXSTAbits   0x000fac       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     Tmr0   0x000e31       data     extern c:\PICos18_v2_10\Kernel\alarm.c
+                        W   0x000fe8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   WDTCON   0x000fd1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               WDTCONbits   0x000fd1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     WREG   0x000fe8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                __FPFLAGS   0x000009       data     extern C:\MCC18\v3_39\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000009       data     extern C:\MCC18\v3_39\src\traditional\math\cmath18.asm
+                  __tmp_0   0x000000       data     static /home/ceng33620232/MPLABXProjects/the.X/tsk_task0.c
+                  __tmp_0   0x000000       data     static c:\PICos18_v2_10\Kernel\even_man.c
+                  __tmp_0   0x000000       data     static c:\PICos18_v2_10\Kernel\alarm.c
+                  __tmp_0   0x000000       data     static c:\PICos18_v2_10\Kernel\pro_man.c
+                  appmode   0x000e2e       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                curr_byte   0x000063       data     static C:\PICos18_v2_10\Kernel\PICos18iz.c
+               curr_entry   0x000065       data     static C:\PICos18_v2_10\Kernel\PICos18iz.c
+                 data_ptr   0x000067       data     static C:\PICos18_v2_10\Kernel\PICos18iz.c
+                  event_1   0x000080       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                 event_10   0x000089       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                 event_11   0x00008a       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                 event_12   0x00008b       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                 event_13   0x00008c       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                 event_14   0x00008d       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                 event_15   0x00008e       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                 event_16   0x00008f       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_2   0x000081       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_3   0x000082       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_4   0x000083       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_5   0x000084       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_6   0x000085       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_7   0x000086       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_8   0x000087       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_9   0x000088       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+           global_counter   0x000e22       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+                    hello   0x000e37       data     extern /home/ceng33620232/MPLABXProjects/the.X/int.c
+                        i   0x000e36       data     extern /home/ceng33620232/MPLABXProjects/the.X/tsk_task1.c
+               id_tsk_run   0x00006a       data     extern c:\PICos18_v2_10\Kernel\kernel.asm
+              kernelPanic   0x00006f       data     extern c:\PICos18_v2_10\Kernel\kernel.asm
+              kernelState   0x00006e       data     extern c:\PICos18_v2_10\Kernel\kernel.asm
+              kernel_copy   0x000e34       data     extern c:\PICos18_v2_10\Kernel\int_man.c
+                   permut   0x00006d       data     static c:\PICos18_v2_10\Kernel\kernel.asm
+                     prom   0x000060       data     static C:\PICos18_v2_10\Kernel\PICos18iz.c
+                rcv_value   0x000e35       data     extern /home/ceng33620232/MPLABXProjects/the.X/int.c
+                   stack0   0x000200       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+                   stack1   0x000100       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+               stack_high   0x000e30       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                stack_low   0x000e2f       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+            startAddressH   0x000071       data     static c:\PICos18_v2_10\Kernel\kernel.asm
+            startAddressL   0x000070       data     static c:\PICos18_v2_10\Kernel\kernel.asm
+            taskdesc_addr   0x000e2a       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+                     temp   0x00006b       data     static c:\PICos18_v2_10\Kernel\kernel.asm
+                    temp2   0x00006c       data     static c:\PICos18_v2_10\Kernel\kernel.asm
+        tsk_10_activ_prio   0x0000b9       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          tsk_10_state_ID   0x0000a9       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+        tsk_11_activ_prio   0x0000ba       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          tsk_11_state_ID   0x0000aa       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+        tsk_12_activ_prio   0x0000bb       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          tsk_12_state_ID   0x0000ab       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+        tsk_13_activ_prio   0x0000bc       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          tsk_13_state_ID   0x0000ac       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+        tsk_14_activ_prio   0x0000bd       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          tsk_14_state_ID   0x0000ad       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+        tsk_15_activ_prio   0x0000be       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          tsk_15_state_ID   0x0000ae       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+        tsk_16_activ_prio   0x0000bf       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          tsk_16_state_ID   0x0000af       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_1_activ_prio   0x0000b0       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_1_state_ID   0x0000a0       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_2_activ_prio   0x0000b1       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_2_state_ID   0x0000a1       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_3_activ_prio   0x0000b2       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_3_state_ID   0x0000a2       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_4_activ_prio   0x0000b3       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_4_state_ID   0x0000a3       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_5_activ_prio   0x0000b4       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_5_state_ID   0x0000a4       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_6_activ_prio   0x0000b5       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_6_state_ID   0x0000a5       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_7_activ_prio   0x0000b6       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_7_state_ID   0x0000a6       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_8_activ_prio   0x0000b7       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_8_state_ID   0x0000a7       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_9_activ_prio   0x0000b8       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_9_state_ID   0x0000a8       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                   wait_1   0x000090       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  wait_10   0x000099       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  wait_11   0x00009a       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  wait_12   0x00009b       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  wait_13   0x00009c       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  wait_14   0x00009d       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  wait_15   0x00009e       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  wait_16   0x00009f       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_2   0x000091       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_3   0x000092       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_4   0x000093       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_5   0x000094       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_6   0x000095       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_7   0x000096       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_8   0x000097       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_9   0x000098       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+
+
+
+                              Symbols - Sorted by Address
+                     Name    Address   Location    Storage File                     
+                ---------  ---------  ---------  --------- ---------                
+                   _entry   0x000000    program     extern C:\PICos18_v2_10\Kernel\PICos18iz.c
+       ___return_lbl00000   0x000004    program     static                          
+       Interrupt_high_vec   0x000008    program     extern /home/ceng33620232/MPLABXProjects/the.X/int.c
+       ___return_lbl00001   0x00000c    program     static                          
+        Interrupt_low_vec   0x000018    program     extern /home/ceng33620232/MPLABXProjects/the.X/int.c
+       ___return_lbl00000   0x00001c    program     static                          
+              descromarea   0x000200    program     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+           rom_desc_task0   0x000202    program     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+           rom_desc_task1   0x00020b    program     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+                      end   0x000214    program     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+              SetRelAlarm   0x000300    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+              SetAbsAlarm   0x0004ce    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+                 GetAlarm   0x00065a    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+              CancelAlarm   0x000710    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+             GetAlarmBase   0x000770    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+               IncCounter   0x0007d4    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+          GetCounterValue   0x000aa4    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+               AddOneTick   0x000b36    program     extern c:\PICos18_v2_10\Kernel\alarm.c
+              SetPriority   0x000dfe    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+              GetPriority   0x000eba    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                GetTaskID   0x000f64    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+             GetTaskState   0x000fb6    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+             ActivateTask   0x001048    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+            TerminateTask   0x001138    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          ___for_lbl00033   0x001158    program     static                          
+         ___else_lbl00031   0x0011de    program     static                          
+           ___if_lbl00032   0x0011f8    program     static                          
+           ___if_lbl00030   0x0011f8    program     static                          
+          ___for_lbl00028   0x001202    program     static                          
+          ___for_lbl00029   0x001206    program     static                          
+       ___return_lbl00027   0x00120a    program     static                          
+                ChainTask   0x001222    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          ___for_lbl00039   0x001242    program     static                          
+           ___if_lbl00037   0x00127e    program     static                          
+           ___if_lbl00038   0x0012c0    program     static                          
+          ___for_lbl00035   0x0012ca    program     static                          
+          ___for_lbl00036   0x0012ce    program     static                          
+       ___return_lbl00034   0x0012d8    program     static                          
+                 Schedule   0x0012f0    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           ___if_lbl00041   0x001300    program     static                          
+        ___while_lbl00042   0x001346    program     static                          
+        ___while_lbl00043   0x001354    program     static                          
+        ___while_lbl00044   0x001358    program     static                          
+        ___while_lbl00045   0x00136e    program     static                          
+           ___if_lbl00046   0x001384    program     static                          
+       ___return_lbl00040   0x00138c    program     static                          
+ GetActiveApplicationMode   0x00138e    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                  StartOS   0x001396    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+        ___while_lbl00049   0x0013da    program     static                          
+        ___while_lbl00050   0x0013e8    program     static                          
+        ___while_lbl00051   0x0013ec    program     static                          
+        ___while_lbl00052   0x001402    program     static                          
+       ___return_lbl00048   0x00142c    program     static                          
+               ShutdownOS   0x001434    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                 Organize   0x001450    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+        ___while_lbl00055   0x00148c    program     static                          
+        ___while_lbl00056   0x00149a    program     static                          
+        ___while_lbl00057   0x00149e    program     static                          
+        ___while_lbl00058   0x0014b4    program     static                          
+       ___return_lbl00054   0x0014ce    program     static                          
+              GetResource   0x0014d0    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          ReleaseResource   0x0015e8    program     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                 SetEvent   0x0016be    program     extern c:\PICos18_v2_10\Kernel\even_man.c
+               ClearEvent   0x0017ec    program     extern c:\PICos18_v2_10\Kernel\even_man.c
+                 GetEvent   0x0018b2    program     extern c:\PICos18_v2_10\Kernel\even_man.c
+                WaitEvent   0x00197a    program     extern c:\PICos18_v2_10\Kernel\even_man.c
+      EnableAllInterrupts   0x001a7e    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+     DisableAllInterrupts   0x001a84    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+      ResumeAllInterrupts   0x001a8a    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+     SuspendAllInterrupts   0x001a90    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+       ResumeOSInterrupts   0x001a96    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+      SuspendOSInterrupts   0x001a9a    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+                 EnterISR   0x001a9e    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+                 LeaveISR   0x001aa8    program     extern c:\PICos18_v2_10\Kernel\int_man.c
+                  _kernel   0x001abc    program     extern c:\PICos18_v2_10\Kernel\kernel.asm
+              _kInitBank0   0x001aca    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+      _kInitHardwareStack   0x001ad8    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+                  _parser   0x001b02    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+              _parserInit   0x001b1e    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+         _parser_organize   0x001b72    program     extern c:\PICos18_v2_10\Kernel\kernel.asm
+            _parserUpdate   0x001b78    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+        _parserUpdateLoop   0x001b86    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+        _parserUpdateDiff   0x001b9e    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+        _parserUpdateSwap   0x001ba4    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+                  _isHook   0x001bdc    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+                   _sched   0x001bdc    program     extern c:\PICos18_v2_10\Kernel\kernel.asm
+_schedFindRunningTaskEntry   0x001bec    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+      _testIfSamePriority   0x001c02    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+ _RoundRobin4SamePriority   0x001c0c    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+       _schedPickNext2Run   0x001c46    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+     _schedTaskReadyOrNot   0x001c4c    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+             _restore_ctx   0x001c60    program     extern c:\PICos18_v2_10\Kernel\kernel.asm
+          _17_matchTaskID   0x001c78    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+        _17_nextTaskEntry   0x001c82    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+                _17_found   0x001c8c    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+             _restore_now   0x001cb0    program     extern c:\PICos18_v2_10\Kernel\kernel.asm
+ restoreNextHardwareStack   0x001cbc    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+   restoreNextTmpdataByte   0x001cd6    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+             immediat_ret   0x001d18    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+ _schedTestEndOfCtrlTable   0x001d3a    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+               _whileIdle   0x001d48    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+              _checkPanic   0x001d50    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+          _25_matchTaskID   0x001d88    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+        _25_nextTaskEntry   0x001d92    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+                _25_found   0x001d9c    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+_kernelPanicTrashedByNeighbor   0x001dea    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+       _30_nextTableEntry   0x001df0    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+_kernelPanicStackOverflow   0x001e0e    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+       _32_nextTableEntry   0x001e14    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+       _restore_start_adr   0x001e36    program     extern c:\PICos18_v2_10\Kernel\kernel.asm
+          _34_matchTaskID   0x001e4a    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+        _34_nextTaskEntry   0x001e54    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+                _34_found   0x001e5e    program     static c:\PICos18_v2_10\Kernel\kernel.asm
+         InterruptVectorL   0x003000    program     extern /home/ceng33620232/MPLABXProjects/the.X/int.c
+                     main   0x003104    program     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+                     Init   0x003118    program     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+              StartupHook   0x003150    program     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+             ShutdownHook   0x003152    program     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+                ErrorHook   0x003154    program     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+              PreTaskHook   0x003156    program     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+             PostTaskHook   0x003158    program     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+                   __pa_0   0x00315a    program     static /home/ceng33620232/MPLABXProjects/the.X/main.c
+                    TASK0   0x003166    program     extern /home/ceng33620232/MPLABXProjects/the.X/tsk_task0.c
+                 _startup   0x00319c    program     extern C:\PICos18_v2_10\Kernel\PICos18iz.c
+               clear_loop   0x0031b6    program     static                          
+                     loop   0x0031c0    program     static                          
+       ___return_lbl00001   0x0031c6    program     static                          
+                    TASK1   0x0031c8    program     extern /home/ceng33620232/MPLABXProjects/the.X/tsk_task1.c
+         InterruptVectorH   0x003300    program     extern /home/ceng33620232/MPLABXProjects/the.X/int.c
+                _do_cinit   0x003338    program     extern C:\PICos18_v2_10\Kernel\PICos18iz.c
+                     test   0x003352    program     static                          
+                copy_loop   0x0033aa    program     static                          
+            copy_one_byte   0x0033b0    program     static                          
+             done_copying   0x0033be    program     static                          
+       ___return_lbl00002   0x0033d4    program     static                          
+                     done   0x0033d4    program     static                          
+            __zero_memory   0x0033d6    program     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   loop_h   0x0033e4    program     static C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               zero_block   0x0033e4    program     static C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                compare_l   0x0033ec    program     static C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   loop_l   0x0033ee    program     static C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   _reset   0x003400    program     extern /home/ceng33620232/MPLABXProjects/the.X/int.c
+       ___return_lbl00010   0x003404    program     static                          
+               __config_0   0x300001    program     static /home/ceng33620232/MPLABXProjects/the.X/main.c
+               __config_1   0x300002    program     static /home/ceng33620232/MPLABXProjects/the.X/main.c
+               __config_2   0x300003    program     static /home/ceng33620232/MPLABXProjects/the.X/main.c
+               __config_3   0x300005    program     static /home/ceng33620232/MPLABXProjects/the.X/main.c
+               __config_4   0x300006    program     static /home/ceng33620232/MPLABXProjects/the.X/main.c
+                  __tmp_0   0x000000       data     static c:\PICos18_v2_10\Kernel\alarm.c
+                  __tmp_0   0x000000       data     static c:\PICos18_v2_10\Kernel\even_man.c
+                  __tmp_0   0x000000       data     static /home/ceng33620232/MPLABXProjects/the.X/tsk_task0.c
+                  __tmp_0   0x000000       data     static c:\PICos18_v2_10\Kernel\pro_man.c
+                     SIGN   0x000008       data     extern C:\MCC18\v3_39\src\traditional\math\cmath18.asm
+            __FPFLAGSbits   0x000009       data     extern C:\MCC18\v3_39\src\traditional\math\cmath18.asm
+                __FPFLAGS   0x000009       data     extern C:\MCC18\v3_39\src\traditional\math\cmath18.asm
+                     prom   0x000060       data     static C:\PICos18_v2_10\Kernel\PICos18iz.c
+                curr_byte   0x000063       data     static C:\PICos18_v2_10\Kernel\PICos18iz.c
+               curr_entry   0x000065       data     static C:\PICos18_v2_10\Kernel\PICos18iz.c
+                 data_ptr   0x000067       data     static C:\PICos18_v2_10\Kernel\PICos18iz.c
+               id_tsk_run   0x00006a       data     extern c:\PICos18_v2_10\Kernel\kernel.asm
+                     temp   0x00006b       data     static c:\PICos18_v2_10\Kernel\kernel.asm
+                    temp2   0x00006c       data     static c:\PICos18_v2_10\Kernel\kernel.asm
+                   permut   0x00006d       data     static c:\PICos18_v2_10\Kernel\kernel.asm
+              kernelState   0x00006e       data     extern c:\PICos18_v2_10\Kernel\kernel.asm
+              kernelPanic   0x00006f       data     extern c:\PICos18_v2_10\Kernel\kernel.asm
+            startAddressL   0x000070       data     static c:\PICos18_v2_10\Kernel\kernel.asm
+            startAddressH   0x000071       data     static c:\PICos18_v2_10\Kernel\kernel.asm
+                  event_1   0x000080       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_2   0x000081       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_3   0x000082       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_4   0x000083       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_5   0x000084       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_6   0x000085       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_7   0x000086       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_8   0x000087       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  event_9   0x000088       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                 event_10   0x000089       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                 event_11   0x00008a       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                 event_12   0x00008b       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                 event_13   0x00008c       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                 event_14   0x00008d       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                 event_15   0x00008e       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                 event_16   0x00008f       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_1   0x000090       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_2   0x000091       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_3   0x000092       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_4   0x000093       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_5   0x000094       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_6   0x000095       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_7   0x000096       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_8   0x000097       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                   wait_9   0x000098       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  wait_10   0x000099       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  wait_11   0x00009a       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  wait_12   0x00009b       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  wait_13   0x00009c       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  wait_14   0x00009d       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  wait_15   0x00009e       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+                  wait_16   0x00009f       data     extern c:\PICos18_v2_10\Kernel\even_man.c
+           tsk_1_state_ID   0x0000a0       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_2_state_ID   0x0000a1       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_3_state_ID   0x0000a2       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_4_state_ID   0x0000a3       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_5_state_ID   0x0000a4       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_6_state_ID   0x0000a5       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_7_state_ID   0x0000a6       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_8_state_ID   0x0000a7       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+           tsk_9_state_ID   0x0000a8       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          tsk_10_state_ID   0x0000a9       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          tsk_11_state_ID   0x0000aa       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          tsk_12_state_ID   0x0000ab       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          tsk_13_state_ID   0x0000ac       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          tsk_14_state_ID   0x0000ad       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          tsk_15_state_ID   0x0000ae       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+          tsk_16_state_ID   0x0000af       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_1_activ_prio   0x0000b0       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_2_activ_prio   0x0000b1       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_3_activ_prio   0x0000b2       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_4_activ_prio   0x0000b3       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_5_activ_prio   0x0000b4       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_6_activ_prio   0x0000b5       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_7_activ_prio   0x0000b6       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_8_activ_prio   0x0000b7       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+         tsk_9_activ_prio   0x0000b8       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+        tsk_10_activ_prio   0x0000b9       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+        tsk_11_activ_prio   0x0000ba       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+        tsk_12_activ_prio   0x0000bb       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+        tsk_13_activ_prio   0x0000bc       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+        tsk_14_activ_prio   0x0000bd       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+        tsk_15_activ_prio   0x0000be       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+        tsk_16_activ_prio   0x0000bf       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                   stack1   0x000100       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+                   stack0   0x000200       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+             Counter_list   0x000e00       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+           Counter_kernel   0x000e0a       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+               Alarm_list   0x000e14       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+              ALARMNUMBER   0x000e20       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+            COUNTERNUMBER   0x000e21       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+           global_counter   0x000e22       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+            Resource_list   0x000e26       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+           RESOURCENUMBER   0x000e29       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+            taskdesc_addr   0x000e2a       data     extern /home/ceng33620232/MPLABXProjects/the.X/taskdesc.c
+               FSR1H_MAIN   0x000e2c       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+               FSR1L_MAIN   0x000e2d       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                  appmode   0x000e2e       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                stack_low   0x000e2f       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+               stack_high   0x000e30       data     extern c:\PICos18_v2_10\Kernel\pro_man.c
+                     Tmr0   0x000e31       data     extern c:\PICos18_v2_10\Kernel\alarm.c
+             SelectedMode   0x000e33       data     extern /home/ceng33620232/MPLABXProjects/the.X/main.c
+              kernel_copy   0x000e34       data     extern c:\PICos18_v2_10\Kernel\int_man.c
+                rcv_value   0x000e35       data     extern /home/ceng33620232/MPLABXProjects/the.X/int.c
+                        i   0x000e36       data     extern /home/ceng33620232/MPLABXProjects/the.X/tsk_task1.c
+                    hello   0x000e37       data     extern /home/ceng33620232/MPLABXProjects/the.X/int.c
+                    PORTA   0x000f80       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                PORTAbits   0x000f80       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                PORTBbits   0x000f81       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    PORTB   0x000f81       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                PORTCbits   0x000f82       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    PORTC   0x000f82       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    PORTD   0x000f83       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                PORTDbits   0x000f83       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    PORTE   0x000f84       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                PORTEbits   0x000f84       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 LATAbits   0x000f89       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     LATA   0x000f89       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     LATB   0x000f8a       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 LATBbits   0x000f8a       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 LATCbits   0x000f8b       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     LATC   0x000f8b       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     LATD   0x000f8c       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 LATDbits   0x000f8c       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     LATE   0x000f8d       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 LATEbits   0x000f8d       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 DDRAbits   0x000f92       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     DDRA   0x000f92       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TRISA   0x000f92       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                TRISAbits   0x000f92       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                TRISBbits   0x000f93       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 DDRBbits   0x000f93       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     DDRB   0x000f93       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TRISB   0x000f93       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TRISC   0x000f94       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     DDRC   0x000f94       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 DDRCbits   0x000f94       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                TRISCbits   0x000f94       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                TRISDbits   0x000f95       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TRISD   0x000f95       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     DDRD   0x000f95       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 DDRDbits   0x000f95       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 DDREbits   0x000f96       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                TRISEbits   0x000f96       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TRISE   0x000f96       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     DDRE   0x000f96       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  OSCTUNE   0x000f9b       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              OSCTUNEbits   0x000f9b       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 PIE1bits   0x000f9d       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     PIE1   0x000f9d       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 PIR1bits   0x000f9e       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     PIR1   0x000f9e       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 IPR1bits   0x000f9f       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     IPR1   0x000f9f       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 PIE2bits   0x000fa0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     PIE2   0x000fa0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 PIR2bits   0x000fa1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     PIR2   0x000fa1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     IPR2   0x000fa2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 IPR2bits   0x000fa2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               EECON1bits   0x000fa6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   EECON1   0x000fa6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   EECON2   0x000fa7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   EEDATA   0x000fa8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    EEADR   0x000fa9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   EEADRH   0x000faa       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                RCSTAbits   0x000fab       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    RCSTA   0x000fab       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                TXSTAbits   0x000fac       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TXSTA   0x000fac       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TXREG   0x000fad       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    RCREG   0x000fae       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    SPBRG   0x000faf       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   SPBRGH   0x000fb0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                T3CONbits   0x000fb1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    T3CON   0x000fb1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TMR3L   0x000fb2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TMR3H   0x000fb3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                CMCONbits   0x000fb4       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    CMCON   0x000fb4       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               CVRCONbits   0x000fb5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   CVRCON   0x000fb5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  ECCP1AS   0x000fb6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              ECCP1ASbits   0x000fb6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              PWM1CONbits   0x000fb7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  PWM1CON   0x000fb7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  BAUDCON   0x000fb8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              BAUDCONbits   0x000fb8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  BAUDCTL   0x000fb8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              BAUDCTLbits   0x000fb8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  CCP2CON   0x000fba       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              CCP2CONbits   0x000fba       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   CCPR2L   0x000fbb       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    CCPR2   0x000fbb       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   CCPR2H   0x000fbc       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  CCP1CON   0x000fbd       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              CCP1CONbits   0x000fbd       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   CCPR1L   0x000fbe       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    CCPR1   0x000fbe       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   CCPR1H   0x000fbf       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               ADCON2bits   0x000fc0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   ADCON2   0x000fc0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               ADCON1bits   0x000fc1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   ADCON1   0x000fc1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   ADCON0   0x000fc2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               ADCON0bits   0x000fc2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    ADRES   0x000fc3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   ADRESL   0x000fc3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   ADRESH   0x000fc4       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  SSPCON2   0x000fc5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              SSPCON2bits   0x000fc5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  SSPCON1   0x000fc6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              SSPCON1bits   0x000fc6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  SSPSTAT   0x000fc7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              SSPSTATbits   0x000fc7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   SSPADD   0x000fc8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   SSPBUF   0x000fc9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    T2CON   0x000fca       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                T2CONbits   0x000fca       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                      PR2   0x000fcb       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     TMR2   0x000fcc       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                T1CONbits   0x000fcd       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    T1CON   0x000fcd       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TMR1L   0x000fce       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TMR1H   0x000fcf       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     RCON   0x000fd0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 RCONbits   0x000fd0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               WDTCONbits   0x000fd1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   WDTCON   0x000fd1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               LVDCONbits   0x000fd2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   LVDCON   0x000fd2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              HLVDCONbits   0x000fd2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  HLVDCON   0x000fd2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               OSCCONbits   0x000fd3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   OSCCON   0x000fd3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                T0CONbits   0x000fd5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    T0CON   0x000fd5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TMR0L   0x000fd6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    TMR0H   0x000fd7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   STATUS   0x000fd8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               STATUSbits   0x000fd8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     FSR2   0x000fd9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    FSR2L   0x000fd9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    FSR2H   0x000fda       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   PLUSW2   0x000fdb       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  PREINC2   0x000fdc       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 POSTDEC2   0x000fdd       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 POSTINC2   0x000fde       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    INDF2   0x000fdf       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                      BSR   0x000fe0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     FSR1   0x000fe1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    FSR1L   0x000fe1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    FSR1H   0x000fe2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   PLUSW1   0x000fe3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  PREINC1   0x000fe4       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 POSTDEC1   0x000fe5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 POSTINC1   0x000fe6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    INDF1   0x000fe7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                        W   0x000fe8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     WREG   0x000fe8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    FSR0L   0x000fe9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     FSR0   0x000fe9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    FSR0H   0x000fea       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   PLUSW0   0x000feb       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  PREINC0   0x000fec       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 POSTDEC0   0x000fed       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                 POSTINC0   0x000fee       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    INDF0   0x000fef       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              INTCON3bits   0x000ff0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  INTCON3   0x000ff0       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  INTCON2   0x000ff1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+              INTCON2bits   0x000ff1       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   INTCON   0x000ff2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               INTCONbits   0x000ff2       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     PROD   0x000ff3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    PRODL   0x000ff3       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                    PRODH   0x000ff4       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   TABLAT   0x000ff5       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  TBLPTRL   0x000ff6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   TBLPTR   0x000ff6       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  TBLPTRH   0x000ff7       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                  TBLPTRU   0x000ff8       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                       PC   0x000ff9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                      PCL   0x000ff9       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   PCLATH   0x000ffa       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   PCLATU   0x000ffb       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                   STKPTR   0x000ffc       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+               STKPTRbits   0x000ffc       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                      TOS   0x000ffd       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     TOSL   0x000ffd       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     TOSH   0x000ffe       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+                     TOSU   0x000fff       data     extern C:\MCC18\v3_39\src\traditional\proc\p18F4620.asm
+
+
