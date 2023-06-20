@@ -110,11 +110,11 @@ endif
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
 dist/${CND_CONF}/${IMAGE_TYPE}/THE4.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk  ../../../../picos/PICos18_v2/Kernel/picos18.lib  ../../../../picos/PICos18_v2/Linker/18f4620.lkr
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_LD} $(MP_EXTRA_LD_PRE) "../../../../picos/PICos18_v2/Linker/18f4620.lkr"    -x -u_DEBUG -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"     $(MP_LINKER_DEBUG_OPTION) -l ${MP_CC_DIR}/../lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/THE4.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}  ../../../../picos/PICos18_v2/Kernel/picos18.lib 
+	${MP_LD} $(MP_EXTRA_LD_PRE) "../../../../picos/PICos18_v2/Linker/18f4620.lkr"    -x -u_DEBUG -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map" -l"../../../../picos/PICos18_v2/Kernel"     $(MP_LINKER_DEBUG_OPTION) -l ${MP_CC_DIR}/../lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/THE4.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}  ../../../../picos/PICos18_v2/Kernel/picos18.lib 
 else
 dist/${CND_CONF}/${IMAGE_TYPE}/THE4.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}: ${OBJECTFILES}  nbproject/Makefile-${CND_CONF}.mk  ../../../../picos/PICos18_v2/Kernel/picos18.lib ../../../../picos/PICos18_v2/Linker/18f4620.lkr
 	@${MKDIR} dist/${CND_CONF}/${IMAGE_TYPE} 
-	${MP_LD} $(MP_EXTRA_LD_PRE) "../../../../picos/PICos18_v2/Linker/18f4620.lkr"     -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"    -l ${MP_CC_DIR}/../lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/THE4.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}  ../../../../picos/PICos18_v2/Kernel/picos18.lib 
+	${MP_LD} $(MP_EXTRA_LD_PRE) "../../../../picos/PICos18_v2/Linker/18f4620.lkr"     -m"${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map" -l"../../../../picos/PICos18_v2/Kernel"    -l ${MP_CC_DIR}/../lib  -o dist/${CND_CONF}/${IMAGE_TYPE}/THE4.X.${IMAGE_TYPE}.${DEBUGGABLE_SUFFIX}  ${OBJECTFILES_QUOTED_IF_SPACED}  ../../../../picos/PICos18_v2/Kernel/picos18.lib 
 endif
 
 
