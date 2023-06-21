@@ -17,12 +17,24 @@ extern char rcv_value;
  *
  **********************************************************************/
 char i = 0;
-TASK(TASK1) 
+TASK(RCV_SENT) 
 {
 	while(1) {
-        WaitEvent(ECHO_EVENT);
-        ClearEvent(ECHO_EVENT);
+        WaitEvent(ALARM_EVENT);
+        ClearEvent(ALARM_EVENT);
         TXREG = rcv_value;
+	}
+	TerminateTask();
+}
+
+TASK(RCV)
+{
+	SetRelAlarm(ALARM_TSK0, 100, 5000);
+	while(1) {
+        WaitEvent(ALARM_EVENT);
+        ClearEvent(ALARM_EVENT);
+        TXREG = '@';
+
 	}
 	TerminateTask();
 }

@@ -51,7 +51,7 @@ void InterruptVectorL(void)
         // receiving is the same for both picsim and real life.
         rcv_value = RCREG;
         hello = 10;
-        SetEvent(TASK1_ID, ECHO_EVENT);
+        //SetEvent(RCV_SENT_ID, ALARM_EVENT);
 		PIR1bits.RCIF = 0;	// clear RC1IF flag
 	}
         if (RCSTAbits.OERR)

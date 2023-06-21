@@ -40,10 +40,30 @@ AlarmObject Alarm_list[] =
      0,                                    /* AlarmValue              */
      0,                                    /* Cycle                   */
      &Counter_kernel,                      /* ptrCounter              */
-     TASK0_ID,                             /* TaskID2Activate         */
+     RCV_ID,                             /* TaskID2Activate         */
      ALARM_EVENT,                          /* EventToPost             */
      0                                     /* CallBack                */
    },
+   
+   {
+     OFF,                                  /* State                   */
+     0,                                    /* AlarmValue              */
+     0,                                    /* Cycle                   */
+     &Counter_kernel,                      /* ptrCounter              */
+     LCD0_ID,                             /* TaskID2Activate         */
+     LCD_EVENT,                          /* EventToPost             */
+     0                                     /* CallBack                */
+   },
+   
+   {
+     OFF,                                  /* State                   */
+     0,                                    /* AlarmValue              */
+     0,                                    /* Cycle                   */
+     &Counter_kernel,                      /* ptrCounter              */
+     LCD1_ID,                             /* TaskID2Activate         */
+     LCD1_EVENT,                          /* EventToPost             */
+     0                                     /* CallBack                */
+   }
  };
 
 #define _ALARMNUMBER_          sizeof(Alarm_list)/sizeof(AlarmObject)
@@ -71,8 +91,11 @@ unsigned char RESOURCENUMBER = _RESOURCENUMBER_;
  * ----------------------- TASK & STACK DEFINITION --------------------
  **********************************************************************/
 #define DEFAULT_STACK_SIZE      256
-DeclareTask(TASK0);
-DeclareTask(TASK1);
+DeclareTask(RCV);
+DeclareTask(RCV_SENT);
+DeclareTask(LCD0);
+DeclareTask(LCD1);
+
 
 // to avoid any C18 map error : regroup the stacks into blocks
 // of 256 bytes (except the last one).
@@ -80,6 +103,10 @@ DeclareTask(TASK1);
 volatile unsigned char stack0[DEFAULT_STACK_SIZE];
 #pragma		udata      STACK_B   
 volatile unsigned char stack1[DEFAULT_STACK_SIZE];
+#pragma		udata      STACK_C   
+volatile unsigned char stack2[DEFAULT_STACK_SIZE];
+#pragma		udata      STACK_D   
+volatile unsigned char stack3[DEFAULT_STACK_SIZE];
 #pragma		udata
 
 /**********************************************************************
@@ -93,9 +120,9 @@ const rom unsigned int descromarea;
 rom_desc_tsk rom_desc_task0 = {
 	TASK0_PRIO,                       /* prioinit from 0 to 15       */
 	stack0,                           /* stack address (16 bits)     */
-	TASK0,                            /* start address (16 bits)     */
+	RCV,                            /* start address (16 bits)     */
 	READY,                            /* state at init phase         */
-	TASK0_ID,                         /* id_tsk from 0 to 15         */
+	RCV_ID,                         /* id_tsk from 0 to 15         */
 	sizeof(stack0)                    /* stack size    (16 bits)     */
 };
 
@@ -105,10 +132,28 @@ rom_desc_tsk rom_desc_task0 = {
 rom_desc_tsk rom_desc_task1 = {
 	TASK1_PRIO,                       /* prioinit from 0 to 15       */
 	stack1,                           /* stack address (16 bits)     */
-	TASK1,                            /* start address (16 bits)     */
+	RCV_SENT,                            /* start address (16 bits)     */
 	READY,                            /* state at init phase         */
-	TASK1_ID,                         /* id_tsk from 0 to 15         */
+	RCV_SENT_ID,                         /* id_tsk from 0 to 15         */
 	sizeof(stack1)                    /* stack size    (16 bits)     */
+};
+
+rom_desc_tsk rom_desc_task2 = {
+	LCD0_PRIO,                       /* prioinit from 0 to 15       */
+	stack2,                           /* stack address (16 bits)     */
+	LCD0,                            /* start address (16 bits)     */
+	READY,                            /* state at init phase         */
+	LCD0_ID,                         /* id_tsk from 0 to 15         */
+	sizeof(stack2)                    /* stack size    (16 bits)     */
+};
+
+rom_desc_tsk rom_desc_task3 = {
+	LCD1_PRIO,                       /* prioinit from 0 to 15       */
+	stack3,                           /* stack address (16 bits)     */
+	LCD1,                            /* start address (16 bits)     */
+	READY,                            /* state at init phase         */
+	LCD1_ID,                         /* id_tsk from 0 to 15         */
+	sizeof(stack3)                    /* stack size    (16 bits)     */
 };
 
 

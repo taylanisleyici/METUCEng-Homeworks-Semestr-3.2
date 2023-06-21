@@ -69,7 +69,6 @@ void Init(void)
 	RCSTA = 0x90;      // (= 10010000) 8-bit receiver, receiver enabled,
                         // continuous receive, serial port enabled
 	/* configure the interrupts */
-    
 	INTCON = 0;			// clear interrupt register completely
 	PIE1bits.TXIE = 1;	// enable USART transmit interrupt
 	PIE1bits.RCIE = 1;	// enable USART receive interrupt
