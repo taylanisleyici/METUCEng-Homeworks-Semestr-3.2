@@ -86,7 +86,8 @@ class Miniterm:
         WAITING = 0
         GETTING = 1
         while self.alive:
-            print(self.data)
+            if (self.data != b''):
+                print(self.data)
             if self.state == WAITING:
                 byte = self.serial.read()
                 if byte == b'$':
