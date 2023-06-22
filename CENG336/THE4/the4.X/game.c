@@ -99,6 +99,14 @@ void tossIngredient(ingredient_t ingredientToToss)
 void cookOrder(unsigned char customerIndex)
 {
     unsigned char i;
+    if (customers[customerIndex].isOrderBeingCooked)
+    {
+        return;
+    }
+    else
+    {
+        customers[customerIndex].isOrderBeingCooked = 1;
+    }
     buf_push('$', OUTBUF);
     buf_push('C', OUTBUF);
     buf_push(customers[customerIndex].customerId, OUTBUF);
