@@ -83,6 +83,7 @@ class Miniterm:
         self.prev_time = self.time
 
     def reader(self):
+        print(self.data)
         WAITING = 0
         GETTING = 1
         while self.alive:
