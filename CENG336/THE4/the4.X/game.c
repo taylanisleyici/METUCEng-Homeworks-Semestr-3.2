@@ -17,6 +17,17 @@ char responseString[21];
 char responseHead = 0;
 unsigned char isResponse = 0;
 
+extern char string_pool[2][16];
+
+void sendMessage(char *message, unsigned char length)
+{
+    unsigned char i = 0; 
+    for (i = 0; i < length; i++)
+    {
+        buf_push(message[i], OUTBUF);
+    }
+}
+
 void clearResponse()
 {
     int i;
@@ -29,6 +40,7 @@ void clearResponse()
 
 void go(void)
 {
+    started = 1;
     
 }
 
@@ -56,7 +68,7 @@ void playGame()
         if (responseString[1] == 'G' && responseString[2] == 'O')
         {
             go();
-            clearResponse();
+            //clearResponse();
             return;
         }
         if (strcmp(responseString, endString) == 0)

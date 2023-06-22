@@ -1,5 +1,4 @@
-Warning[2058] game.c 59 : call of function without prototype
-Warning[2058] game.c 65 : call of function without prototype
-Warning[2058] game.c 71 : call of function without prototype
-Warning[2058] game.c 77 : call of function without prototype
-Warning[2058] game.c 112 : call of function without prototype
+Warning[2058] game.c 67 : call of function without prototype
+Warning[2058] game.c 73 : call of function without prototype
+Warning[2058] game.c 79 : call of function without prototype
+Warning[2058] game.c 114 : call of function without prototype
