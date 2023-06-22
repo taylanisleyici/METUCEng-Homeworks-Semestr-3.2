@@ -6,39 +6,99 @@
  */
 #include "common.h"
 #include "rcv.h"
+#include "string.h"
 
 char started = 0;
 
 char val = 0;
 char flag = 0;
+
+char responseString[21];
+char responseHead = 0;
+unsigned char isResponse = 0;
+
+void clearResponse()
+{
+    int i;
+    for (i = 0; i < 21; i++)
+    {
+        responseString[i] = 0;
+    }
+    responseHead = 0;
+}
+
+void go(void)
+{
+    
+}
+
+void endGame(void)
+{
+    
+}
+
+void getStatus(void)
+{
+    
+}
+
+void getHash(void)
+{
+    
+}
+
 void playGame()
 {
-    if(!started) // the game is not started yet
-    {
-        if(!buf_isempty(INBUF)) // if there is char in buf
+    if (isResponse)
+    {   
+        char goString[] = "$GO:";
+        char endString[] = "$END:";
+        if (strcmp(responseString, goString) == 0)
         {
-            while(!buf_isempty(INBUF))
+            go();
+            clearResponse();
+            return;
+        }
+        if (strcmp(responseString, endString) == 0)
+        {
+            endGame();
+            clearResponse();
+            return;
+        }
+        if (responseString[1] == 'R')
+        {
+            getStatus();
+            clearResponse();
+            return;
+        }
+        if (responseString[1] == 'H')
+        {
+            getHash();
+            clearResponse();
+            return;
+        }
+       
+    }
+    else if(!buf_isempty(INBUF)) // if there is char in buf
+    {
+        while(!buf_isempty(INBUF))
+        {
+            val = buf_pop(INBUF);
+            if(val == '$') flag = 1;
+            if(flag)
             {
-                val = buf_pop(INBUF);
-                if(val == '$') flag = 1;
-                if(flag)            
-                    if(val == 'G') started = 1;
-                if(val == ':') flag = 0;
+                responseString[responseHead] = val;
+                responseHead++;
             }
-            
-        }
-        flag = 0;
-    }
-    else // take go command
-    {
-        if(!flag)
-        {
-            buf_push('$', OUTBUF);
-            buf_push('W', OUTBUF);
-            buf_push(':', OUTBUF);
-            flag = 1;
+            if(val == ':')
+            {
+                flag = 0;
+                responseHead = 0;
+                isResponse=1;
+            }
         }
     }
+    
 }
 
 TASK(GAME)
