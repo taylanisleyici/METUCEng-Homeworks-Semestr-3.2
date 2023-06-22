@@ -17,13 +17,15 @@ extern char string_pool[2][16];
 TASK(LCD0)
 {
     SetRelAlarm(ALARM_TSK1, 100, 350);
+    while (1)
+    {
+        WaitEvent(LCD_EVENT);
+        ClearEvent(LCD_EVENT);
 
-    WaitEvent(LCD_EVENT);
-    ClearEvent(LCD_EVENT);
+        ClearLCDScreen();
 
-    ClearLCDScreen();
-    
-    LcdPrintString(string_pool[0], 0, 0);
-    LcdPrintString(string_pool[1], 0, 1);
+        LcdPrintString(string_pool[0], 0, 0);
+        LcdPrintString(string_pool[1], 0, 1);
+    }
     TerminateTask();
 }
