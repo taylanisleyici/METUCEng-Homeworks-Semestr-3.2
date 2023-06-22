@@ -1,4 +1,5 @@
 #include "common.h"
+#include "rcv.h"
 
 char rcv_value;
 /**********************************************************************
@@ -42,15 +43,15 @@ void InterruptVectorL(void)
 		AddOneTick();
 	/* Here are the other interrupts you would desire to manage */
 	if (PIR1bits.TXIF == 1) {
-        if(hello > 0){
-            hello--;
-            TXREG = rcv_value-hello;
-        }
+     
+        TXREG = buf_pop(OUTBUF);
+        
 	}
 	if (PIR1bits.RCIF == 1) {
         // receiving is the same for both picsim and real life.
-        rcv_value = RCREG;
-        hello = 10;
+        //rcv_value = RCREG;
+        //hello = 10;
+        buf_push(RCREG, INBUF);
         //SetEvent(RCV_SENT_ID, ALARM_EVENT);
 		PIR1bits.RCIF = 0;	// clear RC1IF flag
 	}

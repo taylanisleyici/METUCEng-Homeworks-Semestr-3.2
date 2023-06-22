@@ -35,16 +35,19 @@
 #define RCV_SENT_ID             2
 #define LCD0_ID                 3
 #define LCD1_ID                 4
+#define GAME_ID                 5
 
 /* Priorities of the tasks */
 #define TASK0_PRIO           8
 #define TASK1_PRIO           7
 #define LCD0_PRIO            10
 #define LCD1_PRIO            10
+#define GAME_PRIO            9
 
 #define ALARM_TSK0           0
 #define ALARM_TSK1           1
 #define ALARM_LCD            2
+#define GAME_ALARM           3
 
 
 #endif

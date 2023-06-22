@@ -63,7 +63,18 @@ AlarmObject Alarm_list[] =
      LCD1_ID,                             /* TaskID2Activate         */
      LCD1_EVENT,                          /* EventToPost             */
      0                                     /* CallBack                */
+   },
+   
+   {
+     OFF,                                  /* State                   */
+     0,                                    /* AlarmValue              */
+     0,                                    /* Cycle                   */
+     &Counter_kernel,                      /* ptrCounter              */
+     GAME_ID,                             /* TaskID2Activate         */
+     ALARM_EVENT,                          /* EventToPost             */
+     0                                     /* CallBack                */
    }
+   
  };
 
 #define _ALARMNUMBER_          sizeof(Alarm_list)/sizeof(AlarmObject)
@@ -95,6 +106,7 @@ DeclareTask(RCV);
 DeclareTask(RCV_SENT);
 DeclareTask(LCD0);
 DeclareTask(LCD1);
+DeclareTask(GAME);
 
 
 // to avoid any C18 map error : regroup the stacks into blocks
@@ -107,6 +119,8 @@ volatile unsigned char stack1[DEFAULT_STACK_SIZE];
 volatile unsigned char stack2[DEFAULT_STACK_SIZE];
 #pragma		udata      STACK_D   
 volatile unsigned char stack3[DEFAULT_STACK_SIZE];
+#pragma		udata      STACK_E   
+volatile unsigned char stack4[DEFAULT_STACK_SIZE];
 #pragma		udata
 
 /**********************************************************************
@@ -156,7 +170,14 @@ rom_desc_tsk rom_desc_task3 = {
 	sizeof(stack3)                    /* stack size    (16 bits)     */
 };
 
-
+rom_desc_tsk rom_desc_task4 = {
+	GAME_PRIO,                       /* prioinit from 0 to 15       */
+	stack4,                           /* stack address (16 bits)     */
+	GAME,                            /* start address (16 bits)     */
+	READY,                            /* state at init phase         */
+	GAME_ID,                         /* id_tsk from 0 to 15         */
+	sizeof(stack4)                    /* stack size    (16 bits)     */
+};
 /**********************************************************************
  * --------------------- END TASK DESCRIPTOR SECTION ------------------
  **********************************************************************/

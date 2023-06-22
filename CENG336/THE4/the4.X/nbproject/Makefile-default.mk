@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=int.c main.c taskdesc.c rcv.c LCD.c lcdtask.c
+SOURCEFILES_QUOTED_IF_SPACED=int.c main.c taskdesc.c rcv.c LCD.c lcdtask.c game.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/int.o ${OBJECTDIR}/main.o ${OBJECTDIR}/taskdesc.o ${OBJECTDIR}/rcv.o ${OBJECTDIR}/LCD.o ${OBJECTDIR}/lcdtask.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/int.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/taskdesc.o.d ${OBJECTDIR}/rcv.o.d ${OBJECTDIR}/LCD.o.d ${OBJECTDIR}/lcdtask.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/int.o ${OBJECTDIR}/main.o ${OBJECTDIR}/taskdesc.o ${OBJECTDIR}/rcv.o ${OBJECTDIR}/LCD.o ${OBJECTDIR}/lcdtask.o ${OBJECTDIR}/game.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/int.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/taskdesc.o.d ${OBJECTDIR}/rcv.o.d ${OBJECTDIR}/LCD.o.d ${OBJECTDIR}/lcdtask.o.d ${OBJECTDIR}/game.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/int.o ${OBJECTDIR}/main.o ${OBJECTDIR}/taskdesc.o ${OBJECTDIR}/rcv.o ${OBJECTDIR}/LCD.o ${OBJECTDIR}/lcdtask.o
+OBJECTFILES=${OBJECTDIR}/int.o ${OBJECTDIR}/main.o ${OBJECTDIR}/taskdesc.o ${OBJECTDIR}/rcv.o ${OBJECTDIR}/LCD.o ${OBJECTDIR}/lcdtask.o ${OBJECTDIR}/game.o
 
 # Source Files
-SOURCEFILES=int.c main.c taskdesc.c rcv.c LCD.c lcdtask.c
+SOURCEFILES=int.c main.c taskdesc.c rcv.c LCD.c lcdtask.c game.c
 
 
 
@@ -150,6 +150,14 @@ ${OBJECTDIR}/lcdtask.o: lcdtask.c  nbproject/Makefile-${CND_CONF}.mk
 	@${DEP_GEN} -d ${OBJECTDIR}/lcdtask.o 
 	@${FIXDEPS} "${OBJECTDIR}/lcdtask.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
+${OBJECTDIR}/game.o: game.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/game.o.d 
+	@${RM} ${OBJECTDIR}/game.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -D__DEBUG  -p$(MP_PROCESSOR_OPTION) -I"../../../../../Desktop/picos/Include" -ms -oa-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/game.o   game.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/game.o 
+	@${FIXDEPS} "${OBJECTDIR}/game.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
 else
 ${OBJECTDIR}/int.o: int.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -198,6 +206,14 @@ ${OBJECTDIR}/lcdtask.o: lcdtask.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../../Desktop/picos/Include" -ms -oa-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/lcdtask.o   lcdtask.c 
 	@${DEP_GEN} -d ${OBJECTDIR}/lcdtask.o 
 	@${FIXDEPS} "${OBJECTDIR}/lcdtask.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
+	
+${OBJECTDIR}/game.o: game.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/game.o.d 
+	@${RM} ${OBJECTDIR}/game.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -p$(MP_PROCESSOR_OPTION) -I"../../../../../Desktop/picos/Include" -ms -oa-  -I ${MP_CC_DIR}/../h  -fo ${OBJECTDIR}/game.o   game.c 
+	@${DEP_GEN} -d ${OBJECTDIR}/game.o 
+	@${FIXDEPS} "${OBJECTDIR}/game.o.d" $(SILENT) -rsi ${MP_CC_DIR}../ -c18 
 	
 endif
 
