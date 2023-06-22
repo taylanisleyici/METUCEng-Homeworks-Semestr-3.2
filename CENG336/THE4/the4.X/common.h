@@ -40,8 +40,8 @@
 /* Priorities of the tasks */
 #define TASK0_PRIO           8
 #define TASK1_PRIO           7
-#define LCD0_PRIO            10
-#define LCD1_PRIO            10
+#define LCD0_PRIO            6
+#define LCD1_PRIO            6
 #define GAME_PRIO            9
 
 #define ALARM_TSK0           0

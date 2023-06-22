@@ -168,11 +168,14 @@ void cookOrder(unsigned char customerIndex)
     
 }
 
+int flag1 = 0;
 void iterateGame(void)
 {
     unsigned char i,j;
     unsigned char customerWithLowestPatience = 4;
     unsigned char lowestPatience = 255;
+    if(flag1) return;
+    flag1 = 1;
     for (i = 0; i < 3; i++)
     {
         unsigned char ing1State = 0, ing2State = 0;
@@ -193,11 +196,8 @@ void iterateGame(void)
         }
         if (ing1State && ing2State)
         {
-            if (customers[i].patience <= lowestPatience)
-            {
-                lowestPatience = customers[i].patience;
-                customerWithLowestPatience = i;
-            }
+            customerWithLowestPatience = i;
+            cookOrder(i);
         }
     }
     if (customerWithLowestPatience == 4)
@@ -208,7 +208,7 @@ void iterateGame(void)
         unsigned char i;
         for (i = 0; i < 4; i++)
         {
-            if(ingredients[i] == NONE) return;
+            if(ingredients[i] == NONE) { flag1 = 0; return;}
             if(ingredients[i] == BREAD)
             {
                 breadC++;
@@ -238,9 +238,10 @@ void iterateGame(void)
             }
         }
         tossIngredient(ingredientToToss);
+        flag1 = 0;
         return;
     }
-    cookOrder(customerWithLowestPatience);
+    flag1 = 0;
     
 }
 
