@@ -83,10 +83,10 @@ class Miniterm:
         self.prev_time = self.time
 
     def reader(self):
-        print(self.data)
         WAITING = 0
         GETTING = 1
         while self.alive:
+            print(self.data)
             if self.state == WAITING:
                 byte = self.serial.read()
                 if byte == b'$':

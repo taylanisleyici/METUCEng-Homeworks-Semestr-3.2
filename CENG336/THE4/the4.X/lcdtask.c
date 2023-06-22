@@ -22,7 +22,7 @@ TASK(LCD0)
         WaitEvent(LCD_EVENT);
         ClearEvent(LCD_EVENT);
 
-        ClearLCDScreen();
+        //ClearLCDScreen();
 
         LcdPrintString(string_pool[0], 0, 0);
         LcdPrintString(string_pool[1], 0, 1);
