@@ -53,7 +53,7 @@ void playGame()
     {   
         char goString[] = "$GO:";
         char endString[] = "$END:";
-        if (strcmp(responseString, goString) == 0)
+        if (responseString[1] == 'G' && responseString[2] == 'O')
         {
             go();
             clearResponse();
