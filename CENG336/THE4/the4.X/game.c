@@ -112,6 +112,7 @@ void cookOrder(unsigned char customerIndex)
         {
             if (ingredients[i] == customers[customerIndex].requestedIngredients[0])
             {
+                ingredients[i] = COOKING;
                 buf_push(i, OUTBUF);
                 break;
             }
@@ -127,6 +128,7 @@ void cookOrder(unsigned char customerIndex)
         {
             if (ingredients[i] == customers[customerIndex].requestedIngredients[1])
             {
+                ingredients[i] = COOKING;
                 buf_push(i, OUTBUF);
                 break;
             }
