@@ -23,6 +23,8 @@ typedef struct customer
     unsigned char isOrderBeingCooked;
 };
 
+extern char string_pool_started[2][16];
+
 char started = 0;
 
 char val = 0;
@@ -31,6 +33,8 @@ char flag = 0;
 char responseString[21];
 char responseHead = 0;
 unsigned char isResponse = 0;
+
+unsigned short money;
 
 struct customer customers[3];
 //unsigned char customerStatus[3][4];
@@ -75,6 +79,24 @@ void go(void)
     return;
 }
 
+void refreshLCD()
+{
+    //extern char string_pool[2][16];
+    unsigned short moneyLocal = money;
+
+    string_pool_started[0][11] = moneyLocal/10000 +48;
+    moneyLocal = moneyLocal % 10000;
+    string_pool_started[0][12] = moneyLocal / 1000+48;
+    moneyLocal = moneyLocal % 1000;
+    string_pool_started[0][13] = moneyLocal / 100+48;
+    moneyLocal = moneyLocal % 100;
+    string_pool_started[0][14] = moneyLocal / 10+48;
+    moneyLocal = moneyLocal % 10;
+    string_pool_started[0][15] = moneyLocal + 48;
+    //string_pool[0] = string_pool0;
+    //string_pool[1] = string_pool1;
+}
+
 void endGame(void)
 {
     
@@ -99,7 +121,7 @@ void tossIngredient(ingredient_t ingredientToToss)
 void cookOrder(unsigned char customerIndex)
 {
     unsigned char i;
-    if (customers[customerIndex].isOrderBeingCooked)
+    if (customers[customerIndex].isOrderBeingCooked == 1)
     {
         return;
     }
@@ -271,7 +293,7 @@ void getStatus(void)
         if (ingredient == 'C') ingredients[i] = COOKING;
         if (ingredient == 'S') ingredients[i] = SLOWCOOKING;
     }
-    
+    money = responseString[19]*16+responseString[20];
     iterateGame();
 }
 
