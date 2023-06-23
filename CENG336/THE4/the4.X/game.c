@@ -1,12 +1,26 @@
-/* 
- * File:   game.c
- * Author: ceng33620232
- *
- * Created on June 22, 2023, 11:42 AM
- */
+/******************
+ * We tried to create a structure with 3 tasks, 1 to receive from serial port,
+ * one to timing tasks, and one for game itself. But we couldn't achieve the
+ * goal because of the reasons we cannot understand. As you can see from our functions 
+ * below, our game logic is leaning on 2 buffer objects, and one pseudo-buffer object "responseString".
+ * We chose highest priority for our game, and then communication and lowest 
+ * priority for lcd task, this is simply because game requires the most cpu cycles, 
+ * and lcd need not to be "as real time as" others. Since we couldn't succeed in
+ * easy mode, we couldn't bother to implement hash task. 
+ * 
+ * There is a strange behaviour about our implementation, our cookOrder and 
+ * tossIngredient functions are not working properly and we couldn't understand 
+ * why. We would be very happy to get a feedback from you.
+ * 
+ * Also, we don't know why but simulator.py work properly for us and in some run
+ *  we get points but sometimes we got nothing and we should reboot the whole system in our both computer.
+ * 
+******************/
+
 #include "common.h"
 #include "rcv.h"
 #include "string.h"
+#include "LCD.h"
 
 
 
@@ -39,12 +53,62 @@ ingredient_t ingredients[4];
 unsigned short money = 0;
 
 extern char string_pool[2][16];
+extern char string_pool_started[2][16];
 char isLCDChanged = 1;
 
 void convertToString() // TODO
 {
     
 }
+
+void refreshLCD()
+{
+    //extern char string_pool[2][16];
+    unsigned short moneyLocal = money;
+    char i;
+    char count_people = 0;
+    string_pool_started[0][0] = 'M';
+    string_pool_started[0][1] = 'O';
+    string_pool_started[0][2] = 'N';
+    string_pool_started[0][3] = 'E';
+    string_pool_started[0][4] = 'Y';
+    string_pool_started[0][5] = ':';
+    for(i = 0; i < 3; i++)
+    {
+        if(customers[i].customerId != 0) count_people++;
+    }
+    string_pool_started[1][3] = count_people + 48;
+    for(i = 0; i < 4; i++)
+    {
+        if(ingredients[i] == 0)
+            string_pool_started[1][12 + i] = 'N';
+        if(ingredients[i] == 1)
+            string_pool_started[1][12 + i] = 'M';
+        if(ingredients[i] == 2)
+            string_pool_started[1][12 + i] = 'P';
+        if(ingredients[i] == 3)
+            string_pool_started[1][12 + i] = 'B';
+        if(ingredients[i] == 4)
+            string_pool_started[1][12 + i] = 'C';
+        if(ingredients[i] == 5)
+            string_pool_started[1][12 + i] = 'S';
+    
+    }
+    
+    string_pool_started[0][11] = moneyLocal/10000 +48;
+    moneyLocal = moneyLocal % 10000;
+    string_pool_started[0][12] = moneyLocal / 1000+48;
+    moneyLocal = moneyLocal % 1000;
+    string_pool_started[0][13] = moneyLocal / 100+48;
+    moneyLocal = moneyLocal % 100;
+    string_pool_started[0][14] = moneyLocal / 10+48;
+    moneyLocal = moneyLocal % 10;
+    string_pool_started[0][15] = moneyLocal + 48;
+    //string_pool[0] = string_pool0;
+    //string_pool[1] = string_pool1;
+}
+
+
 
 /*void sendMessage(char *message, unsigned char length)
 {
@@ -282,7 +346,6 @@ void getHash(void)
 
 void playGame()
 {
-    // Halihaz?rda runl?yorsa runlamamas? için bir event at?lmas? gerekiyor.
     if (isResponse)
     {   
         if (responseString[1] == 'G' && responseString[2] == 'O')

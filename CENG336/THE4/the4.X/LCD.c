@@ -32,6 +32,7 @@ void LcdPrintString(const char *s, unsigned char positionX,  unsigned char posit
 EventMaskType LCDevent;
 unsigned char LCDchar[LINE][COLUMN];
 const char string_pool[2][16] = {"    COOKING  ", "      SIM"};
+char string_pool_started[2][16] = {"MONEY:          ", "C:      ING:    "};
 
 /**********************************************************************
  * ----------------------------- LCD TASK -----------------------------

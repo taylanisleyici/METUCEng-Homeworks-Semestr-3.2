@@ -13,6 +13,10 @@
  * 
  */
 extern char string_pool[2][16];
+extern char string_pool_started[2][16];
+extern char started;
+
+
 
 TASK(LCD0)
 {
@@ -21,11 +25,22 @@ TASK(LCD0)
     {
         WaitEvent(LCD_EVENT);
         ClearEvent(LCD_EVENT);
+        
+        if (started)
+        {
+            refreshLCD();
+            LcdPrintString(string_pool_started[0], 0, 0);
+            LcdPrintString(string_pool_started[1], 0, 1);
 
+        }
+        else
+        {
+            LcdPrintString(string_pool[0], 0, 0);
+            LcdPrintString(string_pool[1], 0, 1);
+        }
         //ClearLCDScreen();
 
-        LcdPrintString(string_pool[0], 0, 0);
-        LcdPrintString(string_pool[1], 0, 1);
+        
     }
     TerminateTask();
 }

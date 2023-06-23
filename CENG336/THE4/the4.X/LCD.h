@@ -47,7 +47,7 @@ void WriteStringToLCD(const char*);
 void ClearLCDScreen(void);
 void LcdPrintString(const char *,  unsigned char, unsigned char);
 
-
+void refreshLCD();
 #endif
 
 /* End of file : lcd.h */
